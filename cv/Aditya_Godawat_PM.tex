@@ -1,0 +1,172 @@
+%% Example CV - Aditya Vikram Godawat
+%% Comprehensive overview of all competencies, experience, and achievements.
+%% Use as a master reference when tailoring role-specific CVs.
+%%
+%% SETUP: Populated from documents/cv/Aditya Vikram Godawat CV(May 26).pdf.
+%% Compile with: lualatex Aditya_Godawat_PM.tex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+
+% Force both first and last name AND section headings to render in moderncv
+% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
+% looks inconsistent with the rest of the blue accent scheme.
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Aditya Vikram Godawat - CV},
+    pdfpagemode=FullScreen,
+}
+\usepackage[scale=0.80]{geometry}
+\usepackage{import}
+
+% personal data
+\name{Aditya Vikram}{Godawat}
+\address{Sydney, NSW, Australia (Permanent Resident)}{}{}
+\phone[mobile]{+61 418 672 778}
+\email{aditya.godawat@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/adityavikram}{LinkedIn}}
+
+\begin{document}
+
+\makecvtitle
+
+% ============================================================
+%     PROFILE STATEMENT
+% ============================================================
+
+\vspace{6pt}
+\small{Senior Product Manager with 11+ years spanning software engineering and product leadership, currently directing GenAI strategy and agentic AI product development at McKinsey \& Company. Bridges technical depth with commercial product judgement across enterprise B2B platforms and high-scale B2C products, with measurable outcomes across revenue growth, pricing accuracy, sales uplift, client cash flow, release cadence, and user engagement.}
+
+% ============================================================
+%     CORE COMPETENCIES
+% ============================================================
+
+\section{Core Competencies}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{AI Product Strategy}: Generative AI, agentic workflows, LLM implementation, prompt engineering, decisioning systems, RAG, AI product roadmaps.
+\item \textbf{Product Leadership}: Roadmapping, product discovery, lifecycle management, GTM strategy, OKR frameworks, PRD writing, stakeholder management, user research and analytics.
+\item \textbf{Enterprise Platforms}: B2B SaaS, pricing platforms, business intelligence, collections automation, A/B experimentation engines, product consulting.
+\item \textbf{Technical Foundation}: iOS architecture, Swift, mobile application development, system design, API integration, SQL working knowledge.
+\item \textbf{Domains}: Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, B2C consumer applications.
+\end{itemize}
+
+% ============================================================
+%     PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section{Professional Experience}
+\vspace{3pt}
+\begin{itemize}
+
+\item{\cventry{Sep 2025--Jul 2026}{Senior Product Manager}{McKinsey \& Company}{Sydney, Australia}{}{\vspace{1pt}
+\begin{itemize}
+    \item Own end-to-end GenAI and strategic product roadmaps for Periscope, McKinsey's flagship retail pricing platform used by global enterprise clients.
+    \item Lead a 20+ person cross-functional team across engineering, data science, and design.
+    \item Defined product vision and roadmap for agentic AI workflows that automated manual enterprise retail pricing operations, reducing time-to-action from hours to seconds.
+    \item Directed AI-powered pricing decisioning systems that improved pricing accuracy by 9--12\% and drove 2--7\% return-on-sales uplift for global retail enterprise clients.
+    \item Optimised Agile delivery through strategic GenAI tooling adoption, reducing operational overhead by 20\% and accelerating release cadence by 60\%.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Apr 2024--Sep 2025}{Senior Product Manager}{Fractal Analytics}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Led platform strategy and portfolio roadmap execution for enterprise AI engines across CPG, Finance, and Healthcare verticals, owning discovery through GTM.
+    \item Architected Crux, an AI-powered business intelligence platform that reduced insight generation from days to minutes and eliminated manual data science pipelines.
+    \item Conceptualised and launched Cogentiq I2C, automating 60\% of billing workflows, processing 1M+ invoices, and delivering \$5M in annualised client cash-flow uplift.
+    \item Directed TrialRun, an enterprise A/B testing product scaling to 8,000+ experiments per month, achieving 65\% pilot-to-paid conversion and 14\% average sales uplift.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Jul 2021--Mar 2024}{Product Manager}{Fractal Analytics}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Managed the core feature roadmap and cross-functional stakeholder alignment for Cuddle AI, an AI-powered business intelligence platform.
+    \item Architected product capabilities that drove a 57\% revenue increase and lifted monthly active user engagement by 85\%.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Jan 2019--Jun 2021}{Member, Technical Team (iOS Lead)}{Fractal Analytics}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Owned native iOS architecture, engineering execution, and Agile deployment cycles for the core Cuddle AI mobile product before transitioning into product management.
+    \item Retained ownership of codebase optimisation, sprint planning, and mobile performance management, shaping engineering culture and delivery standards.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Dec 2017--Jul 2018}{Senior iOS Developer}{Toppr}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Scaled the consumer mobile application to 2M+ DAU and 9M+ MAU while maintaining approximately 98\% crash-free rate.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Apr 2017--Dec 2017}{Lead iOS Developer}{Ithaka}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built the foundational iOS application from scratch, established the mobile engineering team, and scaled the platform across 20+ countries.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Jan 2016--Mar 2017}{iOS Developer}{Wow Labz}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Developed and maintained native iOS applications for enterprise and consumer clients including HDFC Bank, FabIndia, and UCSF.
+\end{itemize}}}
+
+\vspace{3pt}
+
+\item{\cventry{Aug 2015--Jan 2016}{Mobile Developer}{Mapplinks}{India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Engineered and deployed the company's in-house mobile application suite, delivering stable production-ready app solutions.
+\end{itemize}}}
+
+\end{itemize}
+
+% ============================================================
+%     EDUCATION
+% ============================================================
+
+\section{Education}
+\vspace{1pt}
+\begin{itemize}
+\item{\cventry{Graduated 2015}{Bachelor of Engineering (B.E.), Information Science and Engineering}{Dayananda Sagar College of Engineering}{Bangalore, India}{}{\vspace{1pt}
+Focus areas include information science, software engineering, and mobile application development.
+}}
+\end{itemize}
+
+% ============================================================
+%     CERTIFICATIONS
+% ============================================================
+
+\section{Certifications}
+\vspace{1pt}
+\begin{itemize}
+\item{\textbf{Tech \& AI - AI Advisory - Level 2} -- McKinsey \& Co. (Jan 2026).}
+\item{\textbf{Generative AI for Business - A Leaders' Handbook} -- Fractal Analytics (May 2025).}
+\item{\textbf{Behaviour Architecture - Understanding Human Behaviour} -- Fractal Analytics (Dec 2024).}
+\item{\textbf{Human Decision Making and its Biases} -- Coursera (Jul 2024).}
+\end{itemize}
+
+% ============================================================
+%     REFERENCES
+% ============================================================
+
+\section{References}
+\vspace{1pt}
+\begin{itemize}
+\item{Available upon request.}
+\end{itemize}
+
+\end{document}

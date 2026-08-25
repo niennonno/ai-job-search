@@ -43,8 +43,8 @@ USAGE
   bun run src/cli.ts detail <id|url> [--format json|plain]
 
 SEARCH FLAGS
-  --location, -l <text>   Location to search. REQUIRED. e.g. "Mumbai, Maharashtra, India",
-                          "Berlin, Germany", "London, United Kingdom", or "Remote".
+  --location, -l <text>   Location to search. REQUIRED. e.g. "Sydney, New South Wales, Australia",
+                          "Melbourne, Victoria, Australia", "Remote, Australia", or "Remote".
   --query, -q <text>      Keywords (job title, skill, or role). Recommended.
   --jobage <days>         Posted within N days: 1, 7, 14, 30. Default: all.
   --remote <mode>         remote | hybrid | onsite. Filter by workplace type.
@@ -53,9 +53,9 @@ SEARCH FLAGS
   --format <fmt>          json (default) | table | plain.
 
 EXAMPLES
-  bun run src/cli.ts search -q "data engineer" -l "Bengaluru, Karnataka, India" --jobage 30 --format table
-  bun run src/cli.ts search -q "product manager" -l "Berlin, Germany" --remote remote --format table
-  bun run src/cli.ts search -q "paralegal" -l "Remote" --format table
+  bun run src/cli.ts search -q "data engineer" -l "Sydney, New South Wales, Australia" --jobage 30 --format table
+  bun run src/cli.ts search -q "product manager" -l "Melbourne, Victoria, Australia" --remote hybrid --format table
+  bun run src/cli.ts search -q "paralegal" -l "Remote, Australia" --format table
   bun run src/cli.ts detail 4300011451 --format plain
 
 Personal use only — uses LinkedIn's public pages; keep volume low (LinkedIn ToS).
@@ -66,9 +66,14 @@ async function main(): Promise<number> {
   const flags = parseFlags(argv)
   const cmd = (flags._ as string[])[0]
 
-  if (!cmd || flags.help || flags.h) {
+  if (flags.help || flags.h) {
     process.stdout.write(HELP)
-    return cmd ? 0 : 1
+    return 0
+  }
+
+  if (!cmd) {
+    process.stdout.write(HELP)
+    return 1
   }
 
   if (cmd === "search") {
@@ -76,7 +81,7 @@ async function main(): Promise<number> {
     if (!location) {
       process.stderr.write(
         JSON.stringify({
-          error: 'the --location/-l flag is required (e.g. -l "Mumbai, Maharashtra, India", -l "Berlin, Germany", or -l "Remote")',
+          error: 'the --location/-l flag is required (e.g. -l "Sydney, New South Wales, Australia", -l "Melbourne, Victoria, Australia", or -l "Remote, Australia")',
           code: "NO_LOCATION",
         }) + "\n",
       )

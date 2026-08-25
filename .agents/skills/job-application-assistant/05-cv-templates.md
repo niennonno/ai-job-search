@@ -106,14 +106,11 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For Senior Product Manager / Product Lead roles:**
-> Senior Product Manager with 11+ years spanning software engineering and product leadership across enterprise SaaS, B2B platforms, and high-scale B2C products. Combines technical depth in AI, mobile architecture, and experimentation with commercial product judgement across roadmap ownership, discovery, delivery, and go-to-market. Has led cross-functional teams and delivered measurable outcomes including revenue growth, release acceleration, sales uplift, and client cash-flow improvement.
+**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
+> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
 
-**For AI Product Manager / GenAI Product roles:**
-> AI product leader currently directing GenAI strategy and agentic AI product development at McKinsey & Company. Experienced in translating LLM, agentic workflow, decisioning, RAG, and experimentation capabilities into enterprise products that reduce manual work, improve decision quality, and create measurable commercial impact. Brings a hands-on engineering foundation plus senior stakeholder experience across retail, CPG, eCommerce, finance, and healthcare.
-
-**For Product Strategy / Platform Product roles:**
-> Product leader with a track record of shaping enterprise platform strategy from concept through global go-to-market. Has owned AI product portfolios, advised C-suite stakeholders, led 20+ person cross-functional teams, and scaled products across pricing decisioning, business intelligence, collections, experimentation, and mobile consumer platforms. Best suited to roles where product strategy, technical architecture, customer value, and commercial outcomes need to connect cleanly.
+**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
+> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

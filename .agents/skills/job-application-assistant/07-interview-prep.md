@@ -8,69 +8,32 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## STAR Candidates (Complete Manually)
+## Ready-Made STAR Examples
 
-These are CV-backed story candidates. Flesh out the exact situation, task, action, and result before using them in interviews.
+<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
 
-### McKinsey Agentic AI Pricing Roadmap
-**Source:** CV - Senior Product Manager, McKinsey & Company
-**What happened:** Defined product vision and end-to-end roadmap for agentic AI workflows that automated manual enterprise retail pricing operations and reduced time-to-action from hours to seconds.
-**Why it matters:** Use for AI product strategy, roadmap ownership, stakeholder alignment, enterprise automation, and product vision questions.
-**S/T/A/R stub:**
-- Situation:
-- Task:
-- Action:
-- Result:
+### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
+**S:** [CONTEXT - what was happening, what was the problem]
+**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
+**A:** [WHAT YOU DID - specific actions, tools, methods]
+**R:** [OUTCOME - measurable results, adoption, impact]
+**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
 
-### McKinsey AI Pricing Decisioning Impact
-**Source:** CV - Senior Product Manager, McKinsey & Company
-**What happened:** Directed AI-powered pricing decisioning systems that improved pricing accuracy by 9-12% and drove 2-7% return-on-sales uplift for global retail enterprise clients.
-**Why it matters:** Use for commercial impact, enterprise client value, pricing products, metrics-driven product management, and senior stakeholder questions.
-**S/T/A/R stub:**
-- Situation:
-- Task:
-- Action:
-- Result:
+### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
+**S:** [CONTEXT]
+**T:** [YOUR RESPONSIBILITY]
+**A:** [WHAT YOU DID]
+**R:** [OUTCOME]
+**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
 
-### Cogentiq I2C Platform Launch
-**Source:** CV - Senior Product Manager, Fractal Analytics
-**What happened:** Conceptualised and launched an AI-driven collections platform that automated 60% of billing workflows, processed 1M+ invoices, and delivered $5M in annualised client cash flow uplift.
-**Why it matters:** Use for product launch, enterprise AI, GTM, workflow automation, and measurable financial impact questions.
-**S/T/A/R stub:**
-- Situation:
-- Task:
-- Action:
-- Result:
+### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
+**S:** [CONTEXT]
+**T:** [YOUR RESPONSIBILITY]
+**A:** [WHAT YOU DID]
+**R:** [OUTCOME]
+**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
 
-### TrialRun Experimentation Platform Scale-Up
-**Source:** CV - Senior Product Manager, Fractal Analytics
-**What happened:** Directed an enterprise A/B testing product scaling to 8,000+ experiments per month, with 65% pilot-to-paid conversion and 14% average sales uplift across client portfolios.
-**Why it matters:** Use for experimentation, platform scaling, customer adoption, product-market validation, and data-informed decision questions.
-**S/T/A/R stub:**
-- Situation:
-- Task:
-- Action:
-- Result:
-
-### Cuddle AI Revenue and Engagement Growth
-**Source:** CV - Product Manager, Fractal Analytics
-**What happened:** Managed the core feature roadmap and stakeholder alignment for Cuddle AI, driving a 57% revenue increase and lifting MAU engagement by 85%.
-**Why it matters:** Use for roadmap prioritisation, stakeholder management, product growth, AI business intelligence, and transition from technical to product leadership questions.
-**S/T/A/R stub:**
-- Situation:
-- Task:
-- Action:
-- Result:
-
-### Toppr Mobile Scale and Reliability
-**Source:** CV - Senior iOS Developer, Toppr
-**What happened:** Scaled a consumer mobile application to 2M+ DAU and 9M+ MAU while maintaining approximately 98% crash-free rate.
-**Why it matters:** Use for technical foundation, reliability, scale, performance optimisation, and engineering-to-product credibility questions.
-**S/T/A/R stub:**
-- Situation:
-- Task:
-- Action:
-- Result:
+<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 
 ## Common Tough Questions
 

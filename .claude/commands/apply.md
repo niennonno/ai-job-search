@@ -16,7 +16,7 @@ Follow these steps **exactly in order**. Do not skip steps.
 
 - If `$ARGUMENTS` looks like a URL, use `WebFetch` to retrieve the job posting content.
 - If it is pasted text, use it directly.
-- Extract: **company name**, **role title**, **department** (if mentioned), **location**, and **language** of the posting (Danish or English).
+- Extract: **company name**, **role title**, **department** (if mentioned), **location**, **posting language**, **work rights/security requirements**, **salary or package details**, **superannuation wording**, and **hybrid/remote cadence**.
 - Store these for use throughout the workflow.
 
 ---
@@ -41,7 +41,8 @@ Present the evaluation to the user with:
 2. **Experience match** - how work history maps to the role
 3. **Behavioral/culture match** - how behavioral profile fits the role/company culture
 4. **Salary benchmark** - salary index for the company (if available)
-5. **Overall fit score** and recommendation (strong fit / moderate fit / weak fit)
+5. **Australian logistics** - work rights, superannuation, location, hybrid cadence, travel/FIFO, or clearance requirements
+6. **Overall fit score** and recommendation (strong fit / moderate fit / weak fit)
 
 After presenting the evaluation, ask the user:
 > "Should I proceed with drafting the CV and cover letter for this role?"
@@ -71,13 +72,13 @@ Also read the most recent existing CV and cover letter files for concrete struct
 - Keep to 2 pages
 
 ### Cover Letter (`cover_letters/cover_<company>_<role>.tex`)
-- **Match the language of the job posting** (Danish posting -> Danish cover letter, English posting -> English cover letter)
+- Write in Australian English by default. Match another language only if the posting explicitly requires it.
 - Follow the structure from `06-cover-letter-templates.md`
 - Use the `cover.cls` template
 - Tailor the opening paragraph to the specific role and company
 - Address to a named person if available in the posting, otherwise "Dear Hiring Manager" (or equivalent in posting language)
 - Keep to approximately one page
-- Any mention of agentic coding or AI tooling must reference **Claude Code** by name
+- Any mention of agentic coding or AI tooling must reference **Codex** by name
 
 Write both files to disk. Keep the exact text of both drafts in working memory — you will pass them inline to the reviewer in Step 3 and revise them in Step 4 without re-reading.
 

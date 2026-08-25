@@ -1,10 +1,9 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Aditya Vikram Godawat
 
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+<!-- SETUP: Populated from documents/cv/Aditya Vikram Godawat CV(May 26).pdf on 2026-08-25. -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Aditya Vikram Godawat, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,65 +15,82 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** Aditya Vikram Godawat
+- **Location:** Sydney, NSW, Australia (Permanent Resident; commute radius and hybrid cadence still need confirmation)
+- **Languages:** English (native or bilingual proficiency), French (elementary proficiency). LinkedIn shows a third language exists but it was not visible in the PDF export.
+- **Status:** Senior Product Manager
+- **LinkedIn headline:** "Product@McKinsey | GenAI | Tech | SaaS | GTM"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **Bachelor of Engineering (B.E.) in Information Science and Engineering** (graduated 2015) - Dayananda Sagar College of Engineering, Bangalore, India
+  - Topics: Information science, software engineering, mobile application development
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Senior Product Manager** (September 2025 - July 2026) - **McKinsey & Company** (Sydney, Australia)
+  - Owns GenAI and strategic product roadmaps for Periscope, McKinsey's flagship retail pricing platform.
+  - Leads a 20+ person cross-functional team across engineering, data science, and design.
+  - Directed AI pricing decisioning systems improving pricing accuracy by 9-12% and driving 2-7% return-on-sales uplift.
+
+- **Senior Product Manager** (April 2024 - September 2025) - **Fractal Analytics** (India)
+  - Led platform strategy and portfolio roadmap execution for enterprise AI engines across CPG, Finance, and Healthcare.
+  - Launched Cogentiq I2C, automating 60% of billing workflows, processing 1M+ invoices, and delivering $5M annualised cash-flow uplift.
+  - Directed TrialRun, scaling to 8,000+ experiments per month with 65% pilot-to-paid conversion and 14% average sales uplift.
+
+- **Product Manager** (July 2021 - March 2024) - **Fractal Analytics** (India)
+  - Managed the Cuddle AI roadmap and stakeholder alignment, driving 57% revenue growth and lifting MAU engagement by 85%.
+
+- **Member, Technical Team (iOS Lead)** (January 2019 - June 2021) - **Fractal Analytics** (India)
+  - Owned iOS architecture, engineering execution, Agile deployment cycles, sprint planning, and mobile performance management.
+
+- **Senior iOS Developer** (December 2017 - July 2018) - **Toppr** (India)
+  - Scaled consumer mobile application to 2M+ DAU and 9M+ MAU while maintaining approximately 98% crash-free rate.
+
+- **Lead iOS Developer** (April 2017 - December 2017) - **Ithaka** (India)
+  - Built the foundational iOS application from scratch, established the mobile engineering team, and scaled the platform across 20+ countries.
+
+- **iOS Developer** (January 2016 - March 2017) - **Wow Labz** (India)
+  - Developed and maintained native iOS applications for clients including HDFC Bank, FabIndia, and UCSF.
+
+- **Mobile Developer** (August 2015 - January 2016) - **Mapplinks** (India)
+  - Engineered and deployed production-ready in-house mobile application solutions.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Generative AI, agentic workflows, LLM implementation and prompt engineering, AI product strategy, decisioning systems, A/B experimentation engines, product roadmap ownership, enterprise SaaS.
+- **Secondary:** RAG, Agile/Scrum, sprint planning, product lifecycle management, GTM strategy, OKRs, product discovery, stakeholder management, user research and analytics, PRD writing, UX, iOS architecture, Swift, API integration, SQL working knowledge.
+- **Domain:** Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
+- **Software:** Not listed explicitly in CV beyond product, AI, mobile, and analytics tooling categories.
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Tech & AI - AI Advisory - Level 2** - McKinsey & Co., January 2026
+- **Generative AI for Business - A Leaders' Handbook** - Fractal Analytics, May 2025
+- **Behaviour Architecture - Understanding Human Behaviour** - Fractal Analytics, December 2024
+- **Human Decision Making and its Biases** - Coursera, July 2024
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- **Exploiting Long Term Connectivity and Visual Motion in CRF-Based Multi-Object Tracking Considering Occlusion** - May 8, 2015. Listed on LinkedIn.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- St. Paul's Senior Secondary School: seven-time district quiz champion and recipient of an award for Cultural Excellence, listed on LinkedIn.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Technical-commercial bridge** - Inferred from senior AI product leadership built on an iOS engineering foundation.
+- **Outcome-oriented product leader** - Inferred from repeated revenue, cash-flow, sales uplift, release cadence, pricing accuracy, and engagement metrics.
+- **Strengths:** AI product strategy, roadmap ownership, cross-functional leadership, enterprise stakeholder management, product consulting, commercial impact framing.
+- **Growth areas:** Desired role scope, salary baseline, commute/travel constraints, and formal behavioural profile still need confirmation.
+- **Thrives in:** AI, GenAI, enterprise SaaS, decisioning, experimentation, and platform roles with clear ownership and measurable business outcomes.
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- AI product strategy and agentic workflows that turn manual enterprise operations into faster, higher-quality decisions.
+- Senior product roles connecting technical architecture, customer value, cross-functional delivery, and measurable commercial outcomes.
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI / GenAI product: enterprise AI platforms, agentic workflow products, AI decisioning systems, AI business intelligence.
+- Enterprise SaaS and platform product: B2B platforms, product strategy, pricing, experimentation, workflow automation.
+- Domain-aligned sectors: retail, CPG, eCommerce, financial services, healthcare, consulting/advisory.
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Not yet confirmed. Flag roles requiring relocation outside Sydney/Australia until relocation boundaries are clarified.
+- Flag roles with unclear salary package/superannuation, heavy travel, FIFO/rostered expectations, or office cadence that may conflict with commute preferences.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

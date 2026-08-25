@@ -12,7 +12,7 @@ instructions on the expected format and how to convert from Excel.
 
 Usage:
     python salary_lookup.py "Company Name"
-    python salary_lookup.py "Company Name" --city "København"
+    python salary_lookup.py "Company Name" --city "Sydney"
     python salary_lookup.py "Company Name" --json
     python salary_lookup.py --list-all
 """
@@ -26,19 +26,22 @@ from pathlib import Path
 
 DATA_FILE = Path(__file__).parent / "salary_data.json"
 
-# Common Danish <-> anglicized spelling variants
+# Common accented spelling variants for robust matching
 SPELLING_VARIANTS = {
     "ø": "o", "æ": "ae", "å": "aa",
     "ö": "o", "ä": "ae", "ü": "u",
+    "é": "e", "è": "e", "ê": "e",
 }
 
 # Legal suffixes and noise to strip when matching company names
 STRIP_PATTERNS = [
+    r"\bpty\s+ltd\b", r"\bproprietary\s+limited\b", r"\bltd\b", r"\blimited\b",
+    r"\binc\b", r"\bcorp\b", r"\bcorporation\b", r"\bcompany\b", r"\bco\b",
     r"\ba/s\b", r"\baps\b", r"\bi/s\b", r"\bp/s\b", r"\bk/s\b",
     r"\bivs\b", r"\bamba\b", r"\ba\.m\.b\.a\.\b",
-    r"\(vg\)", r"\(.*?\)",  # (VG) and other parentheticals
-    r"\bdanmark\b", r"\bdenmark\b", r"\bscandinavia\b", r"\bnordic\b",
-    r"\bgroup\b", r"\bholding\b",
+    r"\(.*?\)",
+    r"\baustralia\b", r"\bau\b", r"\bapac\b", r"\boceania\b",
+    r"\bgroup\b", r"\bholdings?\b",
     r",\s*.*$",  # everything after comma (sub-entities)
 ]
 
@@ -51,7 +54,7 @@ def load_data():
         print("See tools/README_SALARY_TOOL.md for setup instructions.", file=sys.stderr)
         print("", file=sys.stderr)
         print("If you don't have salary data, the salary lookup", file=sys.stderr)
-        print("step will be skipped during /apply.", file=sys.stderr)
+        print("step will be skipped during the application workflow.", file=sys.stderr)
         sys.exit(1)
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -67,7 +70,7 @@ def normalize(s):
 
 
 def anglicize(s):
-    """Convert Danish/Nordic characters to anglicized equivalents."""
+    """Convert accented characters to plain equivalents."""
     s = s.lower()
     for danish, english in SPELLING_VARIANTS.items():
         s = s.replace(danish, english)
@@ -261,7 +264,7 @@ def main():
         if args.city:
             print(f"  (filtered by city: {args.city})")
         print("\nTry a shorter or different name. Company names in the dataset")
-        print("may include legal suffixes like 'A/S' or 'ApS'.")
+        print("may include legal suffixes like 'Pty Ltd' or 'Limited'.")
         sys.exit(1)
 
     if args.json:

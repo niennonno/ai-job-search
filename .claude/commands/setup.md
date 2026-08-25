@@ -18,7 +18,7 @@ Then welcome the user with a single message that lists three paths. The wording 
 
 > **Welcome to the AI Job Search setup!**
 >
-> I'll help you build your professional profile so Claude can evaluate job postings, tailor CVs, write cover letters, and prepare you for interviews.
+> I'll help you build your professional profile so Codex can evaluate job postings, tailor CVs, write cover letters, and prepare you for interviews.
 >
 > I see files in your `documents/` folder: [list per subfolder, e.g. "2 in cv/, 1 in linkedin/, 3 in references/"]. Three ways to start:
 >
@@ -34,7 +34,7 @@ Then welcome the user with a single message that lists three paths. The wording 
 
 > **Welcome to the AI Job Search setup!**
 >
-> I'll help you build your professional profile so Claude can evaluate job postings, tailor CVs, write cover letters, and prepare you for interviews.
+> I'll help you build your professional profile so Codex can evaluate job postings, tailor CVs, write cover letters, and prepare you for interviews.
 >
 > Three ways to start:
 >
@@ -213,7 +213,7 @@ Wait for the user's choice on each conflict. If no conflicts, state "No conflict
 
 Apply the confirmed changes with the Edit tool. Make targeted edits only. Do not rewrite entire files. State which changes were applied per file. If a file has no confirmed changes, state "No changes made to [filename]."
 
-Documents cover skills, experience, education, references, and behavioral signal. They do not cover everything `/apply` and `/scrape` need. After the writes, ask follow-up questions for gaps:
+Documents cover skills, experience, education, references, and behavioral signal. They do not cover everything application drafting and job scraping need. After the writes, ask follow-up questions for gaps:
 
 - Career goals and target role types
 - What excites the user in their next role
@@ -306,14 +306,15 @@ For each reference:
 - Relationship to the user
 
 ### Section 9: Job Search Configuration
-This section generates the search queries that power `/scrape`. Use the information from Sections 1, 4, and 7 to build targeted queries.
+This section generates the search queries that power job scraping. Use the information from Sections 1, 4, and 7 to build targeted Australian queries.
 
 Ask about:
 - **Role titles to search for:** "What job titles should I search for? For example: Data Scientist, ML Engineer, Geophysicist." Collect 3-8 specific titles.
 - **Key skills as search terms:** "Which of your skills are most likely to appear in job postings?" Pick 3-5 that are distinctive and searchable.
 - **Target companies (optional):** "Are there specific companies you'd like to monitor for openings?"
 - **Geographic scope:** "Which cities or regions should I search in? How far are you willing to commute?" Use this to define the location filter tiers (ideal, acceptable, borderline, too far).
-- **Job portals:** "The framework includes tools for Danish job portals (Jobindex, Jobbank, Jobdanmark, Jobnet). Are these the right ones for you, or do you use other sites?" Note: if the user is outside Denmark, acknowledge that the built-in CLI tools are Denmark-specific and suggest they can add their own portal integrations or rely on LinkedIn/Google site-searches.
+- **Job sources:** "Which Australian job sources should I prioritize? Defaults are SEEK, LinkedIn Australia, Workforce Australia, APS Jobs, and target-company careers pages. Are there specialist boards for your field?" Note any sources to exclude so the scraper does not waste time on irrelevant markets.
+- **Australian logistics:** Ask about work rights, preferred states/cities, remote-only vs hybrid, acceptable office cadence, relocation, FIFO/rostered work, travel tolerance, salary expectations, and superannuation preferences.
 
 **Important:** Also suggest role types the user may not have considered, based on their skill profile. For example:
 - If they have strong Python + domain expertise: "Have you considered roles like 'Technical Consultant' or 'Solutions Engineer' in your domain?"
@@ -381,11 +382,11 @@ Present a summary:
 > - `.claude/skills/job-application-assistant/05-cv-templates.md` - CV templates with your profile statements
 > - `.claude/skills/job-application-assistant/07-interview-prep.md` - STAR examples from your experience
 > - `cv/main_example.tex` - Your LaTeX CV template
-> - `.claude/skills/job-scraper/search-queries.md` - Job search queries for `/scrape`
+> - `.claude/skills/job-scraper/search-queries.md` - Australian job search queries
 >
 > **Try it out:**
-> - Run `/scrape` to search for matching jobs right now
-> - Run `/apply` with a job posting URL to see the full application workflow
+> - Ask Codex to "Find new jobs" to search for matching jobs right now
+> - Ask Codex to evaluate a job posting URL to see the full application workflow
 > - Run `/setup --section search` later to update your search queries as your priorities evolve
 
 If Path A left any STAR stubs in `07-interview-prep.md`, also note:
@@ -403,4 +404,4 @@ If Path A left any STAR stubs in `07-interview-prep.md`, also note:
 - Synthesize answers into structured formats (the user does not need to know markdown or LaTeX).
 - Can be re-run with `--section <name>` to update specific sections (e.g., `/setup --section search` to reconfigure job search queries without re-doing the full profile).
 - Section 9 (search) in Path C, and the equivalent follow-up questions in Path A, proactively suggest role types the user may not have considered.
-- At the end, suggest running `/scrape` and `/apply` with a test job posting.
+- At the end, suggest asking Codex to find new jobs or evaluate a test job posting.

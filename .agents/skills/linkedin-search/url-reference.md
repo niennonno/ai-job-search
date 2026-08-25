@@ -16,7 +16,7 @@ Query params:
 | Param | Meaning | Example |
 |-------|---------|---------|
 | `keywords` | Free-text query | `data engineer` |
-| `location` | Place string | `Mumbai, Maharashtra, India` · `Berlin, Germany` · `Remote` |
+| `location` | Place string | `Sydney, New South Wales, Australia` · `Melbourne, Victoria, Australia` · `Remote, Australia` |
 | `f_TPR` | Posted-within window (seconds) | `r604800` (7d), `r2592000` (30d) |
 | `f_WT` | Workplace type | `1` on-site · `2` remote · `3` hybrid |
 | `start` | Pagination offset (10/page) | `0`, `10`, `20`, … |

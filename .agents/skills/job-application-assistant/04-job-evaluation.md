@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** AI product strategy, GenAI product development, agentic workflows, LLM implementation and prompt engineering, enterprise SaaS platforms, AI-powered decisioning systems, A/B experimentation engines, product roadmap ownership, Agile/Scrum delivery, GTM strategy, stakeholder management.
-**Moderate match areas:** iOS architecture and Swift, mobile application development, system design, API integration, SQL working knowledge, RAG, user research and analytics, product consulting, OKR frameworks.
-**Weak match areas:** Deep hands-on backend engineering, infrastructure/platform engineering, cybersecurity, data engineering implementation, formal people-management-only roles, and domains not supported by CV evidence.
+**Strong match areas:** [YOUR_PRIMARY_SKILLS]
+**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
+**Weak match areas:** [SKILLS_YOU_LACK]
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** Senior product management, AI product management, GenAI strategy, enterprise B2B platforms, retail pricing platforms, CPG, eCommerce, financial services, healthcare AI products, experimentation platforms, mobile consumer products at scale.
-**Moderate:** Product strategy consulting, solutions/product consulting, technical program leadership, platform partnerships, B2C growth/product roles, applied AI transformation roles.
-**Entry-level:** Roles requiring direct ownership of pure sales, pure data science modelling, cloud infrastructure engineering, or regulated security-clearance delivery without product leadership scope.
+**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
+**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
+**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -67,19 +67,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- Target senior product roles where AI, GenAI, agentic workflows, or decisioning systems are central to the product strategy.
-- Prioritise roles with end-to-end ownership across discovery, roadmap, delivery, go-to-market, and measurable commercial outcomes.
-- Build on enterprise SaaS, retail/CPG/eCommerce, financial services, healthcare, and product consulting experience in the Australian market.
+- [YOUR_CAREER_GOAL_1]
+- [YOUR_CAREER_GOAL_2]
+- [YOUR_CAREER_GOAL_3]
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: AI product strategy, agentic workflow design, enterprise platform roadmaps, pricing/decisioning systems, experimentation, cross-functional leadership, C-suite stakeholder work, products with clear revenue or operational-impact metrics.
-- Tasks that drain: Not yet confirmed. Flag roles that appear mostly maintenance-heavy, pure delivery coordination, narrow feature ownership, or coding-first without product strategy scope.
-- Non-task factors: leadership style, department culture, company values, degree of autonomy, product ownership clarity, executive alignment, and maturity of AI/product operating model.
+- Tasks that energize: [YOUR_ENERGIZING_TASKS]
+- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: Salary baseline and package expectations not yet confirmed. Flag salary clarity and whether package is inclusive or exclusive of superannuation.
-- **Flexibility**: Sydney-based Australian Permanent Resident. Commute radius, hybrid cadence, relocation boundaries, and travel tolerance still need confirmation.
-- **Professional development**: Strongest signal is growth through senior AI product leadership, platform strategy, GenAI/product operating frameworks, and enterprise stakeholder influence.
+- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
+- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
+- **Professional development**: [YOUR_GROWTH_PRIORITIES]
 
 ### 6. Salary Benchmark (Optional)
 

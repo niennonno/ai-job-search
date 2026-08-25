@@ -33,14 +33,14 @@ All errors are written to **stderr** as `{ "error": "...", "code": "..." }` with
 ## Quick examples
 
 ```bash
-# Software roles in Hyderabad, last 7 days
-bun run src/cli.ts search -q "backend engineer" -l "Hyderabad, Telangana, India" --jobage 7 --format table
+# Software roles in Sydney, last 7 days
+bun run src/cli.ts search -q "backend engineer" -l "Sydney, New South Wales, Australia" --jobage 7 --format table
 
-# Design roles in London
-bun run src/cli.ts search -q "product designer" -l "London, United Kingdom" --format table
+# Design roles in Melbourne
+bun run src/cli.ts search -q "product designer" -l "Melbourne, Victoria, Australia" --format table
 
-# Fully remote
-bun run src/cli.ts search -q "technical writer" -l "Remote" --remote remote --format table
+# Remote in Australia
+bun run src/cli.ts search -q "technical writer" -l "Remote, Australia" --remote remote --format table
 
 # Full detail for one job
 bun run src/cli.ts detail 4426311357 --format plain
@@ -52,7 +52,7 @@ See `../SKILL.md` for the full flag reference and the Terms-of-Service note.
 
 | Flag | Alias | Description |
 |------|-------|-------------|
-| `--location` | `-l` | **Required.** Place string, e.g. `"Mumbai, Maharashtra, India"`, `"Berlin, Germany"`, `"Remote"`. |
+| `--location` | `-l` | **Required.** Place string, e.g. `"Sydney, New South Wales, Australia"`, `"Melbourne, Victoria, Australia"`, `"Remote, Australia"`. |
 | `--query` | `-q` | Keywords (title / skill / role). Recommended. |
 | `--jobage` | | Posted within N days: `1`, `7`, `14`, `30`. |
 | `--remote` | | `remote` \| `hybrid` \| `onsite`. |
