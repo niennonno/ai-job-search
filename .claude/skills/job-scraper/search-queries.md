@@ -19,7 +19,7 @@ Secondary:
 
 ## Candidate Search Focus
 
-- **Primary role direction:** Senior Product Manager, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead
+- **Primary role direction:** Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy, AI/Digital Transformation
 - **Core skills:** GenAI, agentic workflows, AI product strategy, LLM implementation, prompt engineering, enterprise SaaS, experimentation, decisioning systems
 - **Domain strengths:** Retail, CPG, eCommerce, financial services, healthcare, B2B platforms, enterprise AI, pricing platforms
 - **Location base:** Sydney, NSW, Australia
@@ -40,6 +40,8 @@ site:seek.com.au "GenAI Product Manager" Australia
 site:au.linkedin.com/jobs "Senior Product Manager" "Generative AI" Australia
 site:au.linkedin.com/jobs "AI Product Manager" Sydney
 site:au.linkedin.com/jobs "Product Lead" "AI" Australia
+site:seek.com.au "Senior Product Owner" "AI" Sydney
+site:au.linkedin.com/jobs "Senior Product Owner" "AI" Australia
 site:workdayjobs.com "AI Product Manager" Australia
 site:greenhouse.io "Senior Product Manager" "AI" Australia
 site:lever.co "Product Lead" "GenAI" Australia
@@ -53,8 +55,10 @@ These match enterprise platform and domain expertise.
 site:seek.com.au "Principal Product Manager" "enterprise SaaS" Sydney
 site:seek.com.au "Product Manager" "decisioning" Australia
 site:seek.com.au "Product Manager" "experimentation" Sydney
+site:seek.com.au "Product Owner" "enterprise SaaS" Sydney
 site:au.linkedin.com/jobs "Product Manager" "A/B testing" Australia
 site:au.linkedin.com/jobs "Product Manager" "pricing" Sydney
+site:au.linkedin.com/jobs "Product Owner" "platform" Australia
 site:greenhouse.io "Product Manager" "enterprise SaaS" Australia
 site:workdayjobs.com "Product Manager" "pricing" Australia
 site:smartrecruiters.com "Product Manager" "experimentation" Australia
@@ -83,40 +87,55 @@ Wider net for product strategy, product consulting, and AI transformation roles.
 site:seek.com.au "Product Strategy" "AI" Sydney
 site:seek.com.au "Product Consultant" "AI" Australia
 site:seek.com.au "AI Strategy" "Product" Sydney
+site:seek.com.au "Strategy Transformation" "Product" Sydney
+site:seek.com.au "Digital Transformation" "Product Owner" Sydney
 site:au.linkedin.com/jobs "Product Strategy Manager" Australia
 site:au.linkedin.com/jobs "AI Transformation" "Product" Australia
+site:au.linkedin.com/jobs "AI Transformation" "Product Owner" Australia
+site:au.linkedin.com/jobs "Product Strategy" "Transformation" Sydney
 site:workforceaustralia.gov.au "Product Manager" "AI" Sydney
 site:apsjobs.gov.au "Product Manager" "AI" NSW
 site:smartrecruiters.com "AI Strategy" Australia
 ```
 
-## Target Companies To Monitor
+## Target Companies And Categories To Monitor
 
-Not yet confirmed by user. Based on CV fit, consider monitoring:
+Monitor companies and categories that repeatedly match Aditya's senior AI/product profile:
 - AI-native and enterprise SaaS companies hiring in Australia
+- Agentic AI, workflow automation, AI platform, and AI evaluation products
 - Retail technology, pricing, experimentation, and decisioning platforms
-- Fintech and financial-services product teams
-- Healthcare AI and workflow automation companies
+- Fintech, lending, payments, and financial-services product teams
+- Healthcare AI, healthtech, and regulated workflow automation companies
 - Consulting and product strategy teams with AI transformation work
+
+Known high-interest companies from current tracker/searches include Checkbox, Relevance AI, Culture Amp, Lendi Group, carsales, Cartology, Quantaco, Cotality, Zip, Nuix, Driva, Mable, and Expertech. Skip The Onset for follow-up action unless Aditya explicitly reopens it.
 
 ## Location Filter
 
 When evaluating results, verify the job location is compatible with Sydney-based work.
 - **Ideal:** Sydney, NSW; hybrid Sydney; remote Australia with Sydney-compatible timezone.
 - **Acceptable:** Australia-remote roles; NSW roles with occasional Sydney office cadence.
-- **Borderline:** Melbourne/Brisbane/Canberra roles if mostly remote or requiring only occasional travel, pending user confirmation.
-- **Too far / flag before evaluating:** Roles requiring relocation outside Sydney/Australia, FIFO/rostered work, or frequent interstate/international travel.
+- **Acceptable:** Melbourne roles when flexible, hybrid, or without a rigid weekly office cadence.
+- **Conditional:** Brisbane/Canberra roles only when remote-first or requiring occasional travel.
+- **Travel:** Include travel roles when the travel appears reasonable for senior product/strategy work; flag cadence before applying.
+- **Skip by default:** Roles requiring relocation outside Australia, FIFO/rostered work, or inflexible non-Sydney/non-Melbourne office cadence.
+
+## Role Level Filter
+
+- **Include:** Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy Manager, Product Strategy Lead, AI Transformation Manager/Lead, and digital/product strategy transformation roles.
+- **Skip by default:** Head of Product, CPO, VP Product, Group Product Manager, pure delivery/program roles, backlog-only Product Owner roles, sales-led solutions roles, and coding-first engineering roles without product ownership.
 
 For Australian roles, distinguish:
 - Local office roles within commute range
 - Hybrid roles with a named office and expected office cadence
 - Remote roles limited to Australia, which may still require Australian work rights or a state time zone
-- FIFO, rostered, or travel-heavy roles, which should be flagged before evaluation
+- FIFO or rostered roles, which should be flagged before evaluation
+- Travel-heavy roles, which should be assessed for cadence rather than skipped automatically
 - Salary package inclusive or exclusive of superannuation
 
 ## Date Filter
 
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date is not visible, include only when the source page is live and the role has a working application path; label the date as "not visible on posting".
 
 ## Adapting Queries
 
@@ -125,4 +144,4 @@ If the user specifies a focus area, select queries from the matching category an
 Examples:
 - "Find GenAI product jobs" -> Priority 1 plus custom agentic workflow / LLM product queries.
 - "Find fintech product jobs" -> Priority 3 plus financial services, pricing, decisioning, and collections automation queries.
-- "Find remote AI product jobs" -> Priority 1 and 4 with remote Australia filters and stricter travel checks.
+- "Find remote AI product jobs" -> Priority 1 and 4 with remote Australia filters and travel-cadence checks.

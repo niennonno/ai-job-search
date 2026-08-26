@@ -3,7 +3,7 @@
 <!-- SETUP: Populated from documents/cv/Aditya Vikram Godawat CV(May 26).pdf on 2026-08-25. -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for Aditya Vikram Godawat, helping with:
+This repo is a job application workspace. Codex acts as a career advisor and application assistant for Aditya Vikram Godawat, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,9 +16,11 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ### Identity
 - **Name:** Aditya Vikram Godawat
-- **Location:** Sydney, NSW, Australia (Permanent Resident; commute radius and hybrid cadence still need confirmation)
-- **Languages:** English (native or bilingual proficiency), French (elementary proficiency). LinkedIn shows a third language exists but it was not visible in the PDF export.
+- **Location:** Sydney, NSW, Australia
+- **Work rights:** Australian Permanent Resident with full Australian work rights
+- **Languages:** English (native or bilingual proficiency), Hindi (native or bilingual proficiency), French (elementary proficiency)
 - **Status:** Senior Product Manager
+- **GitHub:** https://github.com/niennonno
 - **LinkedIn headline:** "Product@McKinsey | GenAI | Tech | SaaS | GTM"
 
 ### Education
@@ -58,7 +60,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Primary:** Generative AI, agentic workflows, LLM implementation and prompt engineering, AI product strategy, decisioning systems, A/B experimentation engines, product roadmap ownership, enterprise SaaS.
 - **Secondary:** RAG, Agile/Scrum, sprint planning, product lifecycle management, GTM strategy, OKRs, product discovery, stakeholder management, user research and analytics, PRD writing, UX, iOS architecture, Swift, API integration, SQL working knowledge.
 - **Domain:** Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
-- **Software:** Not listed explicitly in CV beyond product, AI, mobile, and analytics tooling categories.
+- **Software/tooling evidence:** Claude Code, ChatGPT/GenAI tooling, modern product and analytics tooling categories, SQL working knowledge, Swift/iOS engineering tooling, Agile/Scrum delivery tooling. Only name specific vendor tools in applications when supported by the CV, LinkedIn profile, or the job conversation.
 
 ### Certifications
 - **Tech & AI - AI Advisory - Level 2** - McKinsey & Co., January 2026
@@ -76,21 +78,25 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 - **Technical-commercial bridge** - Inferred from senior AI product leadership built on an iOS engineering foundation.
 - **Outcome-oriented product leader** - Inferred from repeated revenue, cash-flow, sales uplift, release cadence, pricing accuracy, and engagement metrics.
 - **Strengths:** AI product strategy, roadmap ownership, cross-functional leadership, enterprise stakeholder management, product consulting, commercial impact framing.
-- **Growth areas:** Desired role scope, salary baseline, commute/travel constraints, and formal behavioural profile still need confirmation.
+- **Growth areas:** Keep each application focused on one clear product story; do not over-claim unsupported tools or domain depth.
 - **Thrives in:** AI, GenAI, enterprise SaaS, decisioning, experimentation, and platform roles with clear ownership and measurable business outcomes.
 
 ### What Excites You
 - AI product strategy and agentic workflows that turn manual enterprise operations into faster, higher-quality decisions.
-- Senior product roles connecting technical architecture, customer value, cross-functional delivery, and measurable commercial outcomes.
+- Senior product, product owner, and strategy/transformation roles connecting technical architecture, customer value, cross-functional delivery, and measurable commercial outcomes.
 
 ### Target Sectors
 - AI / GenAI product: enterprise AI platforms, agentic workflow products, AI decisioning systems, AI business intelligence.
 - Enterprise SaaS and platform product: B2B platforms, product strategy, pricing, experimentation, workflow automation.
+- Product strategy and transformation: AI transformation, digital transformation, product operating model, strategy-to-execution, and platform/product advisory roles with real product ownership.
 - Domain-aligned sectors: retail, CPG, eCommerce, financial services, healthcare, consulting/advisory.
 
-### Deal-breakers
-- Not yet confirmed. Flag roles requiring relocation outside Sydney/Australia until relocation boundaries are clarified.
-- Flag roles with unclear salary package/superannuation, heavy travel, FIFO/rostered expectations, or office cadence that may conflict with commute preferences.
+### Search Preferences and Deal-breakers
+- **Target role titles:** Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy Manager, Product Strategy Lead, AI Transformation Manager/Lead, and digital/product strategy transformation roles.
+- **Avoid for now:** Head of Product, CPO, VP Product, and Group Product Manager roles.
+- **Location:** Prioritise Sydney, hybrid Sydney, remote Australia, and Melbourne roles when the setup is flexible, hybrid, or does not require a rigid weekly office cadence. Consider Brisbane/Canberra only when remote-first or occasional travel.
+- **Deal-breakers:** Relocation outside Australia, FIFO or rostered work, roles requiring an inflexible non-Sydney/non-Melbourne office cadence, or roles dominated by pure people management, pure delivery coordination, backlog-only product ownership, sales ownership, or hands-on coding without product strategy.
+- **Compensation handling:** Salary must be checked before application. Flag roles below senior Australian PM market expectations, roles that omit superannuation clarity, and total-package wording that needs clarification.
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
@@ -111,7 +117,7 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 After creating or updating a CV or cover letter, re-read the generated file and verify **all** of the following before presenting to the user. Report the results as a pass/fail checklist.
 
 ### Factual accuracy
-- [ ] All claims match actual profile (CLAUDE.md / candidate profile) - no fabricated skills, experience, or achievements
+- [ ] All claims match actual profile (CODEX.md / candidate profile) - no fabricated skills, experience, or achievements
 - [ ] Job titles, dates, company names, and locations are correct
 - [ ] Contact details are correct
 - [ ] All company-specific claims (partnerships, products, technology, expansions) have been independently verified via WebFetch/WebSearch - do not trust reviewer agent research without verification

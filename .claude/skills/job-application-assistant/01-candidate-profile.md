@@ -8,10 +8,14 @@
 - **Phone:** +61 418 672 778
 - **Email:** aditya.godawat@gmail.com
 - **LinkedIn:** https://linkedin.com/in/adityavikram
-- **GitHub:** Not listed in CV
-- **Languages:** English (native or bilingual proficiency), French (elementary proficiency). LinkedIn shows a third language exists but it was not visible in the PDF export.
+- **GitHub:** https://github.com/niennonno
+- **Languages:** English (native or bilingual proficiency), Hindi (native or bilingual proficiency), French (elementary proficiency).
 - **Status:** Senior Product Manager; Australian Permanent Resident
-- **Constraints:** Sydney-based. Specific commute radius, hybrid cadence, relocation boundaries, salary baseline, and travel tolerance still need confirmation.
+- **Work rights:** Australian Permanent Resident with full Australian work rights.
+- **Location constraints:** Sydney-based. Prioritise Sydney, hybrid Sydney, remote Australia, and Melbourne roles when the setup is flexible, hybrid, or does not require a rigid weekly office cadence. Brisbane/Canberra roles are acceptable only when they are remote-first or require occasional travel rather than a fixed weekly office cadence.
+- **Role scope preferences:** Open to Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy Manager, Product Strategy Lead, AI Transformation Manager/Lead, and digital/product strategy transformation roles. Prioritise Product Owner and transformation roles when they include meaningful product ownership, AI/digital transformation, platform strategy, customer value, or measurable business outcome accountability. Avoid Head of Product, CPO, VP Product, and Group Product Manager roles for the current search.
+- **Travel and relocation defaults:** Travel roles are acceptable when the travel is reasonable for a senior product/strategy role and does not require FIFO, rostered work, or relocation outside Australia. Flag the cadence before applying rather than treating travel as an automatic rejection.
+- **Compensation handling:** Treat salary as a check-before-apply item. Benchmark senior AI/Product Manager roles against the Australian market and flag roles that appear below market, omit superannuation clarity, or use package language that needs clarification.
 
 ## Education
 
@@ -107,3 +111,9 @@ India
   - Quote: "He has a rare combination of product clarity, strategic thinking, and a genuine spark for AI that made even complex GenAI topics feel exciting and accessible."
 
 More references available upon request.
+
+## Apply-Time Checks
+Use these only when a posting depends on them; do not let them reduce fit scores automatically.
+- Exact weekly office cadence and commute practicality for non-Sydney roles.
+- Whether salary is base plus superannuation or total package inclusive of superannuation.
+- Whether a role requires background checks, security clearance, unusual travel, or customer-site commitments.

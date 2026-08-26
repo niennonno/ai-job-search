@@ -1,24 +1,22 @@
 ---
 name: job-search-upskill
-description: Analyze skill gaps between the candidate profile and target jobs in the local ai-job-search repo. Use when the user asks for upskilling, learning plans, gap analysis, skill heatmaps, training priorities, or the equivalent of /upskill.
+description: Analyse job-market skill gaps and learning plans. Use for upskilling, gap analysis, heatmaps, training priorities, or /upskill.
 ---
 
 # Job Search Upskill
 
 Use this skill to compare the candidate profile with one posting or the tracked job market.
 
-## Workflow
+## Token-Efficient Workflow
 
-1. Read `AGENTS.md` and `.claude/skills/upskill/SKILL.md`.
-2. Read profile and evaluation sources from `.claude/skills/job-application-assistant/`.
-3. If the user provided a posting, parse that posting. Otherwise use tracked jobs and recent scrape results.
-4. Identify recurring requirements, genuine gaps, adjacent strengths, and high-leverage learning areas.
-5. Produce a prioritized learning plan with estimated effort, practical exercises, and resources.
-6. Save reports under `upskill/` when the user wants a durable artifact.
+1. Read `AGENTS.md`, `.codex/context/job-application-brief.md`, and relevant rows from `.codex/context/evidence-bank.csv`.
+2. If the user provided a posting, parse that posting. Otherwise use `job_search_tracker.csv` and the compact rows from `job_search_comprehensive_*.md`.
+3. Identify recurring requirements, genuine gaps, adjacent strengths, and high-leverage learning areas.
+4. Produce a prioritised learning plan with effort, practical exercises, and interview/portfolio evidence.
+5. Read `.claude/skills/upskill/SKILL.md` only for a durable report or deeper market-gap analysis.
 
 ## Rules
 
-- Do not mark a skill as present unless it is supported by the profile.
+- Do not mark a skill as present unless it is supported by profile facts.
 - Distinguish hard requirements from nice-to-haves.
 - Prefer learning actions that produce portfolio evidence or interview stories.
-

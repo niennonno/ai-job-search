@@ -16,8 +16,8 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** AI product strategy, GenAI product development, agentic workflows, LLM implementation and prompt engineering, enterprise SaaS platforms, AI-powered decisioning systems, A/B experimentation engines, product roadmap ownership, Agile/Scrum delivery, GTM strategy, stakeholder management.
-**Moderate match areas:** iOS architecture and Swift, mobile application development, system design, API integration, SQL working knowledge, RAG, user research and analytics, product consulting, OKR frameworks.
+**Strong match areas:** AI product strategy, GenAI product development, agentic workflows, LLM implementation and prompt engineering, enterprise SaaS platforms, AI-powered decisioning systems, A/B experimentation engines, product roadmap ownership, product ownership, Senior Product Owner scope, product strategy, AI/digital transformation, strategy-to-execution operating models, Agile/Scrum delivery, GTM strategy, stakeholder management.
+**Moderate match areas:** Product Owner roles with narrower delivery scope, iOS architecture and Swift, mobile application development, system design, API integration, SQL working knowledge, RAG, user research and analytics, product consulting, OKR frameworks.
 **Weak match areas:** Deep hands-on backend engineering, infrastructure/platform engineering, cybersecurity, data engineering implementation, formal people-management-only roles, and domains not supported by CV evidence.
 
 ### 2. Experience Match (0-100)
@@ -30,8 +30,8 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** Senior product management, AI product management, GenAI strategy, enterprise B2B platforms, retail pricing platforms, CPG, eCommerce, financial services, healthcare AI products, experimentation platforms, mobile consumer products at scale.
-**Moderate:** Product strategy consulting, solutions/product consulting, technical program leadership, platform partnerships, B2C growth/product roles, applied AI transformation roles.
+**Strong:** Senior product management, product ownership with strategic/platform scope, AI product management, GenAI strategy, product strategy, AI/digital transformation, strategy-to-execution leadership, enterprise B2B platforms, retail pricing platforms, CPG, eCommerce, financial services, healthcare AI products, experimentation platforms, mobile consumer products at scale.
+**Moderate:** Product Owner roles that are mostly delivery/backlog management, solutions/product consulting, technical program leadership, platform partnerships, B2C growth/product roles.
 **Entry-level:** Roles requiring direct ownership of pure sales, pure data science modelling, cloud infrastructure engineering, or regulated security-clearance delivery without product leadership scope.
 
 ### 3. Behavioral/Culture Fit (0-100)
@@ -47,14 +47,18 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
-- Frequent international travel: FLAG (discuss with user)
-- Australian work rights unclear or restricted: FLAG
-- Hybrid role without stated office cadence: FLAG
-- FIFO, rostered, or interstate travel expectations: FLAG
-- Salary excludes superannuation or is below expectations: FLAG
+- Sydney, hybrid Sydney, or remote Australia: PASS
+- Melbourne with flexible, hybrid, or non-rigid weekly office cadence: PASS with note
+- Melbourne with fixed weekly office cadence: FLAG before applying
+- Brisbane or Canberra with remote-first setup or occasional travel: PASS with note
+- Brisbane or Canberra with fixed weekly office cadence: FLAG before applying
+- Requires relocation outside Australia: FAIL
+- Travel required for the role: PASS with note when reasonable for senior product/strategy work; flag cadence before applying
+- Frequent international travel: FLAG before applying
+- FIFO or rostered work: FAIL unless user explicitly requests a review
+- Australian work rights required: PASS; candidate is an Australian Permanent Resident
+- Security clearance, police check, or background check: FLAG for awareness, not a fit penalty unless clearance is mandatory and unavailable
+- Salary excludes superannuation, uses total-package wording, or appears below senior Australian PM market expectations: FLAG before applying
 
 ### 5. Career Alignment & Motivation (0-100)
 Does this role advance career goals and contain tasks that energize?
@@ -68,18 +72,19 @@ Does this role advance career goals and contain tasks that energize?
 
 **Career goals:**
 - Target senior product roles where AI, GenAI, agentic workflows, or decisioning systems are central to the product strategy.
+- Include Product Owner, Senior Product Owner, and strategy/transformation roles when they carry product ownership, digital/AI transformation, platform strategy, or measurable business outcome accountability.
 - Prioritise roles with end-to-end ownership across discovery, roadmap, delivery, go-to-market, and measurable commercial outcomes.
 - Build on enterprise SaaS, retail/CPG/eCommerce, financial services, healthcare, and product consulting experience in the Australian market.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: AI product strategy, agentic workflow design, enterprise platform roadmaps, pricing/decisioning systems, experimentation, cross-functional leadership, C-suite stakeholder work, products with clear revenue or operational-impact metrics.
-- Tasks that drain: Not yet confirmed. Flag roles that appear mostly maintenance-heavy, pure delivery coordination, narrow feature ownership, or coding-first without product strategy scope.
+- Tasks that energize: AI product strategy, agentic workflow design, enterprise platform roadmaps, product ownership, strategy-to-execution transformation, product operating model work, pricing/decisioning systems, experimentation, cross-functional leadership, C-suite stakeholder work, products with clear revenue or operational-impact metrics.
+- Tasks that drain or reduce priority: maintenance-heavy product roles, pure delivery coordination, backlog-only Product Owner roles, narrow feature ownership, coding-first roles without product strategy scope, formal people-management-only roles, or roles dominated by sales/account ownership rather than product ownership.
 - Non-task factors: leadership style, department culture, company values, degree of autonomy, product ownership clarity, executive alignment, and maturity of AI/product operating model.
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: Salary baseline and package expectations not yet confirmed. Flag salary clarity and whether package is inclusive or exclusive of superannuation.
-- **Flexibility**: Sydney-based Australian Permanent Resident. Commute radius, hybrid cadence, relocation boundaries, and travel tolerance still need confirmation.
-- **Professional development**: Strongest signal is growth through senior AI product leadership, platform strategy, GenAI/product operating frameworks, and enterprise stakeholder influence.
+- **Security**: Salary must be checked before applying. Flag below-market senior PM packages, missing superannuation clarity, or total-package ambiguity.
+- **Flexibility**: Sydney-based Australian Permanent Resident. Prioritise Sydney, hybrid Sydney, remote Australia, and Melbourne roles when flexible or hybrid. Travel roles are acceptable when cadence is reasonable; clarify travel expectations before applying.
+- **Professional development**: Strongest signal is growth through senior AI product leadership, product ownership, platform strategy, strategy/transformation work, GenAI/product operating frameworks, and enterprise stakeholder influence.
 
 ### 6. Salary Benchmark (Optional)
 

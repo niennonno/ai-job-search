@@ -1,31 +1,28 @@
 ---
 name: job-search-scrape
-description: Search for jobs from this local ai-job-search workspace using configured portal skills and search state. Use when the user asks to find jobs, scrape jobs, search roles, rank new postings, list matches, update seen_jobs.json, or run the equivalent of /scrape.
+description: Search and rank Australian jobs. Use for finding roles, scraping, lists, dedupe, seen_jobs updates, or /scrape.
 ---
 
 # Job Search Scrape
 
-Use this skill to find and triage job postings.
+Use this skill to find and triage Australian job postings.
 
-## Workflow
+## Token-Efficient Workflow
 
-1. Read `AGENTS.md` and `.claude/skills/job-scraper/SKILL.md`.
-2. Load state:
+1. Read `AGENTS.md` and `.codex/context/job-application-brief.md`.
+2. Load only the needed state files:
    - `job_scraper/seen_jobs.json`
    - `job_search_tracker.csv`
-   - `.claude/skills/job-scraper/search-queries.md`, if present.
-3. Use Australia-first sources by default: SEEK, LinkedIn Australia, Workforce Australia, APS Jobs, and company ATS pages such as Greenhouse, Lever, Workday, SmartRecruiters, and Ashby.
-4. Use `.agents/skills/linkedin-search` when a CLI-based search is useful. Treat the Danish portal skills as legacy examples unless the user explicitly asks for Denmark.
-5. For each portal skill used, read its `SKILL.md` and run its CLI according to that file.
-6. Deduplicate against both `seen_jobs.json` and `job_search_tracker.csv`.
-7. Present only open, real postings with title, company, location, URL, deadline if available, and quick fit.
-8. Update `seen_jobs.json` with all fetched postings.
-9. If the user selects a job for a detailed evaluation, switch to `job-search-apply`.
+   - `job_search_comprehensive_*.md` only when the user asks to consolidate or show the full list.
+3. Search Australia-first sources: SEEK, LinkedIn Australia, Workforce Australia, APS Jobs, and target-company ATS pages such as Greenhouse, Lever, Workday, SmartRecruiters, Ashby, and Teamtailor.
+4. Use `.agents/skills/linkedin-search/SKILL.md` only when a CLI LinkedIn search is actually needed. Do not read Danish portal skills unless the user asks for Denmark.
+5. Deduplicate against `seen_jobs.json`, `job_search_tracker.csv`, user skip decisions, and known closed roles.
+6. Present a compact ranked table: status, platform, role, company, location, fit, strength, gap, link.
+7. Update `seen_jobs.json` after fetching postings. Switch to `job-search-apply` for a selected role.
 
 ## Rules
 
-- Respect each job board's access rules and terms.
-- Keep volume low for personal-use sources.
+- Respect each job board's access rules and keep volume low.
 - Do not fabricate or infer postings that were not actually found.
-- Do not submit applications.
-- Flag Australian logistics early: work rights, baseline salary/superannuation, hybrid cadence, interstate time zone, FIFO roster, or relocation.
+- Do not submit applications from this skill.
+- Flag salary/superannuation, hybrid cadence, sponsorship, security checks, travel, FIFO, and relocation early.

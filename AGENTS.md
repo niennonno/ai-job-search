@@ -16,7 +16,8 @@ The detailed workflow specifications still live in `.claude/commands/` and `.cla
 
 ## Source Of Truth
 
-- Candidate profile: `CLAUDE.md` plus `.claude/skills/job-application-assistant/01-*.md` through `07-*.md`.
+- Candidate profile: `CODEX.md` plus `.claude/skills/job-application-assistant/01-*.md` through `07-*.md`.
+- Token-efficient Codex context: `.codex/context/job-application-brief.md` plus `.codex/context/evidence-bank.csv`. Use these first for routine fit checks, drafting, scraping, and upskilling; read the longer `.claude/` files only when the compact brief is insufficient or the user asks for a deep/full workflow.
 - Job application workflow: `.claude/commands/apply.md`.
 - Setup workflow: `.claude/commands/setup.md`.
 - Scrape workflow: `.claude/skills/job-scraper/SKILL.md`.

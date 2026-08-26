@@ -1,9 +1,9 @@
 # Behavioral Profile
 
-<!-- SETUP: Initial profile inferred from CV and LinkedIn recommendation evidence on 2026-08-25. Review before relying on inferred behavioural claims in applications. -->
+<!-- SETUP: Initial profile inferred from CV and LinkedIn recommendation evidence on 2026-08-25. Use source-backed behavioural claims only. -->
 
 ## Overview
-Aditya Vikram Godawat's behavioural profile has not been populated from a formal assessment yet. The observations below are inferred from CV evidence and LinkedIn recommendations and should be treated as working hypotheses until confirmed by Aditya.
+Aditya Vikram Godawat's behavioural profile is source-backed by CV evidence, LinkedIn recommendations, and application preferences stated during setup. Do not describe these observations as formal psychometric assessment results.
 
 ## Core Behavioral Drives
 
@@ -27,7 +27,7 @@ Aditya Vikram Godawat's behavioural profile has not been populated from a formal
 - Teams building AI, GenAI, decisioning, experimentation, or enterprise SaaS products with real adoption and revenue/accountability metrics.
 
 ## Growth Areas (frame positively in applications)
-- **Clarify desired role scope:** The CV supports senior product, AI product, platform, strategy, and consulting pathways. Applications should choose one primary story per role.
+- **Keep desired role scope focused:** Prioritise Senior Product Manager, Product Manager, Technical Product Manager, AI Product Manager, GenAI Product Manager, Principal Product Manager, and Product Lead roles. Avoid Head of Product, CPO, VP Product, and Group Product Manager roles for the current search.
 - **Avoid over-indexing on AI buzzwords:** Strong AI/GenAI experience is present, but claims should stay tied to specific products, workflows, metrics, and user problems.
 - **Keep behavioural claims source-backed:** LinkedIn recommendations support product clarity, strategic thinking, technical credibility, communication, and GenAI leadership. Avoid unsupported personality claims beyond those sources.
 
