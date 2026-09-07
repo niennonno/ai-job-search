@@ -47,6 +47,7 @@ SEARCH FLAGS
                           "Melbourne, Victoria, Australia", "Remote, Australia", or "Remote".
   --query, -q <text>      Keywords (job title, skill, or role). Recommended.
   --jobage <days>         Posted within N days: 1, 7, 14, 30. Default: all.
+  --jobage-minutes <n>    Posted within N minutes (sub-day precision). Conflicts with --jobage.
   --remote <mode>         remote | hybrid | onsite. Filter by workplace type.
   --page <n>              1-indexed page (10 results/page). Default 1.
   --limit, -n <n>         Cap results emitted (client-side).
@@ -56,10 +57,21 @@ EXAMPLES
   bun run src/cli.ts search -q "data engineer" -l "Sydney, New South Wales, Australia" --jobage 30 --format table
   bun run src/cli.ts search -q "product manager" -l "Melbourne, Victoria, Australia" --remote hybrid --format table
   bun run src/cli.ts search -q "paralegal" -l "Remote, Australia" --format table
+  bun run src/cli.ts search -q "engineer" -l "Remote" --jobage-minutes 30 --format table
   bun run src/cli.ts detail 4300011451 --format plain
 
 Personal use only — uses LinkedIn's public pages; keep volume low (LinkedIn ToS).
 `
+
+// Long-form flag names each command accepts (parseFlags resolves the short
+// aliases q/l/n to these before validation). "help"/"h" pass so `search --help`
+// still prints usage.
+const KNOWN_FLAGS: Record<string, Set<string>> = {
+  search: new Set([
+    "location", "query", "jobage", "jobage-minutes", "remote", "page", "limit", "format", "help", "h",
+  ]),
+  detail: new Set(["format", "help", "h"]),
+}
 
 async function main(): Promise<number> {
   const argv = process.argv.slice(2)
@@ -76,6 +88,25 @@ async function main(): Promise<number> {
     return 1
   }
 
+  // Reject unknown flags instead of silently discarding them: a discarded
+  // filter changes what the search returns with no error (a wrong flag name
+  // once returned an entire portal's database as if it matched the query).
+  // add-portal.md's contract requires a bogus flag to exit 1 with a JSON
+  // error on stderr.
+  const knownFlags = KNOWN_FLAGS[cmd]
+  if (knownFlags) {
+    for (const key of Object.keys(flags)) {
+      if (key === "_" || knownFlags.has(key)) continue
+      process.stderr.write(
+        JSON.stringify({
+          error: `unknown flag --${key} for '${cmd}' - flags are never silently ignored, because a discarded filter changes what the search returns; see --help for the supported flags`,
+          code: "UNKNOWN_FLAG",
+        }) + "\n",
+      )
+      return 1
+    }
+  }
+
   if (cmd === "search") {
     const location = typeof flags.location === "string" ? flags.location : undefined
     if (!location) {
@@ -88,10 +119,57 @@ async function main(): Promise<number> {
       return 1
     }
     const fmt = (flags.format as string) || "json"
+
+    if (flags.jobage !== undefined && flags["jobage-minutes"] !== undefined) {
+      process.stderr.write(
+        JSON.stringify({
+          error: "--jobage and --jobage-minutes both set a freshness window; pass only one",
+          code: "CONFLICTING_AGE_FLAGS",
+        }) + "\n",
+      )
+      return 1
+    }
+
+    const parseIntFlag = (name: string, raw: string | boolean | string[]): number | null => {
+      // Number(), not parseInt(): parseInt truncates, so "--jobage 0.5"
+      // became 0 and silently dropped f_TPR from the request (#371).
+      // Whole numbers >= 1 only, matching the other portal CLIs.
+      const val = typeof raw === "string" ? Number(raw.trim()) : NaN
+      if (!Number.isInteger(val) || val < 1) {
+        process.stderr.write(
+          JSON.stringify({ error: `--${name} must be a whole number of at least 1, got "${raw}"`, code: "BAD_ARG" }) + "\n",
+        )
+        return null
+      }
+      return val
+    }
+
+    if (flags.jobage !== undefined) {
+      const v = parseIntFlag("jobage", flags.jobage)
+      if (v === null) return 1
+      flags.jobage = String(v)
+    }
+    if (flags["jobage-minutes"] !== undefined) {
+      const v = parseIntFlag("jobage-minutes", flags["jobage-minutes"])
+      if (v === null) return 1
+      flags["jobage-minutes"] = String(v)
+    }
+    if (flags.page !== undefined) {
+      const v = parseIntFlag("page", flags.page)
+      if (v === null) return 1
+      flags.page = String(v)
+    }
+    if (flags.limit !== undefined) {
+      const v = parseIntFlag("limit", flags.limit)
+      if (v === null) return 1
+      flags.limit = String(v)
+    }
+
     const opts: SearchOpts = {
       query: typeof flags.query === "string" ? flags.query : undefined,
       location,
       jobage: flags.jobage ? parseInt(flags.jobage as string, 10) : 9999,
+      jobageMinutes: flags["jobage-minutes"] ? parseInt(flags["jobage-minutes"] as string, 10) : undefined,
       remote: typeof flags.remote === "string" ? flags.remote : undefined,
       page: flags.page ? Math.max(1, parseInt(flags.page as string, 10)) : 1,
       limit: flags.limit ? parseInt(flags.limit as string, 10) : undefined,
@@ -118,4 +196,14 @@ async function main(): Promise<number> {
   return 1
 }
 
-main().then((code) => process.exit(code))
+main()
+  .then((code) => process.exit(code))
+  .catch((e) => {
+    process.stderr.write(
+      JSON.stringify({
+        error: e instanceof Error ? e.message : String(e),
+        code: "INTERNAL_ERROR",
+      }) + "\n",
+    )
+    process.exit(1)
+  })

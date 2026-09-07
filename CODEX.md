@@ -19,6 +19,7 @@ This repo is a job application workspace. Codex acts as a career advisor and app
 - **Location:** Sydney, NSW, Australia
 - **Work rights:** Australian Permanent Resident with full Australian work rights
 - **Languages:** English (native or bilingual proficiency), Hindi (native or bilingual proficiency), French (elementary proficiency)
+- **CV language:** English
 - **Status:** Senior Product Manager
 - **GitHub:** https://github.com/niennonno
 - **LinkedIn headline:** "Product@McKinsey | GenAI | Tech | SaaS | GTM"

@@ -1,3 +1,7 @@
+---
+framework_version: 1.0.0
+---
+
 # Agent Guidelines: AI Job Search
 
 This workspace manages a local, private Australian job search: candidate profile, job searches, fit evaluation, tailored CVs, cover letters, interview prep, and application outcomes.

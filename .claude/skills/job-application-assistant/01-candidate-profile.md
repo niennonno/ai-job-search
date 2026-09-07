@@ -1,3 +1,7 @@
+---
+framework_version: 1.1.1
+---
+
 # Candidate Profile
 
 <!-- SETUP: Populated from documents/cv/Aditya Vikram Godawat CV(May 26).pdf on 2026-08-25. -->
@@ -10,12 +14,25 @@
 - **LinkedIn:** https://linkedin.com/in/adityavikram
 - **GitHub:** https://github.com/niennonno
 - **Languages:** English (native or bilingual proficiency), Hindi (native or bilingual proficiency), French (elementary proficiency).
+- **CV language:** English
 - **Status:** Senior Product Manager; Australian Permanent Resident
 - **Work rights:** Australian Permanent Resident with full Australian work rights.
 - **Location constraints:** Sydney-based. Prioritise Sydney, hybrid Sydney, remote Australia, and Melbourne roles when the setup is flexible, hybrid, or does not require a rigid weekly office cadence. Brisbane/Canberra roles are acceptable only when they are remote-first or require occasional travel rather than a fixed weekly office cadence.
 - **Role scope preferences:** Open to Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy Manager, Product Strategy Lead, AI Transformation Manager/Lead, and digital/product strategy transformation roles. Prioritise Product Owner and transformation roles when they include meaningful product ownership, AI/digital transformation, platform strategy, customer value, or measurable business outcome accountability. Avoid Head of Product, CPO, VP Product, and Group Product Manager roles for the current search.
 - **Travel and relocation defaults:** Travel roles are acceptable when the travel is reasonable for a senior product/strategy role and does not require FIFO, rostered work, or relocation outside Australia. Flag the cadence before applying rather than treating travel as an automatic rejection.
 - **Compensation handling:** Treat salary as a check-before-apply item. Benchmark senior AI/Product Manager roles against the Australian market and flag roles that appear below market, omit superannuation clarity, or use package language that needs clarification.
+
+### Languages
+<!-- Every language you can work in professionally, with your honest level. Used by the
+Language Gate in 04-job-evaluation.md and by job-scraper/search-queries.md's query-language
+generation. Omit any language you don't actually work in - an undeclared language is treated as
+a hard no, not a gap to smooth over. -->
+
+| Language | Level | Notes |
+|----------|-------|-------|
+| English | Native or bilingual proficiency | Primary application language |
+| Hindi | Native or bilingual proficiency | Professional and conversational |
+| French | Elementary proficiency | Not a working-language fit unless explicitly discussed |
 
 ## Education
 

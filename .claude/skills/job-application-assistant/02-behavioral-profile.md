@@ -1,3 +1,7 @@
+---
+framework_version: 1.0.0
+---
+
 # Behavioral Profile
 
 <!-- SETUP: Initial profile inferred from CV and LinkedIn recommendation evidence on 2026-08-25. Use source-backed behavioural claims only. -->

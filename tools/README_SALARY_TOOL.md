@@ -69,11 +69,13 @@ If you have salary data in an Excel file:
 
 ```bash
 pip install openpyxl
-python tools/convert_salary_excel.py path/to/salary-data.xlsx \
+python3 tools/convert_salary_excel.py path/to/salary-data.xlsx \
   --source "My Salary Data 2025" \
   --baseline 100 \
   --baseline-desc "Index 100 = median salary"
 ```
+
+On Windows, use `py` if that is how Python is exposed on your PATH. If your system uses `python` instead of `python3`, substitute that in the examples.
 
 The converter auto-detects the Excel layout:
 - Looks for a "Company" column and an optional "City" column
@@ -107,14 +109,16 @@ Start with an empty template and add companies as you research them:
 ## Usage
 
 ```bash
-python salary_lookup.py "Atlassian"
-python salary_lookup.py "Canva" --city "Sydney"
-python salary_lookup.py "Commonwealth Bank" --json
-python salary_lookup.py --list-all
+python3 salary_lookup.py "Atlassian"
+python3 salary_lookup.py "Canva" --city "Sydney"
+python3 salary_lookup.py "Commonwealth Bank" --json
+python3 salary_lookup.py --list-all
+python3 salary_lookup.py --validate      # pre-flight check your salary_data.json
 ```
 
 ## Important notes
 
 - The data file (`salary_data.json`) is **excluded from git** (see `.gitignore`). Your salary data may be proprietary or confidential.
-- If the data file is missing, `salary_lookup.py` exits with a helpful error message and the application workflow skips the salary benchmark step.
-- The fuzzy matcher handles common Australian company suffixes, accented spelling variations, and partial matches.
+- If the data file is missing, `salary_lookup.py` exits with a helpful error message and the `/apply` workflow skips the salary benchmark step.
+- The fuzzy matcher handles Australian and international company-name variations: legal suffixes, accented spelling variations, anglicized spellings, and partial matches.
+- `--validate` checks your data file for malformed category values and duplicate company names and prints a report, without performing a lookup.
