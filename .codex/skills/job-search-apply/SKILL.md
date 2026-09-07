@@ -17,7 +17,7 @@ Use this skill for one Australian job posting.
 6. Draft only from real facts in the brief, evidence bank, `CODEX.md`, or user-confirmed chat facts. Prefer evidence-bank `safe_wording` and respect `avoid_wording`. Use existing recent `cv/main_*.tex` and `cover_letters/cover_*.tex` files as structural examples instead of re-reading all legacy template docs.
 7. Run a recruiter and ATS screen against the current posting before finalising. Tune the CV, cover letter, and notes for the posting's exact language, highest-signal evidence, and likely recruiter filters, while staying truthful.
 8. Frame gaps positively as adjacent strengths, ramp-up approach, or domain preparation. Avoid negative phrasing such as "I have not..." or "no direct..." in outward-facing materials unless the user specifically asks for blunt wording. Keep notes honest, but phrase residual risks without discouraging connotations.
-9. Save files as `cv/main_<company>.tex` and `cover_letters/cover_<company>_<role>.tex`.
+9. Save files as `cv/main_<company>_<role>.tex` and `cover_letters/cover_<company>_<role>.tex`.
 10. Compile and visually inspect generated PDFs: CV with `lualatex`, cover letter with `xelatex`. CV must be exactly 2 pages; cover letter exactly 1 page.
 11. Use the verbose legacy files only when needed:
    - `.claude/commands/apply.md` for full drafter/reviewer workflow or unresolved layout rules.

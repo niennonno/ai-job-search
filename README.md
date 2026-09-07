@@ -85,7 +85,7 @@ cd ai-job-search
 PowerShell:
 
 ```powershell
-$tools = @("jobbank-search", "jobdanmark-search", "jobindex-search", "jobnet-search", "linkedin-search", "freehire-search")
+$tools = @("linkedin-search", "freehire-search")
 foreach ($tool in $tools) {
   Push-Location ".agents/skills/$tool/cli"
   bun install
@@ -96,7 +96,7 @@ foreach ($tool in $tools) {
 Bash / zsh / Git Bash:
 
 ```bash
-for tool in jobbank-search jobdanmark-search jobindex-search jobnet-search linkedin-search freehire-search; do
+for tool in linkedin-search freehire-search; do
   (cd .agents/skills/$tool/cli && bun install)
 done
 ```
@@ -208,7 +208,7 @@ ai-job-search/
 │   └── freehire-search/               # freehire.me tech job aggregator (multi-market, REST API)
 ├── .agents/archive/skills/            # Legacy Danish portal examples, not used by default
 ├── cv/
-│   └── Aditya_Godawat_PM.tex          # moderncv LaTeX template
+│   └── Aditya_Godawat_PM.tex          # private master CV used for tailoring
 ├── cover_letters/
 │   ├── cover.cls                      # Custom cover letter LaTeX class
 │   ├── cover_example.tex              # Example cover letter (structural reference + CI smoke test)

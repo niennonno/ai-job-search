@@ -42,7 +42,7 @@ Common gaps to frame honestly: deep backend/infrastructure engineering, cybersec
 - No em dashes. Avoid cliches and generic buzzwords.
 - Mention Codex by name only when discussing agentic coding or AI tooling in application materials.
 - Verify company-specific claims independently before including them.
-- CV: `cv/main_<company>.tex`, moderncv banking style, exactly 2 pages.
+- CV: `cv/main_<company>_<role>.tex`, moderncv banking style, exactly 2 pages.
 - Cover letter: `cover_letters/cover_<company>_<role>.tex`, `cover.cls`, exactly 1 page.
 - For application forms, do not submit or upload personal files without action-time user confirmation.
 

@@ -242,7 +242,7 @@ Documents cover skills, experience, education, references, and behavioral signal
 - Commute or location constraints (if not visible from CV)
 - Job search configuration (use the questions from Path C Section 9 below)
 
-Then proceed to Step 3 to populate the non-skill files (`CODEX.md`, `cv/main_example.tex`, `.claude/skills/job-scraper/search-queries.md`). Step 3 will detect that the seven skill files are already populated and skip those substeps.
+Then proceed to Step 3 to populate the non-skill files (`CODEX.md`, `cv/Aditya_Godawat_PM.tex`, `.claude/skills/job-scraper/search-queries.md`). Step 3 will detect that the seven skill files are already populated and skip those substeps.
 
 ---
 
@@ -335,7 +335,7 @@ Ask about:
 - **Geographic scope:** "Which cities or regions should I search in? How far are you willing to commute?" Use this to define the location filter tiers (ideal, acceptable, borderline, too far).
 - **Job sources:** "Which Australian job sources should I prioritize? Defaults are SEEK, LinkedIn Australia, Workforce Australia, APS Jobs, and target-company careers pages. Are there specialist boards for your field?" Note any sources to exclude so the scraper does not waste time on irrelevant markets.
 - **Australian logistics:** Ask about work rights, preferred states/cities, remote-only vs hybrid, acceptable office cadence, relocation, FIFO/rostered work, travel tolerance, salary expectations, and superannuation preferences.
-- **Job portals:** "The framework ships country-agnostic search CLIs (`linkedin-search`, `freehire-search`, enabled by default) plus Danish portal demos (Jobindex, Jobbank, Jobdanmark, Jobnet) that ship **disabled**. `/scrape` auto-discovers whatever portal skills are installed under `.agents/skills/` and skips any with `enabled: false`. Which portals fit your market?" **Then act on the answer:** if the user's market is Denmark (or they ask for the Danish boards), edit each of the four Danish `SKILL.md` files and set `enabled: true` in the frontmatter; otherwise leave them disabled and say so - they cost nothing while disabled and can be enabled later by flipping the flag. If the user needs a local board that is not shipped, guide them to `/add-portal` (market-specific skills live in their fork). WebSearch/`site:` queries remain the fallback for portals without a CLI skill.
+- **Job portals:** "The framework ships country-agnostic search CLIs (`linkedin-search`, `freehire-search`, enabled by default) plus archived Danish portal examples (Jobindex, Jobbank, Jobdanmark, Jobnet) under `.agents/archive/skills/`. `/scrape` auto-discovers portal skills installed under `.agents/skills/`. Which portals fit your market?" **Then act on the answer:** if the user needs a market-specific board that is not active, guide them to `/add-portal` so a dedicated skill can be scaffolded under `.agents/skills/`. If the user's market is Denmark and they explicitly want the old demos, copy the relevant archived examples into `.agents/skills/`, review and refresh them before use, then test-run a live query. WebSearch/`site:` queries remain the fallback for portals without a CLI skill.
 - **CV language:** "Should your CVs be written in English (the default, accepted in most markets), or in your market's language?" Record the answer as a `CV language: <language>` line in CODEX.md's Identity section. Cover letters always match each posting's language automatically; this setting governs the CV only. If the user is unsure, keep English and note they can re-run `/setup --section search` to change it.
 
 **Important:** Also suggest role types the user may not have considered, based on their skill profile. For example:
@@ -377,7 +377,7 @@ Personalise the contact line and the signature inside the file's LaTeX template:
 ### 7. Update `07-interview-prep.md` *(Path B and C; skip if Path A populated it)*
 Create STAR examples from their actual experience (at least 3-4 examples). Path A leaves STAR stubs under "## STAR Candidates (Complete Manually)" rather than full examples; if any stubs are present, mention them in Step 4 so the user knows to flesh them out.
 
-### 8. Update `cv/main_example.tex`
+### 8. Update `cv/Aditya_Godawat_PM.tex`
 Replace placeholder personal data with their actual name, contact info, and add their education and most recent experience entries.
 
 ### 9. Generate `.claude/skills/job-scraper/search-queries.md`
@@ -407,7 +407,7 @@ Present a summary:
 > - `.claude/skills/job-application-assistant/05-cv-templates.md` - CV templates with your profile statements and contact block
 > - `.claude/skills/job-application-assistant/06-cover-letter-templates.md` - Cover letter templates with your contact line and signature
 > - `.claude/skills/job-application-assistant/07-interview-prep.md` - STAR examples from your experience
-> - `cv/main_example.tex` - Your LaTeX CV template
+> - `cv/Aditya_Godawat_PM.tex` - Your private master CV
 > - `.claude/skills/job-scraper/search-queries.md` - Australian job search queries
 >
 > **Privacy note:** the files above now contain your personal data and are *tracked by git*.

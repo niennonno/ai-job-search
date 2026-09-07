@@ -81,7 +81,7 @@ The following files are NOT touched (they contain framework rules, not candidate
   - 03-writing-style.md
 
 Outside the profile scope, still holding your personal data: CODEX.md and
-cv/main_example.tex. This scope covers skill files only.
+cv/Aditya_Godawat_PM.tex. This scope covers skill files only.
 ```
 
 ### If scope includes `documents`:
@@ -271,7 +271,7 @@ Then tell the user what to do next based on what was reset:
 **If profile was reset:**
 > The skill files are now blank. Run `/setup` to repopulate them. The command auto-detects any files in your `documents/` folder and offers to read from there; otherwise it walks you through a CV import or interactive interview.
 >
-> Note that `CODEX.md` and `cv/main_example.tex` are outside the `profile` scope and still hold your personal data. If you are handing this fork over or making it public, clear them by hand.
+> Note that `CODEX.md` and `cv/Aditya_Godawat_PM.tex` are outside the `profile` scope and still hold your personal data. If you are handing this fork over or making it public, clear them by hand.
 
 **If documents were reset:**
 > The `documents/` folder is now empty. Add your career documents and run `/setup` to populate your profile. See `documents/README.md` for instructions on what to put where.

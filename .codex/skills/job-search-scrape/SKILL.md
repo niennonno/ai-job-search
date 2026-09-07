@@ -15,7 +15,7 @@ Use this skill to find and triage Australian job postings.
    - `job_search_tracker.csv`
    - `job_search_comprehensive_*.md` only when the user asks to consolidate or show the full list.
 3. Search Australia-first sources: SEEK, LinkedIn Australia, Workforce Australia, APS Jobs, and target-company ATS pages such as Greenhouse, Lever, Workday, SmartRecruiters, Ashby, and Teamtailor.
-4. Use `.agents/skills/linkedin-search/SKILL.md` only when a CLI LinkedIn search is actually needed. Do not read Danish portal skills unless the user asks for Denmark.
+4. Use `.agents/skills/linkedin-search/SKILL.md` or `.agents/skills/freehire-search/SKILL.md` only when those CLI searches are actually needed. Do not read archived Danish portal examples unless the user asks for Denmark.
 5. Deduplicate against `seen_jobs.json`, `job_search_tracker.csv`, user skip decisions, and known closed roles.
 6. Present a compact ranked table: status, platform, role, company, location, fit, strength, gap, link.
 7. Update `seen_jobs.json` after fetching postings. Switch to `job-search-apply` for a selected role.

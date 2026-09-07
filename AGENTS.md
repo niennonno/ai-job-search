@@ -32,7 +32,7 @@ The detailed workflow specifications still live in `.claude/commands/` and `.cla
 
 - Prioritize SEEK, LinkedIn Australia, Workforce Australia, APS Jobs, and target-company career pages.
 - Check common ATS hosts when searching company pages: Greenhouse, Lever, Workday, SmartRecruiters, and Ashby.
-- Treat the Danish portal CLIs under `.agents/skills/job*-search` as legacy examples only unless the user explicitly asks for Denmark.
+- Treat the Danish portal CLIs under `.agents/archive/skills/` as legacy examples only unless the user explicitly asks for Denmark.
 - During evaluation, flag work rights, security clearance, salary package, superannuation, hybrid cadence, travel, FIFO/rostered work, and relocation requirements.
 - Use Australian English in CVs and cover letters unless the posting explicitly requires another language.
 
