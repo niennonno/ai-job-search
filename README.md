@@ -5,9 +5,9 @@
 # AI Job Search
 
 *The job search that runs on your machine.*
-An AI-powered job application framework for local job-search work. This copy includes Codex entrypoints for the Australian market while preserving the original Codex workflow files.
+An AI-powered job application framework for local job-search work. This copy includes Codex entrypoints for the Australian market while preserving the original workflow files under `.claude/`.
 
-> Note: This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by Anthropic. Anthropic and Codex are referenced only to describe the toolchain this workflow uses.
+> Note: This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by OpenAI or Anthropic. Codex, Claude Code, OpenAI, and Anthropic are referenced only to describe the toolchain this workflow uses.
 >
 > This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The only ways to support the project are the Ko-fi link below and contributing on GitHub.
 
@@ -144,7 +144,17 @@ Codex reads `AGENTS.md` first. The reusable Codex skills live under `.codex/skil
 - `job-search-setup` for profile onboarding and updates.
 - `job-search-scrape` for finding and triaging jobs.
 - `job-search-apply` for fit evaluation, tailored CVs, cover letters, and verification.
+- `job-application-assistant` for the full detailed application workflow.
+- `job-search-rank` for ranking scraped jobs into a shortlist.
+- `job-search-outcome` for application results, follow-ups, and stale sweeps.
+- `job-search-interview` for interview prep on tracked applications.
 - `job-search-upskill` for gap analysis and learning plans.
+- `job-search-expand` for competency enrichment from documents and public profile links.
+- `job-search-html-report` for the offline tracker dashboard.
+- `job-search-gmail-sync` for Gmail-based status proposals when the connector is available.
+- `job-search-notion-sync` for one-way Notion pipeline publishing when the connector is available.
+- `job-search-add-portal` for custom portal search skills.
+- `job-search-add-template` for custom CV and cover letter templates.
 - `job-search-reset` for explicit reset requests.
 
 The detailed workflow files remain under `.claude/` and are treated as the canonical source of truth, so the project stays compatible with the original structure.
@@ -390,7 +400,7 @@ Thinking about a PR? Read [CONTRIBUTING.md](CONTRIBUTING.md) first - it explains
 ## Acknowledgements
 
 - [Mikkel Krogholm](https://github.com/mikkelkrogsholm) ([skills repo](https://github.com/mikkelkrogsholm/skills)) for the job search CLI skills
-- Originally built for [Codex](https://claude.com/claude-code) by [Anthropic](https://anthropic.com); adapted here for Codex and the Australian market
+- Originally built for [Claude Code](https://claude.com/claude-code) by [Anthropic](https://anthropic.com); adapted here for Codex and the Australian market
 
 ## License
 

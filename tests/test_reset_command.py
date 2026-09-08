@@ -96,7 +96,7 @@ def setup_step3_skill_files():
 
     Step 3's targets are written as '### <n>. <verb> `<target>`', where the
     target is either a bare filename resolved against .claude/skills/ or a
-    repo-relative path. Non-skill targets (CLAUDE.md, cv/main_example.tex)
+    repo-relative path. Non-skill targets (CODEX.md, the private master CV)
     are dropped: /reset profile's scope is skill files only.
     """
     step3 = section(SETUP.read_text(encoding="utf-8"), "## Step 3:", "## Step 4:")

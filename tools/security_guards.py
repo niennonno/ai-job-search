@@ -3,7 +3,7 @@
 
 Run from anywhere: python tools/security_guards.py
 
-This repo ships pre-approved Claude Code permissions and CLI code that every
+This repo ships pre-approved runtime permissions and CLI code that every
 fork user executes. These guards make the dangerous changes LOUD, not
 impossible: a PR that intentionally needs one of them must update the
 allowlists in this file in the same diff, so the change is explicit and
@@ -39,14 +39,10 @@ errors: list[str] = []
 ALLOWED_PERMISSIONS = {
     "Skill(job-application-assistant)",
     # Narrowed from the upstream template's blanket Bash(bun run:*), which
-    # pre-approved `bun run <any file>`. One entry per shipped portal CLI,
+    # pre-approved `bun run <any file>`. One entry per active portal CLI,
     # matching what each SKILL.md already declares in its allowed-tools.
     # A portal added by /add-portal needs its own entry here and in
     # .claude/settings.json - that review step is the point.
-    "Bash(bun run .agents/skills/jobbank-search/cli/src/cli.ts:*)",
-    "Bash(bun run .agents/skills/jobdanmark-search/cli/src/cli.ts:*)",
-    "Bash(bun run .agents/skills/jobindex-search/cli/src/cli.ts:*)",
-    "Bash(bun run .agents/skills/jobnet-search/cli/src/cli.ts:*)",
     "Bash(bun run .agents/skills/linkedin-search/cli/src/cli.ts:*)",
     "Bash(bun run .agents/skills/freehire-search/cli/src/cli.ts:*)",
     "Bash(python salary_lookup.py:*)",
@@ -125,7 +121,7 @@ ALLOWED_IGNORE_NEGATIONS = {
 # Empty by design - the template ships no hooks at all.
 #
 # A hook is strictly more dangerous than a permissions.allow entry. A permission
-# pre-approves something Claude may choose to do; a hook runs unconditionally when
+# pre-approves something the runtime may choose to do; a hook runs unconditionally when
 # its event fires, with no prompt and no model decision in between. Cloning a repo
 # and opening it is enough. This is the vector the Shai-Hulud worm used in its
 # August 2026 wave, planting a SessionStart hook in .claude/settings.json that

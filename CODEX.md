@@ -61,7 +61,7 @@ This repo is a job application workspace. Codex acts as a career advisor and app
 - **Primary:** Generative AI, agentic workflows, LLM implementation and prompt engineering, AI product strategy, decisioning systems, A/B experimentation engines, product roadmap ownership, enterprise SaaS.
 - **Secondary:** RAG, Agile/Scrum, sprint planning, product lifecycle management, GTM strategy, OKRs, product discovery, stakeholder management, user research and analytics, PRD writing, UX, iOS architecture, Swift, API integration, SQL working knowledge.
 - **Domain:** Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
-- **Software/tooling evidence:** Claude Code, ChatGPT/GenAI tooling, modern product and analytics tooling categories, SQL working knowledge, Swift/iOS engineering tooling, Agile/Scrum delivery tooling. Only name specific vendor tools in applications when supported by the CV, LinkedIn profile, or the job conversation.
+- **Software/tooling evidence:** Claude Code, Codex, ChatGPT/GenAI tooling, modern product and analytics tooling categories, SQL working knowledge, Swift/iOS engineering tooling, Agile/Scrum delivery tooling. Only name specific vendor tools in applications when supported by the CV, LinkedIn profile, or the job conversation.
 
 ### Certifications
 - **Tech & AI - AI Advisory - Level 2** - McKinsey & Co., January 2026
@@ -102,17 +102,17 @@ This repo is a job application workspace. Codex acts as a career advisor and app
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
 - `cover_letters/` - LaTeX cover letters (custom cover.cls template)
-- `.claude/skills/` - AI skill definitions for the application workflow
+- `.claude/skills/` - Canonical detailed workflow definitions used by the Codex entrypoints
 - `.agents/skills/` - Job search CLI tools
 
 ## Workflow for New Job Applications
 1. User provides a job posting (URL or text)
 2. **Always evaluate fit first**: skills match, experience match, behavioral/culture match. Present this assessment to the user before proceeding.
-3. If good fit: create targeted CV (`cv/main_<company>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
+3. If good fit: create targeted CV (`cv/main_<company>_<role>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 
-**Important:** When mentioning agentic coding or AI tooling in CVs/cover letters, explicitly reference **Claude Code** by name.
+**Important:** When mentioning agentic coding or AI tooling in CVs/cover letters, explicitly reference **Codex** by name.
 
 ## Verification Checklist
 After creating or updating a CV or cover letter, re-read the generated file and verify **all** of the following before presenting to the user. Report the results as a pass/fail checklist.
@@ -138,7 +138,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 ### Quality
 - [ ] No LaTeX syntax errors (balanced braces, correct commands)
 - [ ] No spelling or grammar errors
-- [ ] Agentic coding / AI tooling references mention **Claude Code** by name
+- [ ] Agentic coding / AI tooling references mention **Codex** by name
 - [ ] Cover letter is addressed to the correct person (or "Dear Hiring Manager" if unknown)
 - [ ] Cover letter fits approximately one page
 

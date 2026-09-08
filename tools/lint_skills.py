@@ -4,7 +4,7 @@
 Run from anywhere: python tools/lint_skills.py
 
 Checks:
-- Every SKILL.md (.claude/skills/*, .agents/skills/*) has YAML frontmatter that
+- Every SKILL.md (.codex/skills/*, .claude/skills/*, .agents/skills/*) has YAML frontmatter that
   parses, with non-empty `name` and `description` keys
 - `allowed-tools` entries of the form `Bash(bun run <path> *)` point at files
   that exist (skill paths resolve relative to the repo root and to .agents/)
@@ -18,11 +18,12 @@ import json
 import re
 import sys
 from pathlib import Path
+from typing import Optional
 
 try:
     import yaml
 except ImportError:
-    sys.exit("lint_skills.py requires PyYAML: pip install pyyaml")
+    yaml = None
 
 ROOT = Path(__file__).resolve().parent.parent
 errors: list[str] = []
@@ -41,11 +42,16 @@ def check_skill(path: Path) -> None:
     if end == -1:
         errors.append(f"{rel(path)}: unterminated YAML frontmatter")
         return
-    try:
-        data = yaml.safe_load(text[4:end])
-    except yaml.YAMLError as exc:
-        errors.append(f"{rel(path)}: frontmatter is not valid YAML: {exc}")
-        return
+    if yaml is not None:
+        try:
+            data = yaml.safe_load(text[4:end])
+        except yaml.YAMLError as exc:
+            errors.append(f"{rel(path)}: frontmatter is not valid YAML: {exc}")
+            return
+    else:
+        data = parse_simple_frontmatter(text[4:end], path)
+        if data is None:
+            return
     if not isinstance(data, dict):
         errors.append(f"{rel(path)}: frontmatter did not parse to a mapping")
         return
@@ -68,6 +74,33 @@ def check_skill(path: Path) -> None:
                 candidates = [ROOT / target, ROOT / ".agents" / target]
                 if not any(c.is_file() for c in candidates):
                     errors.append(f"{rel(path)}: allowed-tools references a missing file: {target}")
+
+
+def parse_simple_frontmatter(frontmatter: str, path: Path) -> Optional[dict[str, str]]:
+    """Parse the flat frontmatter shape used by this repo when PyYAML is absent."""
+    data: dict[str, str] = {}
+    current_key: Optional[str] = None
+    for raw in frontmatter.splitlines():
+        if not raw.strip():
+            continue
+        if raw.startswith((" ", "\t")):
+            if current_key and data.get(current_key) in {">", "|"}:
+                continue
+            if current_key and data.get(current_key):
+                continue
+            errors.append(f"{rel(path)}: frontmatter needs PyYAML for nested or indented YAML")
+            return None
+        if ":" not in raw:
+            errors.append(f"{rel(path)}: frontmatter is not valid simple YAML: {raw!r}")
+            return None
+        key, _, value = raw.partition(":")
+        key = key.strip()
+        if not key:
+            errors.append(f"{rel(path)}: frontmatter contains an empty key")
+            return None
+        data[key] = value.strip()
+        current_key = key
+    return data
 
 
 def check_command(path: Path) -> None:
@@ -96,7 +129,11 @@ def check_settings() -> None:
 
 
 def main() -> int:
-    skills = sorted(ROOT.glob(".claude/skills/*/SKILL.md")) + sorted(ROOT.glob(".agents/skills/*/SKILL.md"))
+    skills = (
+        sorted(ROOT.glob(".codex/skills/*/SKILL.md"))
+        + sorted(ROOT.glob(".claude/skills/*/SKILL.md"))
+        + sorted(ROOT.glob(".agents/skills/*/SKILL.md"))
+    )
     commands = sorted((ROOT / ".claude" / "commands").glob("*.md"))
     if not skills:
         errors.append("no SKILL.md files found - glob roots are wrong or the tree moved")

@@ -13,7 +13,17 @@ Use the Codex skills in `.codex/skills/` as the natural-language entrypoints:
 - `job-search-setup`: build or update the candidate profile.
 - `job-search-scrape`: find and triage jobs.
 - `job-search-apply`: evaluate a posting, then draft and verify application materials.
+- `job-application-assistant`: run the full application workflow or deeper application-specific tasks.
+- `job-search-rank`: rank scraped jobs into a shortlist.
+- `job-search-outcome`: record outcomes, follow-ups, and stale applications.
+- `job-search-interview`: prepare for interviews on tracked applications.
 - `job-search-upskill`: analyze skill gaps and build a learning plan.
+- `job-search-expand`: enrich the profile from documents and public linked sources.
+- `job-search-html-report`: generate the offline application dashboard.
+- `job-search-gmail-sync`: propose application status updates from Gmail, when connected.
+- `job-search-notion-sync`: publish a one-way Notion pipeline view, when connected.
+- `job-search-add-portal`: create a custom portal search skill.
+- `job-search-add-template`: register or switch CV and cover letter templates.
 - `job-search-reset`: reset profile or document state when explicitly requested.
 
 The detailed workflow specifications still live in `.claude/commands/` and `.claude/skills/`. Treat those files as the canonical source of truth unless a Codex skill says otherwise. Do not duplicate profile data or rewrite the workflow from memory.
@@ -25,7 +35,13 @@ The detailed workflow specifications still live in `.claude/commands/` and `.cla
 - Job application workflow: `.claude/commands/apply.md`.
 - Setup workflow: `.claude/commands/setup.md`.
 - Scrape workflow: `.claude/skills/job-scraper/SKILL.md`.
+- Rank workflow: `.claude/commands/rank.md`.
+- Outcome workflow: `.claude/commands/outcome.md`.
+- Interview workflow: `.claude/commands/interview.md`.
+- Expand workflow: `.claude/commands/expand.md`.
 - Upskill workflow: `.claude/skills/upskill/SKILL.md`.
+- Report/sync workflows: `.claude/commands/html-report.md`, `.claude/commands/gmail-sync.md`, and `.claude/commands/notion-sync.md`.
+- Extension workflows: `.claude/commands/add-portal.md` and `.claude/commands/add-template.md`.
 - Portal search tools: `.agents/skills/*`.
 
 ## Australian Market Defaults

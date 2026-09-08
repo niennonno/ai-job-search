@@ -10,7 +10,7 @@ Follow these steps **in order**.
 
 ## Step 0: Prerequisites
 
-Confirm the Gmail MCP tools (`mcp__claude_ai_Gmail__*`) are available. If not, tell the user to connect the Gmail integration (claude.ai Settings → Connectors → Gmail) and stop - do not attempt this via Bash, IMAP, or any other channel.
+Confirm Gmail connector tools are available in the current Codex session. If not, tell the user to connect the Gmail integration in Codex/ChatGPT and stop - do not attempt this via Bash, IMAP, browser scraping, mailbox exports, or any other channel.
 
 ---
 

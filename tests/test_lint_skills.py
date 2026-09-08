@@ -56,6 +56,13 @@ class LinterRepoFixture(unittest.TestCase):
             encoding="utf-8",
         )
 
+        codex_skill = self.root / ".codex" / "skills" / "codex-example" / "SKILL.md"
+        codex_skill.parent.mkdir(parents=True)
+        codex_skill.write_text(
+            "---\nname: codex-example\ndescription: Codex example skill\n---\n",
+            encoding="utf-8",
+        )
+
         self.settings = self.root / ".claude" / "settings.json"
         self.write_settings({"permissions": {"allow": []}})
 
