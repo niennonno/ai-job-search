@@ -9,25 +9,29 @@
 \moderncvstyle{banking}
 \moderncvcolor{blue}
 
-% Force both first and last name AND section headings to render in moderncv
-% blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
-% looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+% Force the name and section headings to render in moderncv blue (color1).
+% \namefont is the shared hook on moderncv versions that no longer expose
+% \firstnamestyle/\lastnamestyle.
+\renewcommand*{\namefont}{\fontsize{34}{36}\bfseries\upshape}
+\colorlet{firstnamecolor}{color1}
+\colorlet{lastnamecolor}{color1}
+\colorlet{namecolor}{color1}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
-\usepackage{hyperref}
-\hypersetup{
+% moderncv loads hyperref itself in an \AtEndPreamble hook, so put our
+% settings in a later hook instead of loading hyperref directly.
+\AtEndPreamble{\hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
     pdftitle={Aditya Vikram Godawat - CV},
-    pdfpagemode=FullScreen,
-}
+    pdfpagemode=UseNone,
+}}
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
+\usepackage{needspace}
 
 % personal data
 \name{Aditya Vikram}{Godawat}
@@ -55,10 +59,10 @@
 \vspace{1pt}
 \begin{itemize}
 \item \textbf{AI Product Strategy}: Generative AI, agentic workflows, LLM implementation, prompt engineering, decisioning systems, RAG, AI product roadmaps.
-\item \textbf{Product Leadership}: Roadmapping, product discovery, lifecycle management, GTM strategy, OKR frameworks, PRD writing, stakeholder management, user research and analytics.
+\item \textbf{Product Leadership}: Roadmapping, product discovery, lifecycle management, customer success, implementation, GTM strategy, OKR frameworks, PRD writing, stakeholder management.
 \item \textbf{Enterprise Platforms}: B2B SaaS, pricing platforms, business intelligence, collections automation, A/B experimentation engines, product consulting.
 \item \textbf{Technical Foundation}: iOS architecture, Swift, mobile application development, system design, API integration, SQL working knowledge.
-\item \textbf{Domains}: Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, B2C consumer applications.
+\item \textbf{Domains}: Retail and CPG, eCommerce, financial services, investment banking, healthcare, technology, EduTech, travel and tourism, B2C consumer applications.
 \end{itemize}
 
 % ============================================================
@@ -69,20 +73,21 @@
 \vspace{3pt}
 \begin{itemize}
 
-\item{\cventry{Sep 2025--Jul 2026}{Senior Product Manager}{McKinsey \& Company}{Sydney, Australia}{}{\vspace{1pt}
+\item{\cventry{Sep 2025 - Jul 2026}{Senior Product Manager}{McKinsey \& Company}{Sydney, Australia}{}{\vspace{1pt}
 \begin{itemize}
     \item Own end-to-end GenAI and strategic product roadmaps for Periscope, McKinsey's flagship retail pricing platform used by global enterprise clients.
     \item Lead a 20+ person cross-functional team across engineering, data science, and design.
     \item Defined product vision and roadmap for agentic AI workflows that automated manual enterprise retail pricing operations, reducing time-to-action from hours to seconds.
     \item Directed AI-powered pricing decisioning systems that improved pricing accuracy by 9--12\% and drove 2--7\% return-on-sales uplift for global retail enterprise clients.
     \item Optimised Agile delivery through strategic GenAI tooling adoption, reducing operational overhead by 20\% and accelerating release cadence by 60\%.
+    \item Advised product groups and C-suite enterprise clients on AI strategy, product operating models, and technology transformation investments.
 \end{itemize}}}
 
 \vspace{3pt}
 
-\item{\cventry{Apr 2024--Sep 2025}{Senior Product Manager}{Fractal Analytics}{India}{}{\vspace{1pt}
+\item{\cventry{Apr 2024 - Sep 2025}{Senior Product Manager}{Fractal Analytics}{India}{}{\vspace{1pt}
 \begin{itemize}
-    \item Led platform strategy and portfolio roadmap execution for enterprise AI engines across CPG, Finance, and Healthcare verticals, owning discovery through GTM.
+    \item Led AI product strategy and enterprise platform roadmap work across CPG, financial services, retail, investment banking, and healthcare, owning discovery through GTM.
     \item Architected Crux, an AI-powered business intelligence platform that reduced insight generation from days to minutes and eliminated manual data science pipelines.
     \item Conceptualised and launched Cogentiq I2C, automating 60\% of billing workflows, processing 1M+ invoices, and delivering \$5M in annualised client cash-flow uplift.
     \item Directed TrialRun, an enterprise A/B testing product scaling to 8,000+ experiments per month, achieving 65\% pilot-to-paid conversion and 14\% average sales uplift.
@@ -90,7 +95,8 @@
 
 \vspace{3pt}
 
-\item{\cventry{Jul 2021--Mar 2024}{Product Manager}{Fractal Analytics}{India}{}{\vspace{1pt}
+\needspace{5\baselineskip}
+\item{\cventry{Jul 2021 - Mar 2024}{Product Manager}{Fractal Analytics}{India}{}{\vspace{1pt}
 \begin{itemize}
     \item Managed the core feature roadmap and cross-functional stakeholder alignment for Cuddle AI, an AI-powered business intelligence platform.
     \item Architected product capabilities that drove a 57\% revenue increase and lifted monthly active user engagement by 85\%.
@@ -98,7 +104,7 @@
 
 \vspace{3pt}
 
-\item{\cventry{Jan 2019--Jun 2021}{Member, Technical Team (iOS Lead)}{Fractal Analytics}{India}{}{\vspace{1pt}
+\item{\cventry{Jan 2019 - Jun 2021}{Member, Technical Team (iOS Lead)}{Fractal Analytics}{India}{}{\vspace{1pt}
 \begin{itemize}
     \item Owned native iOS architecture, engineering execution, and Agile deployment cycles for the core Cuddle AI mobile product before transitioning into product management.
     \item Retained ownership of codebase optimisation, sprint planning, and mobile performance management, shaping engineering culture and delivery standards.
@@ -106,28 +112,28 @@
 
 \vspace{3pt}
 
-\item{\cventry{Dec 2017--Jul 2018}{Senior iOS Developer}{Toppr}{India}{}{\vspace{1pt}
+\item{\cventry{Dec 2017 - Jul 2018}{Senior iOS Developer}{Toppr}{India}{}{\vspace{1pt}
 \begin{itemize}
     \item Scaled the consumer mobile application to 2M+ DAU and 9M+ MAU while maintaining approximately 98\% crash-free rate.
 \end{itemize}}}
 
 \vspace{3pt}
 
-\item{\cventry{Apr 2017--Dec 2017}{Lead iOS Developer}{Ithaka}{India}{}{\vspace{1pt}
+\item{\cventry{Apr 2017 - Dec 2017}{Lead iOS Developer}{Ithaka}{India}{}{\vspace{1pt}
 \begin{itemize}
     \item Built the foundational iOS application from scratch, established the mobile engineering team, and scaled the platform across 20+ countries.
 \end{itemize}}}
 
 \vspace{3pt}
 
-\item{\cventry{Jan 2016--Mar 2017}{iOS Developer}{Wow Labz}{India}{}{\vspace{1pt}
+\item{\cventry{Jan 2016 - Mar 2017}{iOS Developer}{Wow Labz}{India}{}{\vspace{1pt}
 \begin{itemize}
     \item Developed and maintained native iOS applications for enterprise and consumer clients including HDFC Bank, FabIndia, and UCSF.
 \end{itemize}}}
 
 \vspace{3pt}
 
-\item{\cventry{Aug 2015--Jan 2016}{Mobile Developer}{Mapplinks}{India}{}{\vspace{1pt}
+\item{\cventry{Aug 2015 - Jan 2016}{Mobile Developer}{Mapplinks}{India}{}{\vspace{1pt}
 \begin{itemize}
     \item Engineered and deployed the company's in-house mobile application suite, delivering stable production-ready app solutions.
 \end{itemize}}}

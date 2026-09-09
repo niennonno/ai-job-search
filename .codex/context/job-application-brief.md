@@ -6,9 +6,9 @@ Use this compact brief for normal fit checks and application drafting. For claim
 
 - Aditya Vikram Godawat, Sydney, NSW. Australian Permanent Resident with full Australian work rights.
 - Senior Product Manager with 11+ years across software engineering, enterprise AI platforms, GenAI, pricing, experimentation, billing workflow automation, and mobile products.
-- Current: Senior Product Manager, McKinsey & Company, Sydney, Sep 2025-Jul 2026. Owns GenAI and strategic product roadmaps for Periscope, leads 20+ cross-functional team, directed AI pricing decisioning with 9-12% accuracy improvement and 2-7% return-on-sales uplift, built agentic workflows reducing time-to-action from hours to seconds.
-- Previous: Senior Product Manager, Fractal Analytics, Apr 2024-Sep 2025. Led enterprise AI platform portfolio across CPG, Finance, Healthcare. Launched Cogentiq I2C, automating 60% of billing workflows, processing 1M+ invoices, delivering $5M annualised cash-flow uplift. Directed TrialRun to 8,000+ experiments/month, 65% pilot-to-paid conversion, 14% average sales uplift. Built Crux BI.
-- Earlier: Product Manager and iOS Lead at Fractal; Senior/Lead/iOS roles at Toppr, Ithaka, Wow Labz, Mapplinks. Strong mobile architecture, API integration, Swift, system design, performance, and customer/user workflow evidence.
+- Current: Senior Product Manager, McKinsey & Company, Sydney, Sep 2025-Jul 2026. Owns GenAI and strategic product roadmaps for Periscope, leads 20+ cross-functional team, directed AI pricing decisioning with 9-12% accuracy improvement and 2-7% return-on-sales uplift, built agentic workflows reducing time-to-action from hours to seconds, advises product groups and C-suite clients on AI strategy and product operating models. Worked with consulting teams to create roadmaps for building technical solutions for clients in banking, pharmaceuticals, insurance and operations; also contributed to client digital transformation and implementation.
+- Previous: Senior Product Manager, Fractal Analytics, Apr 2024-Sep 2025. PM persona: led enterprise AI platform roadmap work across CPG, financial services, retail, investment banking, and healthcare. Strategy/consulting persona: worked with sovereign wealth funds, international organisations, and global enterprises across North America, GCC, and APAC on AI transformation. Launched Cogentiq I2C, automating 60% of billing workflows, processing 1M+ invoices, delivering $5M annualised cash-flow uplift. Directed TrialRun to 8,000+ experiments/month, 65% pilot-to-paid conversion, 14% average sales uplift. Built Crux BI. Worked as a product consultant for a retail client to build an AI-powered test-and-learn tool. Delivered Cogentiq I2C product demos, supported pre-sales and onboarded clients.
+- Earlier: Product Manager and iOS Lead at Fractal; career break for health and well-being from Aug-Dec 2018; Senior/Lead/iOS roles at Toppr, Ithaka, Wow Labz, Mapplinks. Strong mobile architecture, API integration, Swift, system design, performance, and customer/user workflow evidence.
 - Education: B.E. Information Science and Engineering, Dayananda Sagar College of Engineering, graduated 2015.
 - Languages: English, Hindi, elementary French.
 - Contact: +61 418 672 778, aditya.godawat@gmail.com, https://linkedin.com/in/adityavikram.
@@ -29,7 +29,9 @@ Use weights: Technical 30%, Experience 25%, Behavioural 15%, Career Alignment 30
 - Moderate 45-59: discuss first.
 - Weak below 45: skip unless strategic.
 
-Strong match areas: AI product strategy, GenAI, agentic workflows, LLM/prompting, enterprise SaaS, decisioning, experimentation, roadmap ownership, product strategy, technical PM, AI/digital transformation, stakeholder management, GTM, healthcare/finance/retail/CPG/eCommerce.
+Strong match areas: PM persona: AI product strategy, GenAI, agentic workflows, LLM/prompting, enterprise SaaS, customer success, implementation, decisioning, experimentation, roadmap ownership, product strategy, technical PM, stakeholder management, GTM, healthcare/finance/investment banking/retail/CPG/eCommerce. Strategy/consulting persona: product operating models, executive advisory, AI/digital/technology transformation, global enterprise transformation, C-suite stakeholder work.
+
+Persona rule: keep sovereign wealth fund, international organisation, North America, GCC, and APAC exposure on the strategy/consulting side unless a PM posting explicitly asks for global enterprise transformation.
 
 Common gaps to frame honestly: deep backend/infrastructure engineering, cybersecurity, formal data-science implementation, specialised domain tools unless supported, pure sales ownership, deep Stripe/payments specifics unless user confirms experience.
 

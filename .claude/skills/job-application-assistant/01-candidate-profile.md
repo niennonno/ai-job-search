@@ -50,14 +50,19 @@ Sydney, Australia
 - Directed AI-powered pricing decisioning systems that improved pricing accuracy by 9-12% and drove 2-7% return-on-sales uplift for global retail enterprise clients.
 - Optimised Agile delivery through strategic GenAI tooling adoption, reducing operational overhead by 20% and accelerating release cadence by 60%.
 - Serves as an in-house consultant to McKinsey product groups and C-suite client executives on enterprise AI strategy, agentic workflow design, and product operating frameworks.
+- Advises internal product groups and enterprise clients on AI strategy, product operating models, and technology transformation investments across internal and client engagements.
+- Worked with consulting teams to create roadmaps for building technical solutions for clients in banking, pharmaceuticals, insurance and operations; also contributed to client digital transformation and implementation.
 
 ### Senior Product Manager - Fractal Analytics (April 2024 - September 2025)
 India
-- Led platform strategy and end-to-end portfolio roadmap execution for enterprise AI engines across CPG, Finance, and Healthcare verticals.
+- PM persona: led AI product strategy and enterprise platform roadmap work across CPG, financial services, retail, investment banking, and healthcare.
+- Strategy/consulting persona: partnered with sovereign wealth funds, international organisations, and global enterprises across North America, GCC, and APAC to identify high-value AI opportunities and shape product strategy.
 - Owned full product lifecycle from discovery through go-to-market.
 - Architected Crux, an AI-powered business intelligence platform that reduced insight generation from days to minutes and eliminated manual data science pipelines.
 - Conceptualised and launched Cogentiq I2C, an AI-driven collections platform that automated 60% of billing workflows, processed 1M+ invoices, and delivered $5M in annualised client cash flow uplift.
 - Directed TrialRun, an enterprise A/B testing product scaling to 8,000+ experiments per month, with 65% pilot-to-paid conversion and 14% average sales uplift across client portfolios.
+- Worked as a product consultant for a retail client to build an AI-powered test-and-learn tool.
+- Delivered Cogentiq I2C product demos, supported pre-sales and onboarded clients.
 
 ### Product Manager - Fractal Analytics (July 2021 - March 2024)
 India
@@ -70,6 +75,9 @@ India
 - Transitioned into product management based on platform outcomes delivered.
 - Retained full ownership of codebase optimisation, sprint planning, and mobile performance management.
 - Shaped engineering culture and delivery standards that informed subsequent product decisions.
+
+### Career break - Health and well-being (August 2018 - December 2018)
+- LinkedIn records a five-month career break recovering from a grade III sports injury.
 
 ### Senior iOS Developer - Toppr (December 2017 - July 2018)
 India
@@ -100,13 +108,18 @@ India
 - Generative AI (GenAI), agentic workflows, LLM implementation and prompt engineering, decisioning systems, A/B experimentation engines, retrieval-augmented generation (RAG), AI product strategy.
 
 ### Product Management
-- Agile/Scrum, sprint planning and facilitation, product lifecycle management, go-to-market strategy, OKR framework, product discovery, product consulting, roadmapping, stakeholder management, user research and analytics, PRD writing, user experience.
+- Agile/Scrum, sprint planning and facilitation, product lifecycle management, go-to-market strategy, OKR framework, product discovery, customer success, implementation, executive advisory, product consulting, product operating models, technology transformation, roadmapping, stakeholder management, user research and analytics, PRD writing, user experience.
 
 ### Technical
 - iOS architecture with Swift, mobile application development, system design, API integration, SQL working knowledge.
 
 ### Domain Expertise
-- Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
+- Retail and CPG, eCommerce, financial services, investment banking, healthcare, technology, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
+
+## Persona Positioning
+- **Product Manager persona:** Lead with product ownership, platform roadmap, product discovery, delivery, GTM, enterprise SaaS, customer success, implementation, pricing, experimentation, decisioning, measurable commercial outcomes, and cross-functional leadership.
+- **Strategy/consulting persona:** Lead with AI/digital transformation, product operating models, executive advisory, C-suite stakeholder work, technology transformation, sovereign wealth funds, international organisations, and global enterprise exposure across North America, GCC, and APAC.
+- **Default rule:** Keep sovereign wealth fund / international organisation / North America / GCC / APAC language on the strategy and consulting side unless a PM role explicitly asks for global enterprise transformation exposure.
 
 ## Certifications
 - **Tech & AI - AI Advisory - Level 2** - McKinsey & Co., January 2026

@@ -33,17 +33,25 @@ This repo is a job application workspace. Codex acts as a career advisor and app
   - Owns GenAI and strategic product roadmaps for Periscope, McKinsey's flagship retail pricing platform.
   - Leads a 20+ person cross-functional team across engineering, data science, and design.
   - Directed AI pricing decisioning systems improving pricing accuracy by 9-12% and driving 2-7% return-on-sales uplift.
+  - Advises McKinsey product groups and C-suite enterprise clients on AI strategy, product operating models, and technology transformation.
+  - Worked with consulting teams to create roadmaps for building technical solutions for clients in banking, pharmaceuticals, insurance and operations; also contributed to client digital transformation and implementation.
 
 - **Senior Product Manager** (April 2024 - September 2025) - **Fractal Analytics** (India)
-  - Led platform strategy and portfolio roadmap execution for enterprise AI engines across CPG, Finance, and Healthcare.
+  - PM persona: led AI product strategy and enterprise platform roadmap work across CPG, financial services, retail, investment banking, and healthcare.
+  - Strategy/consulting persona: partnered with sovereign wealth funds, international organisations, and global enterprises across North America, GCC, and APAC on AI transformation opportunities.
   - Launched Cogentiq I2C, automating 60% of billing workflows, processing 1M+ invoices, and delivering $5M annualised cash-flow uplift.
   - Directed TrialRun, scaling to 8,000+ experiments per month with 65% pilot-to-paid conversion and 14% average sales uplift.
+  - Worked as a product consultant for a retail client to build an AI-powered test-and-learn tool.
+  - Delivered Cogentiq I2C product demos, supported pre-sales and onboarded clients.
 
 - **Product Manager** (July 2021 - March 2024) - **Fractal Analytics** (India)
   - Managed the Cuddle AI roadmap and stakeholder alignment, driving 57% revenue growth and lifting MAU engagement by 85%.
 
 - **Member, Technical Team (iOS Lead)** (January 2019 - June 2021) - **Fractal Analytics** (India)
   - Owned iOS architecture, engineering execution, Agile deployment cycles, sprint planning, and mobile performance management.
+
+- **Career break - Health and well-being** (August 2018 - December 2018)
+  - LinkedIn records a five-month career break recovering from a grade III sports injury.
 
 - **Senior iOS Developer** (December 2017 - July 2018) - **Toppr** (India)
   - Scaled consumer mobile application to 2M+ DAU and 9M+ MAU while maintaining approximately 98% crash-free rate.
@@ -58,9 +66,9 @@ This repo is a job application workspace. Codex acts as a career advisor and app
   - Engineered and deployed production-ready in-house mobile application solutions.
 
 ### Technical Skills
-- **Primary:** Generative AI, agentic workflows, LLM implementation and prompt engineering, AI product strategy, decisioning systems, A/B experimentation engines, product roadmap ownership, enterprise SaaS.
-- **Secondary:** RAG, Agile/Scrum, sprint planning, product lifecycle management, GTM strategy, OKRs, product discovery, stakeholder management, user research and analytics, PRD writing, UX, iOS architecture, Swift, API integration, SQL working knowledge.
-- **Domain:** Retail and CPG, eCommerce, financial services, healthcare, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
+- **Primary:** Generative AI, agentic workflows, LLM implementation and prompt engineering, AI product strategy, decisioning systems, A/B experimentation engines, product roadmap ownership, enterprise SaaS, customer success, implementation, product operating models, AI transformation.
+- **Secondary:** RAG, Agile/Scrum, sprint planning, product lifecycle management, GTM strategy, OKRs, product discovery, stakeholder management, executive advisory, product consulting, technology transformation, user research and analytics, PRD writing, UX, iOS architecture, Swift, API integration, SQL working knowledge.
+- **Domain:** Retail and CPG, eCommerce, financial services, investment banking, healthcare, technology, EduTech, travel and tourism, enterprise SaaS, B2B platforms, B2C consumer applications.
 - **Software/tooling evidence:** Claude Code, Codex, ChatGPT/GenAI tooling, modern product and analytics tooling categories, SQL working knowledge, Swift/iOS engineering tooling, Agile/Scrum delivery tooling. Only name specific vendor tools in applications when supported by the CV, LinkedIn profile, or the job conversation.
 
 ### Certifications
@@ -78,19 +86,24 @@ This repo is a job application workspace. Codex acts as a career advisor and app
 ### Behavioral Profile
 - **Technical-commercial bridge** - Inferred from senior AI product leadership built on an iOS engineering foundation.
 - **Outcome-oriented product leader** - Inferred from repeated revenue, cash-flow, sales uplift, release cadence, pricing accuracy, and engagement metrics.
-- **Strengths:** AI product strategy, roadmap ownership, cross-functional leadership, enterprise stakeholder management, product consulting, commercial impact framing.
+- **Strengths:** AI product strategy, roadmap ownership, cross-functional leadership, enterprise stakeholder management, executive advisory, product consulting, commercial impact framing.
 - **Growth areas:** Keep each application focused on one clear product story; do not over-claim unsupported tools or domain depth.
 - **Thrives in:** AI, GenAI, enterprise SaaS, decisioning, experimentation, and platform roles with clear ownership and measurable business outcomes.
 
+### Persona Positioning
+- **Product Manager persona:** Lead with product ownership, roadmap strategy, discovery, delivery, GTM, enterprise SaaS, customer success, implementation, pricing, experimentation, decisioning, platform products, measurable commercial outcomes, and cross-functional leadership.
+- **Strategy/consulting persona:** Lead with AI/digital transformation, product operating models, executive advisory, C-suite stakeholder work, technology transformation, sovereign wealth funds, international organisations, and global enterprise exposure across North America, GCC, and APAC.
+- **Do not mix by default:** Use the global sovereign wealth fund / international organisation / North America / GCC / APAC language only for strategy, transformation, advisory, or consulting roles unless the user explicitly asks to position a PM application that way.
+
 ### What Excites You
 - AI product strategy and agentic workflows that turn manual enterprise operations into faster, higher-quality decisions.
-- Senior product, product owner, and strategy/transformation roles connecting technical architecture, customer value, cross-functional delivery, and measurable commercial outcomes.
+- Senior product, product owner, and strategy/transformation roles connecting technical architecture, customer value, executive stakeholder alignment, cross-functional delivery, and measurable commercial outcomes.
 
 ### Target Sectors
 - AI / GenAI product: enterprise AI platforms, agentic workflow products, AI decisioning systems, AI business intelligence.
-- Enterprise SaaS and platform product: B2B platforms, product strategy, pricing, experimentation, workflow automation.
-- Product strategy and transformation: AI transformation, digital transformation, product operating model, strategy-to-execution, and platform/product advisory roles with real product ownership.
-- Domain-aligned sectors: retail, CPG, eCommerce, financial services, healthcare, consulting/advisory.
+- Enterprise SaaS and platform product: B2B platforms, product strategy, customer success, implementation, pricing, experimentation, workflow automation.
+- Product strategy and transformation: AI transformation, digital transformation, technology transformation, product operating model, strategy-to-execution, and platform/product advisory roles with real product ownership.
+- Domain-aligned sectors: retail, CPG, eCommerce, financial services, investment banking, healthcare, technology, consulting/advisory.
 
 ### Search Preferences and Deal-breakers
 - **Target role titles:** Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy Manager, Product Strategy Lead, AI Transformation Manager/Lead, and digital/product strategy transformation roles.

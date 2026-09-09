@@ -28,8 +28,8 @@ Secondary:
 ## Candidate Search Focus
 
 - **Primary role direction:** Senior Product Manager, Product Manager, Technical Product Manager, Product Owner, Senior Product Owner, AI Product Manager, GenAI Product Manager, Principal Product Manager, Product Lead, Product Strategy, AI/Digital Transformation
-- **Core skills:** GenAI, agentic workflows, AI product strategy, LLM implementation, prompt engineering, enterprise SaaS, experimentation, decisioning systems
-- **Domain strengths:** Retail, CPG, eCommerce, financial services, healthcare, B2B platforms, enterprise AI, pricing platforms
+- **Core skills:** PM persona: GenAI, agentic workflows, AI product strategy, LLM implementation, prompt engineering, enterprise SaaS, customer success, implementation, experimentation, decisioning systems. Strategy/consulting persona: product operating models, technology transformation, executive advisory, AI transformation.
+- **Domain strengths:** Retail, CPG, eCommerce, financial services, investment banking, healthcare, technology, B2B platforms, enterprise AI, pricing platforms
 - **Location base:** Sydney, NSW, Australia
 - **Work rights:** Australian Permanent Resident
 
@@ -63,12 +63,16 @@ These match enterprise platform and domain expertise.
 
 ```text
 site:seek.com.au "Principal Product Manager" "enterprise SaaS" Sydney
+site:seek.com.au "Product Manager" "customer success" Sydney
+site:seek.com.au "Product Manager" "implementation" Australia
 site:seek.com.au "Product Manager" "decisioning" Australia
 site:seek.com.au "Product Manager" "experimentation" Sydney
 site:seek.com.au "Product Owner" "enterprise SaaS" Sydney
 site:au.linkedin.com/jobs "Product Manager" "A/B testing" Australia
 site:au.linkedin.com/jobs "Product Manager" "pricing" Sydney
 site:au.linkedin.com/jobs "Product Owner" "platform" Australia
+site:au.linkedin.com/jobs "Product Manager" "customer success" Australia
+site:au.linkedin.com/jobs "Product Manager" "implementation" Australia
 site:greenhouse.io "Product Manager" "enterprise SaaS" Australia
 site:workdayjobs.com "Product Manager" "pricing" Australia
 site:smartrecruiters.com "Product Manager" "experimentation" Australia
@@ -91,17 +95,20 @@ site:lever.co "Product Manager" "retail technology" Australia
 
 ### Priority 4: Broader Product Strategy / Advisory
 
-Wider net for product strategy, product consulting, and AI transformation roles.
+Wider net for the strategy/consulting persona: product strategy, product consulting, product operating model, technology transformation, and AI transformation roles.
 
 ```text
 site:seek.com.au "Product Strategy" "AI" Sydney
 site:seek.com.au "Product Consultant" "AI" Australia
 site:seek.com.au "AI Strategy" "Product" Sydney
+site:seek.com.au "Technology Transformation" "Product" Sydney
+site:seek.com.au "Product Operating Model" Australia
 site:seek.com.au "Strategy Transformation" "Product" Sydney
 site:seek.com.au "Digital Transformation" "Product Owner" Sydney
 site:au.linkedin.com/jobs "Product Strategy Manager" Australia
 site:au.linkedin.com/jobs "AI Transformation" "Product" Australia
 site:au.linkedin.com/jobs "AI Transformation" "Product Owner" Australia
+site:au.linkedin.com/jobs "Technology Transformation" "Product" Australia
 site:au.linkedin.com/jobs "Product Strategy" "Transformation" Sydney
 site:workforceaustralia.gov.au "Product Manager" "AI" Sydney
 site:apsjobs.gov.au "Product Manager" "AI" NSW
@@ -115,8 +122,9 @@ Monitor companies and categories that repeatedly match Aditya's senior AI/produc
 - Agentic AI, workflow automation, AI platform, and AI evaluation products
 - Retail technology, pricing, experimentation, and decisioning platforms
 - Fintech, lending, payments, and financial-services product teams
+- Investment banking and enterprise finance transformation product teams
 - Healthcare AI, healthtech, and regulated workflow automation companies
-- Consulting and product strategy teams with AI transformation work
+- Consulting and product strategy teams with AI transformation work, for the strategy/consulting persona
 
 Known high-interest companies from current tracker/searches include Checkbox, Relevance AI, Culture Amp, Lendi Group, carsales, Cartology, Quantaco, Cotality, Zip, Nuix, Driva, Mable, and Expertech. Skip The Onset for follow-up action unless Aditya explicitly reopens it.
 

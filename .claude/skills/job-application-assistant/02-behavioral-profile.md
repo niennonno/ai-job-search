@@ -17,17 +17,24 @@ Aditya Vikram Godawat's behavioural profile is source-backed by CV evidence, Lin
 | Technical-product synthesis | High, inferred | Career path spans iOS engineering, AI platforms, GenAI strategy, product roadmaps, and C-suite product consulting. A McKinsey recommendation says he combines product thinking with technical credibility. |
 | Cross-functional leadership | High, inferred | Current role leads 20+ people across engineering, data science, and design; a McKinsey manager referenced effective collaboration across engineering, data science, design, business stakeholders, and client-facing teams. |
 | Enterprise client orientation | High, inferred | Experience includes global enterprise retail clients, CPG, finance, healthcare, and C-suite stakeholders. |
+| Executive advisory orientation | High, inferred | Consulting CV describes advising product groups and C-suite enterprise clients on AI strategy, product operating models, and technology transformation. |
 
 ## Strongest Behaviors
 - **Bridges technical depth with commercial framing:** Inferred from software engineering background plus senior AI product leadership and measurable business outcomes.
 - **Builds operating rhythm around delivery:** Inferred from Agile optimisation, sprint planning, release-cadence improvements, and platform roadmap ownership.
 - **Moves comfortably between strategy and execution:** Inferred from product vision, roadmap ownership, GTM, mobile architecture, and hands-on platform delivery.
 - **Communicates with senior stakeholders:** Inferred from consulting to C-suite client executives and separate McKinsey product groups.
+- **Advises through ambiguity:** Inferred from consulting CV evidence around identifying high-value AI opportunities and shaping product strategy for global enterprise clients.
 - **Simplifies complex AI topics:** A McKinsey recommendation notes his ability to make complex GenAI topics exciting, accessible, and connected to product value.
+
+## Persona Split
+- **Product Manager persona:** Emphasise product ownership, roadmap, discovery, delivery, GTM, customer success, implementation, platform products, metrics, and cross-functional leadership.
+- **Strategy/consulting persona:** Emphasise executive advisory, AI/digital transformation, product operating models, technology transformation, sovereign wealth funds, international organisations, and global enterprise exposure across North America, GCC, and APAC.
+- Keep the global transformation language out of ordinary PM applications unless the posting itself asks for advisory or transformation scope.
 
 ## How You Work Best
 - Environments where product strategy, engineering, data science, and design need to converge around a measurable business outcome.
-- Roles with ownership of roadmap, discovery, delivery, and go-to-market rather than narrow feature maintenance.
+- Roles with ownership of roadmap, discovery, delivery, implementation, customer success loops, and go-to-market rather than narrow feature maintenance.
 - Teams building AI, GenAI, decisioning, experimentation, or enterprise SaaS products with real adoption and revenue/accountability metrics.
 
 ## Growth Areas (frame positively in applications)
@@ -40,6 +47,7 @@ Aditya Vikram Godawat's behavioural profile is source-backed by CV evidence, Lin
 When a job posting mentions these keywords, it's a **strong behavioral fit**:
 - AI product strategy, GenAI product, agentic workflows, enterprise SaaS, platform roadmap, pricing decisioning
 - Cross-functional leadership, engineering/data science/design collaboration, stakeholder management, C-suite clients
+- Executive advisory, product operating models, technology transformation, global enterprise transformation
 - Go-to-market, product discovery, experimentation, OKRs, measurable commercial impact
 
 When a job posting mentions these, flag as **potential friction** (not deal-breaker):

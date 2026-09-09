@@ -1,0 +1,122 @@
+Aditya Vikram Godawat
+Sydney, NSW, Australia | Australian Permanent Resident
+MOBILE-ALT+61 418 672 778 • Envelopeaditya.godawat@gmail.com
+linkedin.com/in/adityavikram
+AI Strategy, Product Advisory & Delivery
+Product and technology leader with 11+ years across software engineering, enterprise AI and product management.
+Experience at McKinsey & Company and Fractal Analytics spans executive advisory, AI transformation, product
+operating models and delivery of commercially focused products. Combines technical depth with product strategy,
+cross-functional leadership and measurable outcomes in pricing, finance operations, experimentation and business
+intelligence.
+Consulting Capabilities
+Strategy and advisory: AI opportunity identification, AI and technology transformation, executive stakeholder align-
+ment, product operating models and product strategy.
+Product and delivery: Discovery, roadmaps, PRDs, OKRs, go-to-market, implementation, customer success, Ag-
+ile/Scrum and cross-functional leadership.
+Technology and domains: GenAI, agentic workflows, LLM implementation, prompt engineering, RAG, decisioning,
+A/B experimentation, enterprise SaaS, retail/CPG, financial services, investment banking and healthcare.
+McKinsey & Company
+McKinsey & Company Sydney, Australia
+Senior Product Manager Sep 2025 - Jul 2026
+Enterprise retail pricing | Periscope
+Context and scope: GenAI product development and AI decision support for enterprise retail pricing operations, including
+workflows where operational action previously took hours.
+Contribution and outcomes: Owned GenAI strategy and product roadmaps; led a 20+ person team across engineering,
+data science and design. Defined and delivered agentic workflows that reduced time-to-action from hours to seconds.
+Directed pricing decisioning systems that improved pricing accuracy by 9–12% and drove 2–7% return-on-sales uplift.
+Work also included compliance workflows and security features.
+AI strategy and product operating models | Internal teams and enterprise clients
+Context and scope: Advisory work with McKinsey product groups and C-suite enterprise stakeholders on AI adoption,
+product operating frameworks and technology transformation investments.
+Contribution and outcomes: Advised on enterprise AI strategy, agentic workflow design and product operating models,
+connecting technology capabilities with product direction and delivery considerations.
+Client solution roadmaps and digital transformation | Banking, pharmaceuticals, insurance and operations
+Context and scope: Technical solution planning and digital transformation work with consulting teams serving clients
+across banking, pharmaceuticals, insurance and operations.
+Contribution and outcomes: Worked with consulting teams to create roadmaps for building technical solutions for
+clients. Contributed to client digital transformation and implementation work.
+Product delivery improvement | Internal cross-functional teams
+Context and scope: Improving Agile delivery efficiency and release cadence through adoption of GenAI tooling.
+Contribution and outcomes: Optimised delivery practices through GenAI tooling adoption, reducing operational overhead
+by 20% and accelerating release cadence by 60%.
+1/3
+Fractal Analytics | Enterprise AI and Transformation
+Fractal Analytics India
+Senior Product Manager Apr 2024 - Sep 2025
+Led AI product strategy and enterprise platform roadmaps across CPG, financial services, retail, investment banking
+and healthcare. Owned the product lifecycle from discovery through go-to-market.
+AI transformation and opportunity identification | Global enterprise stakeholders
+Context and scope: Work with sovereign wealth funds, international organisations and global enterprises across North
+America, the GCC and APAC.
+Contribution and outcomes: Partnered with stakeholders to identify high-value AI opportunities and shape product
+strategy. Brought enterprise AI platform and delivery experience to transformation discussions.
+Collections, billing and accounting workflows | Cogentiq I2C
+Context and scope: AI-driven collections and finance operations, covering billing automation, invoice processing,
+accounting workflows and banking infrastructure exposure.
+Contribution and outcomes: Conceptualised and launched Cogentiq I2C. Delivered product demos, supported pre-sales
+and onboarded clients. The platform automated 60% of billing workflows, processed more than 1 million invoices and
+delivered $5 million in annualised client cash-flow uplift. Responsibilities also included compliance workflow exposure.
+AI-powered test-and-learn tool | Retail client
+Context and scope: Client-facing product consulting to build an AI-powered test-and-learn tool for a retail client.
+Contribution and outcomes: Worked as the product consultant on the tool, contributing product expertise to its
+development.
+Enterprise experimentation | TrialRun
+Context and scope: An enterprise A/B testing product supporting experimentation at scale and measurement of
+commercial outcomes across client portfolios.
+Contribution and outcomes: Directed the product and scaled usage to more than 8,000 experiments per month.
+Achieved 65% pilot-to-paid conversion and 14% average sales uplift across client portfolios.
+AI-powered business intelligence | Crux
+Context and scope: Business insight generation that previously took days and relied on manual data-science pipelines.
+Contribution and outcomes: Architected the AI-powered BI platform, reducing insight generation from days to minutes
+and eliminating manual data-science pipelines. Built security features as part of the product work.
+Fractal Analytics | Business Intelligence Product Growth
+Fractal Analytics India
+Product Manager Jul 2021 - Mar 2024
+AI business intelligence roadmap | Cuddle AI
+Context and scope: Core product capability development and cross-functional alignment for an AI-powered business
+intelligence platform.
+Contribution and outcomes: Managed the feature roadmap and stakeholder alignment. Architected product capabilities
+that drove 57% revenue growth and lifted monthly active user engagement by 85%. Brought experience from the
+platform’s mobile engineering team into product decisions.
+2/3
+Engineering Leadership and Earlier Project Experience
+Fractal Analytics India
+Member, Technical Team (iOS Lead) Jan 2019 - Jun 2021
+Mobile business intelligence | Cuddle AI
+Context and scope: Native iOS delivery for the core Cuddle AI mobile product.
+Contribution and outcomes: Owned application architecture, engineering execution, Agile deployment cycles, codebase
+optimisation, sprint planning and mobile performance. Shaped engineering culture and delivery standards before
+transitioning into product management.
+Toppr India
+Senior iOS Developer Dec 2017 - Jul 2018
+Consumer education platform | Toppr
+Context and scope: Mobile application scaling, reliability and payment infrastructure in an education technology
+environment.
+Contribution and outcomes: Scaled the consumer mobile application to 2M+ daily active users and 9M+ monthly active
+users. Maintained approximately 98% crash-free rate through performance optimisation and architecture improvements;
+responsibilities included payment infrastructure.
+Ithaka India
+Lead iOS Developer Apr 2017 - Dec 2017
+Travel platform launch and expansion | Ithaka
+Context and scope: Building the foundational iOS product and mobile engineering capability for a travel platform.
+Contribution and outcomes: Built the iOS application from scratch, established the mobile engineering team and scaled
+the platform across 20+ countries. Responsibilities included payment infrastructure.
+Wow Labz India
+iOS Developer Jan 2016 - Mar 2017
+Developed and maintained native iOS applications for HDFC Bank, FabIndia and UCSF. Work included banking API
+and mobile integration experience for HDFC Bank.
+Mapplinks India
+Mobile Developer Aug 2015 - Jan 2016
+Engineered and deployed the company’s in-house mobile application suite, delivering production-ready app solutions.
+Project record includes Percentor Margin Markup Calculator, a business mobile application associated with Mapplinks.
+Education and Professional Development
+B.E., Information Science and Engineering | Dayananda Sagar College of Engineering, Bangalore, India | Graduated
+2015.
+Certifications: Tech & AI - AI Advisory - Level 2 (McKinsey, Jan 2026); Generative AI for Business - A Leaders’
+Handbook (Fractal, May 2025); Behaviour Architecture - Understanding Human Behaviour (Fractal, Dec 2024); Human
+Decision Making and its Biases (Coursera, Jul 2024).
+Technical foundation: Swift, iOS architecture, system design, API integration and working knowledge of SQL. AI
+tooling includes Claude Code, Codex and ChatGPT.
+Languages: English and Hindi (native or bilingual); French (elementary).
+Work rights: Australian Permanent Resident with full Australian work rights.
+3/3

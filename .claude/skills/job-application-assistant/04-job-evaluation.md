@@ -60,9 +60,11 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** AI product strategy, GenAI product development, agentic workflows, LLM implementation and prompt engineering, enterprise SaaS platforms, AI-powered decisioning systems, A/B experimentation engines, product roadmap ownership, product ownership, Senior Product Owner scope, product strategy, AI/digital transformation, strategy-to-execution operating models, Agile/Scrum delivery, GTM strategy, stakeholder management.
+**Strong match areas:** AI product strategy, GenAI product development, agentic workflows, LLM implementation and prompt engineering, enterprise SaaS platforms, customer success, implementation, AI-powered decisioning systems, A/B experimentation engines, product roadmap ownership, product ownership, Senior Product Owner scope, product strategy, product operating models, AI/digital/technology transformation, strategy-to-execution operating models, executive advisory, Agile/Scrum delivery, GTM strategy, stakeholder management.
 **Moderate match areas:** Product Owner roles with narrower delivery scope, iOS architecture and Swift, mobile application development, system design, API integration, SQL working knowledge, RAG, user research and analytics, product consulting, OKR frameworks.
 **Weak match areas:** Deep hands-on backend engineering, infrastructure/platform engineering, cybersecurity, data engineering implementation, formal people-management-only roles, and domains not supported by CV evidence.
+
+**Persona routing:** For Product Manager roles, prioritise product ownership, platform roadmap, discovery, delivery, implementation, customer success, GTM, measurable outcomes, and cross-functional leadership. For strategy/consulting roles, prioritise AI/digital transformation, product operating models, executive advisory, C-suite stakeholder work, technology transformation, sovereign wealth funds, international organisations, and global enterprise exposure across North America, GCC, and APAC. Do not use the global consulting evidence as default PM positioning.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,7 +76,7 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** Senior product management, product ownership with strategic/platform scope, AI product management, GenAI strategy, product strategy, AI/digital transformation, strategy-to-execution leadership, enterprise B2B platforms, retail pricing platforms, CPG, eCommerce, financial services, healthcare AI products, experimentation platforms, mobile consumer products at scale.
+**Strong:** Senior product management, product ownership with strategic/platform scope, AI product management, GenAI strategy, product strategy, customer success, implementation, product operating models, AI/digital/technology transformation, strategy-to-execution leadership, executive advisory, enterprise B2B platforms, retail pricing platforms, CPG, eCommerce, financial services, investment banking adjacency, healthcare AI products, experimentation platforms, mobile consumer products at scale.
 **Moderate:** Product Owner roles that are mostly delivery/backlog management, solutions/product consulting, technical program leadership, platform partnerships, B2C growth/product roles.
 **Entry-level:** Roles requiring direct ownership of pure sales, pure data science modelling, cloud infrastructure engineering, or regulated security-clearance delivery without product leadership scope.
 
@@ -115,13 +117,14 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- Target senior product roles where AI, GenAI, agentic workflows, or decisioning systems are central to the product strategy.
+- Target senior product roles where AI, GenAI, agentic workflows, product operating models, technology transformation, or decisioning systems are central to the product strategy.
 - Include Product Owner, Senior Product Owner, and strategy/transformation roles when they carry product ownership, digital/AI transformation, platform strategy, or measurable business outcome accountability.
 - Prioritise roles with end-to-end ownership across discovery, roadmap, delivery, go-to-market, and measurable commercial outcomes.
 - Build on enterprise SaaS, retail/CPG/eCommerce, financial services, healthcare, and product consulting experience in the Australian market.
+- Maintain two application personas: PM applications should stay product/platform-led; strategy and consulting applications can lead with global AI transformation, executive advisory, sovereign wealth funds, international organisations, and North America/GCC/APAC exposure.
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: AI product strategy, agentic workflow design, enterprise platform roadmaps, product ownership, strategy-to-execution transformation, product operating model work, pricing/decisioning systems, experimentation, cross-functional leadership, C-suite stakeholder work, products with clear revenue or operational-impact metrics.
+- Tasks that energize: AI product strategy, agentic workflow design, enterprise platform roadmaps, product ownership, customer success, implementation, strategy-to-execution transformation, product operating model work, technology transformation, pricing/decisioning systems, experimentation, cross-functional leadership, C-suite stakeholder work, products with clear revenue or operational-impact metrics.
 - Tasks that drain or reduce priority: maintenance-heavy product roles, pure delivery coordination, backlog-only Product Owner roles, narrow feature ownership, coding-first roles without product strategy scope, formal people-management-only roles, or roles dominated by sales/account ownership rather than product ownership.
 - Non-task factors: leadership style, department culture, company values, degree of autonomy, product ownership clarity, executive alignment, and maturity of AI/product operating model.
 
