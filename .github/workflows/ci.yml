@@ -73,6 +73,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python tools/bootstrap_private_profile.py
+      - name: Install Excel integration test dependency
+        run: python -m pip install openpyxl==3.1.5
       - run: python -m unittest discover -s tests -t . -v
 
   dependency-review:
@@ -174,6 +176,7 @@ jobs:
         run: |
           python3 tools/verify_pdf.py cv/main_example.pdf \
             --pages 2 \
+            --ascii-dates \
             --contains '[your.email@example.com]' \
             --contains 'Professional Experience' \
             --contains 'Achievement'
