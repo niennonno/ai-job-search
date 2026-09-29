@@ -59,6 +59,7 @@ The framework encodes career guidance best practices, including structured evalu
 ```bash
 gh repo clone niennonno/ai-job-search
 cd ai-job-search
+python3 tools/bootstrap_private_profile.py
 ```
 
 > [!IMPORTANT]
@@ -124,6 +125,152 @@ If the URL can't be fetched (some job portals block automated access), you can p
 
 This runs the full workflow: evaluate fit, draft CV + cover letter, review, revise, compile the PDFs, and present the final output.
 
+## Create your own flavour
+
+A flavour is a fork tuned for a particular market, profession, language, set of job boards, or application style. Keep reusable workflow improvements in Git; keep candidate details and application history local.
+
+### 1. Fork it and establish the upstream
+
+```bash
+gh repo fork niennonno/ai-job-search --clone
+cd ai-job-search
+git remote -v
+gh repo set-default origin
+```
+
+GitHub normally creates `origin` for your fork and `upstream` for this repository, but selects the parent as the GitHub CLI default. The last command makes issue, release, and Actions commands target your edition. If you cloned another way, add the upstream explicitly:
+
+```bash
+git remote add upstream https://github.com/niennonno/ai-job-search.git
+```
+
+Rename the repository if your edition has a distinct audience, then update its GitHub description, website, and topics. Useful starting topics include `job-search`, `codex`, `career-tools`, `resume`, `ai-agents`, and your target market or profession.
+
+### 2. Create the private working files
+
+```bash
+python3 tools/bootstrap_private_profile.py
+```
+
+The bootstrap script copies public, placeholder-only files from `.framework/profile-templates/` into ignored working locations. It creates the local candidate profile, compact context, evidence bank, search configuration, and master CV without putting personal information into version control. Re-running it is safe: existing files are never overwritten.
+
+Then open the repository in Codex and say `Set up my job search profile.` You can also run `/setup --section search` later to change roles, locations, or portals without rebuilding the full profile.
+
+### 3. Customise the public edition
+
+These are the main tracked surfaces that define your flavour:
+
+| Path | What belongs there |
+|---|---|
+| `README.md` | Edition name, audience, prerequisites, support and feedback links, and honest attribution |
+| `AGENTS.md` | Market defaults, language conventions, operating rules, and source-of-truth paths |
+| `.framework/profile-templates/` | Placeholder-only profile structures for new users; never real candidate data |
+| `.framework/commands/` and `.framework/skills/` | Reusable workflow behaviour and evaluation logic |
+| `.agents/skills/` | Reviewed market-specific job portal integrations |
+| `templates/` and `cover_letters/` | Shareable document templates with placeholders rather than personal details |
+| `.github/`, `CONTRIBUTING.md`, and `SECURITY.md` | CI, issue intake, contribution rules, security reporting, and optional funding links |
+
+Common flavour ideas include a country-specific edition, a graduate or career-change workflow, a sector-specific scoring rubric, local-language application templates, or a carefully reviewed portal pack. Keep the original MIT licence and attribution, then clearly describe what your edition changes.
+
+### 4. Confirm the privacy boundary
+
+Before committing, check that personal working files are ignored:
+
+```bash
+git check-ignore \
+  CODEX.md \
+  .codex/context/job-application-brief.md \
+  .codex/context/evidence-bank.csv \
+  cv/master_cv.tex \
+  job_search_tracker.csv
+git status --short
+```
+
+Do not use `git add -f` on candidate profiles, source documents, generated applications, trackers, Gmail state, or local evidence. If you introduce a new personal-data path in your flavour, add it to `.gitignore` before using it and extend `tools/security_guards.py` so CI protects future contributors too.
+
+### 5. Validate and publish
+
+Run the same checks expected by CI:
+
+```bash
+python3 tools/lint_skills.py
+python3 tools/check_framework_version.py
+python3 tools/security_guards.py
+python3 -m unittest discover -s tests -t . -v
+```
+
+Also test one bootstrap and one representative workflow from a clean checkout. If you changed document templates, compile and visually inspect the sample PDFs. Finally, review exactly what will become public:
+
+```bash
+git status --short
+git add README.md AGENTS.md
+# Stage any other reviewed public files individually.
+git diff --cached
+git commit -m "Create my job-search flavour"
+git push
+```
+
+Never use a real candidate as the public example. Use obviously fictional names and organisations, and search the staged diff for email addresses, phone numbers, home addresses, API keys, and absolute paths from your machine.
+
+### 6. Keep your flavour current
+
+Prefer tagged [releases](../../releases) over blindly merging the latest branch. These commands show what changed before you merge anything:
+
+```bash
+git fetch upstream --tags
+python3 tools/check_upstream_updates.py
+python3 tools/upstream_triage.py
+```
+
+See [SETUP.md, section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork) for the complete update workflow.
+
+## Measure how it is performing
+
+This project contains no product analytics or hidden telemetry. Career data stays on the user's machine. Measure the public project with repository-level signals and optional, aggregate feedback instead.
+
+### Adoption signals
+
+- **[GitHub Insights → Traffic](https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository):** review clones, unique visitors, referring sites, and popular content. GitHub exposes a rolling 14-day window, so take a weekly snapshot if you want history.
+- **Community activity:** track stars, forks, watchers, contributors, issues, pull requests, and discussion participation. Treat these as interest signals, not proof that the workflow improved someone's job search.
+- **Release use:** publish tagged releases with clear notes; release downloads are useful when you attach versioned starter bundles or other assets.
+- **Discovery:** add accurate repository topics and link to the project from your own site or launch posts. Referrer data will show which channels bring useful traffic.
+
+Maintainers with repository access can snapshot the rolling traffic data with the GitHub CLI:
+
+```bash
+gh api repos/{owner}/{repo}/traffic/views
+gh api repos/{owner}/{repo}/traffic/clones
+gh api repos/{owner}/{repo}/traffic/popular/referrers
+gh api repos/{owner}/{repo}/traffic/popular/paths
+```
+
+Store those summaries outside the public candidate workflow—for example in a private spreadsheet or a maintainer-only dashboard.
+
+### Feedback and outcome signals
+
+[Enable GitHub Discussions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/enabling-or-disabling-github-discussions) and create focused categories such as **Q&A**, **Ideas**, **Show and tell**, and **Success stories**. Pin a short welcome post asking what edition people tried, whether setup completed, which workflow was useful, and what blocked them.
+
+A simple weekly scorecard is enough:
+
+| Question | Suggested signal |
+|---|---|
+| Are people finding it? | Unique visitors and referrers |
+| Are they trying it? | Clones, forks, and setup-related questions |
+| Can they get through it? | Setup failures, bug reports, and CI health |
+| Do they return or contribute? | Discussions, repeat contributors, pull requests, and releases adopted by forks |
+| Does it help? | Opt-in, aggregate reports of applications prepared, interviews, or offers |
+
+For outcome feedback, explicitly ask users **not** to post CVs, application archives, recruiter emails, employer correspondence, addresses, or other personal information. Aggregate counts and optional anonymous stories are sufficient. Do not add command telemetry or upload local tracker contents merely to improve the dashboard; if telemetry is ever introduced, make it opt-in, documented, minimal, and easy to disable.
+
+### Public launch checklist
+
+- Replace edition-specific placeholders and links, while retaining the MIT licence and original inspiration credit.
+- Confirm the repository description, topics, social preview, support links, and security contact.
+- Enable Discussions and pin a privacy-safe feedback prompt.
+- Run all validation checks and confirm Actions are green on a clean checkout.
+- Publish a tagged release with setup instructions, changes from upstream, known limitations, and screenshots made from fictional data.
+- Announce the edition with one concrete audience and use case; review traffic and feedback weekly for the first month.
+
 ## Codex entrypoints
 
 Codex reads `AGENTS.md` first. The reusable Codex skills live under `.codex/skills/`:
@@ -169,11 +316,13 @@ Postings are treated as untrusted input (the workflow follows no instructions em
 
 ```
 ai-job-search/
-├── CODEX.md                           # Main candidate profile + workflow rules
+├── CODEX.md                           # Local candidate profile (generated, ignored)
 ├── AGENTS.md                          # Codex entrypoint and operating rules
 ├── .codex/
-│   └── skills/                        # Codex natural-language workflow entrypoints
+│   ├── skills/                        # Tracked Codex natural-language workflow entrypoints
+│   └── context/                       # Local compact profile + evidence bank (ignored)
 ├── .framework/
+│   ├── profile-templates/             # Tracked, placeholder-only onboarding templates
 │   ├── commands/
 │   │   ├── apply.md                   # /apply workflow (drafter-reviewer)
 │   │   ├── setup.md                   # /setup onboarding (documents folder, CV import, or interview)
@@ -190,13 +339,7 @@ ai-job-search/
 │   ├── skills/
 │   │   ├── job-application-assistant/  # Core application skill
 │   │   │   ├── SKILL.md               # Skill definition
-│   │   │   ├── 01-candidate-profile.md # Your education, experience, skills
-│   │   │   ├── 02-behavioral-profile.md# PI/DISC/personality assessment
-│   │   │   ├── 03-writing-style.md    # Tone, structure, do's and don'ts
-│   │   │   ├── 04-job-evaluation.md   # Scoring framework for job fit
-│   │   │   ├── 05-cv-templates.md     # LaTeX CV structure + tailoring rules
-│   │   │   ├── 06-cover-letter-templates.md # LaTeX cover letter templates
-│   │   │   └── 07-interview-prep.md   # STAR examples + interview framework
+│   │   │   └── 01-... through 07-...   # Local private profile modules (ignored)
 │   │   ├── job-scraper/               # Job search orchestration
 │   │   └── upskill/                   # /upskill skill gap analysis and learning plan
 │   └── command-allowlist.json         # Reviewed framework command policy
@@ -205,14 +348,14 @@ ai-job-search/
 │   └── freehire-search/               # freehire.me tech job aggregator (multi-market, REST API)
 ├── .agents/archive/skills/            # Legacy Danish portal examples, not used by default
 ├── cv/
-│   └── Aditya_Godawat_PM.tex          # private master CV used for tailoring
+│   └── master_cv.tex                   # Local private master CV (generated, ignored)
 ├── cover_letters/
 │   ├── cover.cls                      # Custom cover letter LaTeX class
 │   ├── cover_example.tex              # Example cover letter (structural reference + CI smoke test)
 │   └── OpenFonts/                     # Lato + Raleway fonts
 ├── templates/                         # Custom templates registered via /add-template
 │   └── README.md                      # Folder layout instructions
-├── documents/                         # Career source materials for /setup Path A and /expand
+├── documents/                         # Local career source materials (contents ignored)
 │   ├── README.md                      # Folder layout instructions
 │   ├── cv/                            # Master CV (PDF or .tex)
 │   ├── linkedin/                      # LinkedIn profile export (PDF)
@@ -222,6 +365,7 @@ ai-job-search/
 ├── .github/workflows/ci.yml           # CI: LaTeX smoke compiles, skill lint, CLI typechecks
 ├── salary_lookup.py                   # Salary benchmarking tool (BYO data)
 ├── tools/
+│   ├── bootstrap_private_profile.py   # Create ignored working files from public templates
 │   ├── check_framework_version.py     # CI check: framework_version bumped when skill files change
 │   ├── check_upstream_updates.py      # Preview which personalized files an upstream update touches
 │   ├── convert_salary_excel.py        # Convert salary Excel to JSON
@@ -231,10 +375,10 @@ ai-job-search/
 │   ├── upstream_triage.py             # Sort upstream commits into worth-reviewing vs probably-skip
 │   ├── verify_pdf.py                  # Verify a compiled PDF's page count and extractable text
 │   └── README_SALARY_TOOL.md          # Salary tool setup instructions
-├── job_scraper/                       # Scraper state (seen jobs, results)
-├── gmail_sync/                        # /gmail-sync state (processed message IDs, last sync date)
-├── upskill/                           # /upskill report output (markdown reports per run)
-├── job_search_tracker.csv             # Application tracking spreadsheet
+├── job_scraper/                       # Local scraper state (ignored)
+├── gmail_sync/                        # Local /gmail-sync state (ignored)
+├── upskill/                           # Local report output (ignored)
+├── job_search_tracker.csv             # Local application tracker (ignored)
 └── SETUP.md                           # Detailed setup guide
 ```
 
@@ -265,17 +409,20 @@ All claims in the CV and cover letter are verified against your actual profile. 
 
 ### Which files to edit manually
 
-If you prefer editing files directly instead of using `/setup`:
+If you prefer editing files directly instead of using `/setup`, these are the generated local copies. They are intentionally ignored by Git:
 
 | File | What to change |
 |------|---------------|
 | `CODEX.md` | Your full profile (name, education, experience, skills, goals) |
-| `01-candidate-profile.md` | Structured version of your CV data |
-| `02-behavioral-profile.md` | Your behavioral assessment or self-assessment |
-| `04-job-evaluation.md` | Skill match areas, career goals, motivation filters |
-| `05-cv-templates.md` | Profile statement templates for different role types |
-| `07-interview-prep.md` | Your STAR examples from actual experience |
-| `search-queries.md` | Job search queries for your skills and location |
+| `.framework/skills/job-application-assistant/01-candidate-profile.md` | Structured version of your CV data |
+| `.framework/skills/job-application-assistant/02-behavioral-profile.md` | Your behavioural assessment or self-assessment |
+| `.framework/skills/job-application-assistant/04-job-evaluation.md` | Skill match areas, career goals, motivation filters |
+| `.framework/skills/job-application-assistant/05-cv-templates.md` | Profile statement templates for different role types |
+| `.framework/skills/job-application-assistant/07-interview-prep.md` | Your STAR examples from actual experience |
+| `.framework/skills/job-scraper/search-queries.md` | Job search queries for your skills and location |
+| `.codex/context/job-application-brief.md` | Token-efficient working summary derived from your full profile |
+| `.codex/context/evidence-bank.csv` | Verified claims and examples available for tailoring |
+| `cv/master_cv.tex` | Private master CV used as tailoring source material |
 
 ### Updating your search queries
 
@@ -303,7 +450,7 @@ Point it at your source file (a `.tex` file plus any `.cls`/`.sty` files or bund
 - `/add-template --use <name>` switches between them
 - `/add-template --use default` reverts to the stock moderncv / cover.cls templates
 
-If you prefer doing it by hand, the manual route still works: update the guidance in `05-cv-templates.md` and `06-cover-letter-templates.md`.
+If you prefer doing it by hand, the manual route still works: update the local guidance in `.framework/skills/job-application-assistant/05-cv-templates.md` and `.framework/skills/job-application-assistant/06-cover-letter-templates.md`.
 
 ### Job search tools
 
