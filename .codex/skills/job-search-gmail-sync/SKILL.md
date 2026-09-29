@@ -10,7 +10,7 @@ Use this skill when the user wants to classify job-search emails and update loca
 ## Workflow
 
 1. Read `AGENTS.md`.
-2. Read `.claude/commands/gmail-sync.md`; it is the canonical workflow for Gmail search, classification, proposal format, approval, and writes.
+2. Read `.framework/commands/gmail-sync.md`; it is the canonical workflow for Gmail search, classification, proposal format, approval, and writes.
 3. Use Gmail connector tools only when they are available in the current session. If not available, explain that Gmail must be connected and stop.
 4. Present proposed updates as a batch with source email citations before editing `job_search_tracker.csv` or any `outcome.md`.
 

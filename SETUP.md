@@ -150,7 +150,7 @@ If a command still uses `pdftotext -layout`, it must pass `-enc UTF-8` as well. 
 ## 2. Fork and clone
 
 ```bash
-gh repo fork MadsLorentzen/ai-job-search --clone
+gh repo fork niennonno/ai-job-search --clone
 cd ai-job-search
 gh repo set-default <your-github-username>/ai-job-search
 ```
@@ -166,12 +166,11 @@ Or manually: fork on GitHub, then clone your fork.
 > under your GitHub identity, on a repo where you cannot delete it (#389).
 
 > **Before you go further: forks are public.** GitHub cannot make a fork of a public
-> repository private, and `/setup` (section 6) writes your personal data into **tracked**
-> files — pushing those commits to a fork publishes them. If this copy is for your own
-> job search rather than for contributing, prefer a **private repository** with this repo
-> as `upstream`: see section 8, step 1 for the exact commands and why committing your
-> personalization there is still the right move. Everything else in this guide works
-> identically either way.
+> repository private. This edition protects `/setup` output with explicit `.gitignore`
+> rules: profile files, evidence, the master CV, tracker, and application artefacts stay
+> local. Run `python3 tools/bootstrap_private_profile.py` once after cloning; it creates
+> safe placeholder working files without overwriting existing data. A private repository
+> is still appropriate if you intentionally want an encrypted or access-controlled backup.
 
 ## 3. Install job search CLI dependencies
 Run these from the repository root.
@@ -224,7 +223,7 @@ All three paths produce the same result: fully populated profile files.
 | `04-job-evaluation.md` | Personalized skill match areas and career goals |
 | `05-cv-templates.md` | Profile statement templates for your background |
 | `07-interview-prep.md` | STAR examples from your experience |
-| `cv/Aditya_Godawat_PM.tex` | Your LaTeX CV with actual details |
+| `cv/master_cv.tex` | Your LaTeX CV with actual details |
 | `search-queries.md` | Job search queries for job scraping |
 
 ### Re-running setup
@@ -298,10 +297,10 @@ Upstream keeps improving the methodology files your fork has personalized, so pl
 
 **Prefer releases over raw `master`.** Tagged [releases](../../releases) are vetted checkpoints, each described in [CHANGELOG.md](CHANGELOG.md). Updating to a tag pulls a stable, documented state instead of whatever `master` happens to be mid-review. Fetch tags with `git fetch upstream --tags` and merge a release (for example `git merge v1.0.0`) when you want stability; pull `master` directly only when you specifically want the latest unreleased changes. The steps below apply either way - substitute the release tag for `upstream/master` where you see it.
 
-1. **Commit your personalization - but know where those commits land.** `/setup` edits CODEX.md and the profile skill files in place; those edits are *yours*, and committing them is what lets updates merge cleanly. But a GitHub **fork of this repo is public** - forks of public repositories cannot be made private - so anything you commit *and push to a fork* is visible to anyone. If you want your profile in a remote at all, don't push it to a fork: create a **private** repository, push there, and add this repo as the `upstream` remote (`git remote add upstream https://github.com/MadsLorentzen/ai-job-search.git`) to keep receiving updates. Committing locally without pushing is also fine. The genuinely sensitive files (tracker, salary data, `documents/`, application archives) are gitignored and never enter git either way. An uncommitted working tree is the most common reason `git pull` refuses to merge at all (`Your local changes ... would be overwritten`).
+1. **Keep personalisation local.** `/setup` edits gitignored profile and evidence files in place. Do not force-add them. Framework updates merge independently because the repository tracks sanitised templates under `.framework/profile-templates/`, not your populated working copies. If you need a remote backup of personal files, use a separate private and access-controlled location rather than the public fork.
 2. **Preview what changed before pulling:**
    ```bash
-   git remote add upstream https://github.com/MadsLorentzen/ai-job-search.git   # first time only, if you cloned your own fork
+   git remote add upstream https://github.com/niennonno/ai-job-search.git   # first time only, if you cloned your own fork
    git fetch upstream    # or origin, if you cloned the template directly
    python3 tools/check_upstream_updates.py
    ```
@@ -333,10 +332,3 @@ Make sure Bun is installed. The Australian default workflow can use normal web s
 
 ### Fonts not found in cover letter
 The cover letter template expects fonts in `cover_letters/OpenFonts/fonts/`. Make sure this directory exists and contains the Lato and Raleway font files.
-
-### Stale `.claude/settings.local.json` from an older clone
-Shared Codex permissions now live in `.claude/settings.json` (scoped to `bun run`, `python salary_lookup.py`, and `python3 salary_lookup.py`). Earlier versions of this repo committed a broader `.claude/settings.local.json` that pre-approved `Bash(curl:*)`, `Bash(python:*)` and `Bash(bun:*)`. If you cloned before that change, git leaves the old file behind in your working copy, and its permissions still apply on top of `settings.json`. Delete it (or trim it to your own personal overrides):
-
-```bash
-rm .claude/settings.local.json
-```

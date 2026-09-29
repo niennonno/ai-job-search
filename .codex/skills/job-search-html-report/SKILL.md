@@ -10,7 +10,7 @@ Use this skill to generate a local HTML dashboard from the tracker and applicati
 ## Workflow
 
 1. Read `AGENTS.md`.
-2. Read `.claude/commands/html-report.md`; it is the canonical workflow for arguments, status buckets, funnel math, escaping, layout, and output path.
+2. Read `.framework/commands/html-report.md`; it is the canonical workflow for arguments, status buckets, funnel math, escaping, layout, and output path.
 3. Parse `job_search_tracker.csv` and `documents/applications/*/outcome.md` with structured parsers.
 4. Write the report to `reports/application-dashboard.html` by default, or to the user-provided path.
 

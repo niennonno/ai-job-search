@@ -15,13 +15,13 @@ per-file diff commands.
 
 ### Added
 
-- **`/expand` project and portfolio expansion** (`.claude/commands/expand.md`,
+- **`/expand` project and portfolio expansion** (`.framework/commands/expand.md`,
   `tests/test_expand_command.py`) - expands candidate discovery
   to technical projects from public GitHub repositories, extracting structured summaries
   (problem domain, tech stack, key technical challenges, and verifiable outcomes) to
   populate the `## Independent Projects` section of `01-candidate-profile.md`.
 
-- **Stale sweep branch in `/outcome`** (`.claude/commands/outcome.md`,
+- **Stale sweep branch in `/outcome`** (`.framework/commands/outcome.md`,
   `tests/test_outcome_stale.py`) - introduces `/outcome stale [N]` (and `/outcome sweep [N]`)
   to batch-resolve open applications quiet for 60+ (or N) days. Displays a numbered summary
   of qualifying applications, requires explicit user confirmation (`all`, `select`, or `skip`),
@@ -49,7 +49,7 @@ per-file diff commands.
   The file's instruction and its own snippet disagreed, and the snippet won silently.
   Both expansions are now guarded with `${SCRATCHPAD:?...}`, turning a silent repo write into
   an immediate failure whose message names where the value comes from. Behaviour is unchanged
-  wherever the variable is set. The same undefined reference in `.claude/commands/rank.md`
+  wherever the variable is set. The same undefined reference in `.framework/commands/rank.md`
   was removed by #425 as a side effect of rewriting Step 2/4; this is the remaining instance.
 
 ## [1.7.1] - 2026-09-06
@@ -78,7 +78,7 @@ per-file diff commands.
 
 ### Security
 
-- **`settings.json` no longer pre-approves `bun run` on arbitrary files** (#396) - the
+- **The command policy no longer permits `bun run` on arbitrary files** (#396) - the
   template's permission allowlist granted `Bash(bun run:*)`, which auto-approved
   `bun run <any file on disk>` in every fork. It is now one path-scoped entry per shipped
   portal CLI, matching what each portal SKILL.md already declares. `/scrape` is unaffected
@@ -366,7 +366,7 @@ per-file diff commands.
   `/setup` placeholders while preserving the scoring framework and the query structure;
   `04-job-evaluation.md` is out of the preserved list, which keeps `03-writing-style.md`
   and `06-cover-letter-templates.md` (correctly - the latter's `[YOUR_NAME]` tokens are
-  LaTeX scaffolding Step 3 never writes to). `CLAUDE.md` and `cv/main_example.tex` stay
+  LaTeX scaffolding Step 3 never writes to). `CODEX.md` and `cv/main_example.tex` stay
   outside the `profile` scope, which covers skill files only, and the preview and Step 4
   now say so instead of implying a full wipe. `tests/test_reset_command.py` gains a
   profile-scope guard alongside its documents-scope one, deriving the file list from
@@ -642,7 +642,7 @@ per-file diff commands.
   encoding flag emits Latin-1 on Xpdf builds, so every non-ASCII character in a correct CV
   (Rambøll, Ingeniør, København) read back as a replacement character and failed the
   parseability checklist, steering the agent to "fix" a healthy document. The commands in
-  `apply.md`, `05-cv-templates.md`, and `CLAUDE.md`'s verification checklist now carry
+  `apply.md`, `05-cv-templates.md`, and `CODEX.md`'s verification checklist now carry
   `-enc UTF-8`, which is deterministic on both poppler and Xpdf. Pinned by
   `tests/test_latex_guidance.py`.
 
@@ -764,13 +764,13 @@ per-file diff commands.
   introduces both tools side by side. Offline tests cover patch-id matching, relevance filtering, the
   won't-port list, and the workflow guard. Thanks @anjolok1997.
 
-- **`security_guards.py` now holds `.claude/settings.json` hooks to an allowlist** - the
+- **`security_guards.py` now holds `.framework/command-allowlist.json` hooks to an allowlist** - the
   guard read `permissions.allow` and nothing else, so a `hooks` block in the same file
   passed silently. A hook is strictly more dangerous than a pre-approved permission: a
-  permission pre-approves something Claude *may* choose to do, while a hook runs
+  permission pre-approves something an agent *may* choose to do, while a hook runs
   unconditionally when its event fires, with no prompt and no model decision in between.
   This is not hypothetical - it is the vector the Shai-Hulud worm used in its August 2026
-  wave, planting a `SessionStart` hook in `.claude/settings.json` that executed on session
+  wave, planting a `SessionStart` hook in `.framework/command-allowlist.json` that executed on session
   start ([JFrog research](https://research.jfrog.com/post/shai-hulud-is-back-august/)).
   For a template thousands of people are invited to fork, that is the riskiest key in the
   file the guard already parses. `ALLOWED_HOOKS` ships empty (the template has no hooks),
@@ -814,11 +814,11 @@ per-file diff commands.
   The ignore rule `upskill/*.md` is rooted (a middle slash anchors a gitignore pattern to the
   repo root), but `/upskill` is a *skill*, and skills resolve bare relative paths against
   their own directory - the same observed behavior the `**/job_scraper/*` rules exist for.
-  A report written to `.claude/skills/upskill/upskill/report-*.md` was therefore not ignored
+  A report written to `.framework/skills/upskill/upskill/report-*.md` was therefore not ignored
   (`git check-ignore` confirms it on the unpatched tree), and an upskill report is the
   candidate's skill gaps and weaknesses measured against named employers - among the most
   sensitive files the workflow generates. The obvious widening, `**/upskill/*.md`, would have
-  ignored the template's own `.claude/skills/upskill/SKILL.md` (the skill directory shares
+  ignored the template's own `.framework/skills/upskill/SKILL.md` (the skill directory shares
   the name), so the new rule pins the report-file prefix instead: `**/upskill/report-*.md`.
   Added to `.gitignore` and `security_guards.py`'s `REQUIRED_IGNORE_RULES`, with a
   `check-ignore`-based test pinning both properties - reports ignored at both depths,
@@ -983,11 +983,11 @@ per-file diff commands.
   `/apply`, `/rank`, `/interview`, `/outcome`, `/notion-sync`, the job-scraper skill, and
   writing-style rule 5 (`03-writing-style.md` 1.1.0 to 1.2.0).
 
-  **The retry is gated on `robots.txt`.** `WebFetch` identifies itself as `Claude-User`
+  **The retry is gated on `robots.txt`.** `WebFetch` identifies itself as `AI-Job-Search`
   and honors `robots.txt`, so a 403 means either a WAF default on a site whose published
   policy allows access, or a site that has actually declined. New `tools/robots_check.py`
   tells them apart and the escalation runs it before retrying: a disallow for `*` or
-  `Claude-User` skips the retry entirely and goes straight to finding the employer's own
+  `AI-Job-Search` skips the retry entirely and goes straight to finding the employer's own
   posting. The rule is stated in the file so later edits do not erode it - *the retry
   exists to get past bot-filtering firewalls on sites whose robots.txt permits access; it
   is never used to override a site that has said no.* Two findings are pinned by
@@ -1040,7 +1040,7 @@ per-file diff commands.
   language requirements against what the candidate actually speaks (not a Scoring Dimension,
   not a `/scrape`/`/rank` field, nothing for `/apply`'s existing generic language detection
   to report to). Adds that check, structured like the existing Eligibility Gate, on a new
-  structured `Languages` table in CLAUDE.md / `01-candidate-profile.md` (`/setup` asks, or
+  structured `Languages` table in CODEX.md / `01-candidate-profile.md` (`/setup` asks, or
   infers it from a CV/LinkedIn export): a posting requiring a language you haven't declared
   at all is a hard **FAIL**; one requiring a higher level than you declared in a language you
   *do* work in is **FLAG**, not an auto-reject, so borderline cases (a strict "fluent" bar vs.
@@ -1114,8 +1114,7 @@ per-file diff commands.
   `rank_verdict`, and `rank_date`, so the honest per-posting findings were printed once in
   Step 5 and then discarded. Both arrays are now stored verbatim and replaced (never
   accumulated) on `--all` re-ranks, so downstream consumers of `seen_jobs.json` can read
-  real triage findings instead of re-deriving them. See
-  [discussion #258](https://github.com/MadsLorentzen/ai-job-search/discussions/258).
+  real triage findings instead of re-deriving them.
 - **`/upskill` aggregate mode now ingests `/rank`'s recorded gaps** - previously it only
   read `job_search_tracker.csv` and *guessed* required skills from the `role`/`sector`/
   `notes` columns, even though `/rank` had already fetched and scored postings that never
@@ -1124,8 +1123,7 @@ per-file diff commands.
   on case-insensitive company+role, and prefers a job's recorded `gaps` over an inferred
   skill list wherever both exist. The heatmap's Gap Source column now shows the
   recorded-vs-inferred split per skill, and the report header states how many jobs came
-  from each source. Depends on #263 (`/rank` persisting `gaps`/`strengths`); see
-  [discussion #258](https://github.com/MadsLorentzen/ai-job-search/discussions/258).
+  from each source. Depends on #263 (`/rank` persisting `gaps`/`strengths`).
 
 ### Security & privacy
 
@@ -1134,8 +1132,7 @@ per-file diff commands.
   exposure it seemed to rule out. Section 8 now states the fork-is-public fact plainly and
   documents the safe alternative (a private repository with this repo as `upstream`), and
   `/setup` ends with a matching privacy note the moment profile data first lands in
-  tracked files. Prompted by
-  [discussion #266](https://github.com/MadsLorentzen/ai-job-search/discussions/266).
+  tracked files.
 - **The gitignore guard now covers two more personal-data rules** - `security_guards.py`
   requires `cover_letters/Cover_*.*` (the uppercase cover-letter naming variant `/apply`
   recognizes) and `cv/*.txt` (ATS text extractions of tailored CVs) in `.gitignore`, so a
@@ -1161,8 +1158,7 @@ per-file diff commands.
 
 - CONTRIBUTING's "run what CI runs" list is now complete - it previously omitted
   `tools/security_guards.py` and the exact `unittest` invocation, the precise checks a
-  contributor PR had already failed on. Prompted by
-  [issue #262](https://github.com/MadsLorentzen/ai-job-search/issues/262).
+  contributor PR had already failed on.
 
 ## [1.1.0] - 2026-07-30
 
@@ -1251,15 +1247,15 @@ At this baseline the framework provides:
   `tools/security_guards.py` allowlist for `.gitignore` negations, and a CI policy of
   making no live portal requests.
 - **Cross-runtime support** - a root `AGENTS.md` pointer so Codex and Antigravity can
-  discover the portable portal skills, with Claude Code as the reference runtime.
+  discover the portable portal skills, with Codex as the reference runtime.
 
-[Unreleased]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.7.1...HEAD
-[1.7.1]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.7.0...v1.7.1
-[1.7.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.6.0...v1.7.0
-[1.6.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.5.0...v1.6.0
-[1.5.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.4.0...v1.5.0
-[1.4.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.3.0...v1.4.0
-[1.3.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.2.0...v1.3.0
-[1.2.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/MadsLorentzen/ai-job-search/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/MadsLorentzen/ai-job-search/releases/tag/v1.0.0
+[Unreleased]: https://github.com/niennonno/ai-job-search/compare/v1.7.1...HEAD
+[1.7.1]: https://github.com/niennonno/ai-job-search/compare/v1.7.0...v1.7.1
+[1.7.0]: https://github.com/niennonno/ai-job-search/compare/v1.6.0...v1.7.0
+[1.6.0]: https://github.com/niennonno/ai-job-search/compare/v1.5.0...v1.6.0
+[1.5.0]: https://github.com/niennonno/ai-job-search/compare/v1.4.0...v1.5.0
+[1.4.0]: https://github.com/niennonno/ai-job-search/compare/v1.3.0...v1.4.0
+[1.3.0]: https://github.com/niennonno/ai-job-search/compare/v1.2.0...v1.3.0
+[1.2.0]: https://github.com/niennonno/ai-job-search/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/niennonno/ai-job-search/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/niennonno/ai-job-search/releases/tag/v1.0.0

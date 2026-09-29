@@ -10,10 +10,10 @@ Use this skill to add missing competencies from source documents and public prof
 ## Workflow
 
 1. Read `AGENTS.md`, `CODEX.md`, `.codex/context/job-application-brief.md`, and `.codex/context/evidence-bank.csv`.
-2. Read `.claude/commands/expand.md`; it is the canonical workflow for source order, enrichment, deduplication, and profile update rules.
+2. Read `.framework/commands/expand.md`; it is the canonical workflow for source order, enrichment, deduplication, and profile update rules.
 3. Scan only the relevant local source folders or public profile links needed for the requested enrichment.
 4. Propose additions before writing when a discovered fact could conflict with existing profile facts.
-5. When approved, update `CODEX.md`, `.claude/skills/job-application-assistant/01-candidate-profile.md`, `.codex/context/job-application-brief.md`, and `.codex/context/evidence-bank.csv` as needed.
+5. When approved, update `CODEX.md`, `.framework/skills/job-application-assistant/01-candidate-profile.md`, `.codex/context/job-application-brief.md`, and `.codex/context/evidence-bank.csv` as needed.
 
 ## Rules
 

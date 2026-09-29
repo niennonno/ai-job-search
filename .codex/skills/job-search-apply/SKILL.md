@@ -20,8 +20,8 @@ Use this skill for one Australian job posting.
 9. Save files as `cv/main_<company>_<role>.tex` and `cover_letters/cover_<company>_<role>.tex`.
 10. Compile and visually inspect generated PDFs: CV with `lualatex`, cover letter with `xelatex`. CV must be exactly 2 pages; cover letter exactly 1 page.
 11. Use the verbose legacy files only when needed:
-   - `.claude/commands/apply.md` for full drafter/reviewer workflow or unresolved layout rules.
-   - `.claude/skills/job-application-assistant/*.md` for deeper profile, tone, template, or interview-prep detail.
+   - `.framework/commands/apply.md` for full drafter/reviewer workflow or unresolved layout rules.
+   - `.framework/skills/job-application-assistant/*.md` for deeper profile, tone, template, or interview-prep detail.
 
 ## Hard Rules
 

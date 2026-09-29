@@ -13,8 +13,8 @@ import unittest
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-COMMAND = REPO / ".claude" / "commands" / "setup.md"
-SKILL_DIR = REPO / ".claude" / "skills" / "job-application-assistant"
+COMMAND = REPO / ".framework" / "commands" / "setup.md"
+SKILL_DIR = REPO / ".framework" / "skills" / "job-application-assistant"
 CV_TEMPLATES = SKILL_DIR / "05-cv-templates.md"
 COVER_TEMPLATES = SKILL_DIR / "06-cover-letter-templates.md"
 

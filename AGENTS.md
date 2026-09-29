@@ -1,5 +1,5 @@
 ---
-framework_version: 1.0.0
+framework_version: 1.2.0
 ---
 
 # Agent Guidelines: AI Job Search
@@ -26,22 +26,24 @@ Use the Codex skills in `.codex/skills/` as the natural-language entrypoints:
 - `job-search-add-template`: register or switch CV and cover letter templates.
 - `job-search-reset`: reset profile or document state when explicitly requested.
 
-The detailed workflow specifications still live in `.claude/commands/` and `.claude/skills/`. Treat those files as the canonical source of truth unless a Codex skill says otherwise. Do not duplicate profile data or rewrite the workflow from memory.
+The detailed workflow specifications still live in `.framework/commands/` and `.framework/skills/`. Treat those files as the canonical source of truth unless a Codex skill says otherwise. Do not duplicate profile data or rewrite the workflow from memory.
 
 ## Source Of Truth
 
-- Candidate profile: `CODEX.md` plus `.claude/skills/job-application-assistant/01-*.md` through `07-*.md`.
-- Token-efficient Codex context: `.codex/context/job-application-brief.md` plus `.codex/context/evidence-bank.csv`. Use these first for routine fit checks, drafting, scraping, and upskilling; read the longer `.claude/` files only when the compact brief is insufficient or the user asks for a deep/full workflow.
-- Job application workflow: `.claude/commands/apply.md`.
-- Setup workflow: `.claude/commands/setup.md`.
-- Scrape workflow: `.claude/skills/job-scraper/SKILL.md`.
-- Rank workflow: `.claude/commands/rank.md`.
-- Outcome workflow: `.claude/commands/outcome.md`.
-- Interview workflow: `.claude/commands/interview.md`.
-- Expand workflow: `.claude/commands/expand.md`.
-- Upskill workflow: `.claude/skills/upskill/SKILL.md`.
-- Report/sync workflows: `.claude/commands/html-report.md`, `.claude/commands/gmail-sync.md`, and `.claude/commands/notion-sync.md`.
-- Extension workflows: `.claude/commands/add-portal.md` and `.claude/commands/add-template.md`.
+Private profile files are intentionally gitignored. If any are missing in a fresh checkout, run `python3 tools/bootstrap_private_profile.py` before `/setup`; it creates placeholder working copies without overwriting existing local data.
+
+- Candidate profile: `CODEX.md` plus `.framework/skills/job-application-assistant/01-*.md` through `07-*.md`.
+- Token-efficient Codex context: `.codex/context/job-application-brief.md` plus `.codex/context/evidence-bank.csv`. Use these first for routine fit checks, drafting, scraping, and upskilling; read the longer `.framework/` files only when the compact brief is insufficient or the user asks for a deep/full workflow.
+- Job application workflow: `.framework/commands/apply.md`.
+- Setup workflow: `.framework/commands/setup.md`.
+- Scrape workflow: `.framework/skills/job-scraper/SKILL.md`.
+- Rank workflow: `.framework/commands/rank.md`.
+- Outcome workflow: `.framework/commands/outcome.md`.
+- Interview workflow: `.framework/commands/interview.md`.
+- Expand workflow: `.framework/commands/expand.md`.
+- Upskill workflow: `.framework/skills/upskill/SKILL.md`.
+- Report/sync workflows: `.framework/commands/html-report.md`, `.framework/commands/gmail-sync.md`, and `.framework/commands/notion-sync.md`.
+- Extension workflows: `.framework/commands/add-portal.md` and `.framework/commands/add-template.md`.
 - Portal search tools: `.agents/skills/*`.
 
 ## Australian Market Defaults
@@ -60,4 +62,4 @@ The detailed workflow specifications still live in `.claude/commands/` and `.cla
 - Never fabricate skills, experience, credentials, outcomes, or company claims.
 - Verify company-specific claims using independent sources before including them in application materials.
 - Compile and visually inspect generated PDFs when LaTeX output is created.
-- Keep personal data local. Do not publish, commit, or sync profile files unless the user explicitly asks.
+- Keep personal data local. Profile files are gitignored; never force-add, publish, or sync them. Use a separate private backup only when the user explicitly requests one.

@@ -9,7 +9,7 @@ Use this skill only for explicit reset requests.
 
 ## Workflow
 
-1. Read `AGENTS.md` and `.claude/commands/reset.md`.
+1. Read `AGENTS.md` and `.framework/commands/reset.md`.
 2. Confirm the requested reset scope:
    - profile
    - documents

@@ -5,29 +5,19 @@
 # AI Job Search
 
 *The job search that runs on your machine.*
-An AI-powered job application framework for local job-search work. This copy includes Codex entrypoints for the Australian market while preserving the original workflow files under `.claude/`.
+An AI-powered Codex framework for private, local job-search work in the Australian market. Codex entrypoints live under `.codex/`, with the detailed workflow specifications under `.framework/`.
 
-> Note: This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by OpenAI or Anthropic. Codex, Claude Code, OpenAI, and Anthropic are referenced only to describe the toolchain this workflow uses.
+> Created and maintained by **Aditya Vikram Godawat**. This Codex-first Australian edition was inspired by the [original AI Job Search project](https://github.com/MadsLorentzen/ai-job-search) by Mads Lorentzen.
 >
-> This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The only ways to support the project are the Ko-fi link below and contributing on GitHub.
-
-## Does it actually work?
-
-I'm a geophysicist by training. When my position was cut in late 2025, I built this framework to run my own job search - the same `/scrape`, `/apply`, and `/interview` workflow in this repo, used weekly, on my own career. I was upfront about it with every employer I spoke to, and instead of counting against me, it usually sparked a genuine technical conversation.
-
-Sixty-nine tailored applications, twenty first interviews, and one signed contract later, I started as an AI engineer in June 2026. People kept asking whether this actually works. It got me hired. Now it's yours.
-
-*The longer version, including the full application funnel, is on [LinkedIn](https://www.linkedin.com/in/mads-lorentzen/).*
+> This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by OpenAI. Codex and OpenAI are referenced only to describe the toolchain this workflow uses.
+>
+> This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The official support links are the Buy Me a Coffee link and GitHub repository below.
 
 <p align="center">
-  <i>Did this save you a Sunday of cover-letter writing? Consider a coffee.<br>
-  Did it land you the job? Maybe two.</i> ☕
-</p>
-
-<p align="center">
-  <a href="https://ko-fi.com/madslorentzen">
-    <img src="https://storage.ko-fi.com/cdn/kofi3.png?v=6" alt="Buy me a coffee at ko-fi.com" height="40">
-  </a>
+  <a href="https://buymeacoffee.com/ad1tya">Buy Aditya a coffee</a>.<br>
+  For questions or framework upgrade requests, contact Aditya on
+  <a href="https://linkedin.com/in/adityavikram">LinkedIn</a> or
+  <a href="https://github.com/niennonno">GitHub</a>.
 </p>
 
 ## What this is
@@ -64,21 +54,18 @@ The framework encodes career guidance best practices, including structured evalu
 
 > 🎥 **Prefer to see it in action first?** [The Next New Thing did a hands-on walkthrough](https://www.youtube.com/watch?v=HoVxjMNFYv4) of how the workflow is actually used, from setup to a finished application (recorded August 2026 - commands may have evolved since).
 
-### 1. Fork and clone
+### 1. Clone
 
 ```bash
-gh repo fork MadsLorentzen/ai-job-search --clone
+gh repo clone niennonno/ai-job-search
 cd ai-job-search
 ```
 
 > [!IMPORTANT]
-> **A fork of this repo is always public** — GitHub does not allow private forks of
-> public repositories — and `/setup` (step 3 below) writes your personal data (name,
-> contact details, employment history, salary expectations) into **tracked** files.
-> If this copy is for your own job search rather than for contributing changes back,
-> use a **private repository** with this repo as `upstream` instead — the two-minute
-> recipe is in [SETUP.md section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork),
-> and every update workflow works identically. Fork only to contribute.
+> This repository is public. `/setup` writes personal profile data only to
+> gitignored local files created by `tools/bootstrap_private_profile.py`.
+> The tracker, generated applications, Gmail state, evidence bank, master CV,
+> and application archives are also ignored. Still review `git status` before every push.
 
 ### 2. Install job search tools
 
@@ -157,7 +144,7 @@ Codex reads `AGENTS.md` first. The reusable Codex skills live under `.codex/skil
 - `job-search-add-template` for custom CV and cover letter templates.
 - `job-search-reset` for explicit reset requests.
 
-The detailed workflow files remain under `.claude/` and are treated as the canonical source of truth, so the project stays compatible with the original structure.
+The detailed workflow files under `.framework/` remain the canonical source of truth. The Codex skills are concise entrypoints into those specifications.
 
 Postings are treated as untrusted input (the workflow follows no instructions embedded in them and fetches no links from their body), but agentic defenses are instruction-level, not a sandbox - on an unfamiliar job board, skim what was fetched and written before you hit send. Details in [SECURITY.md](SECURITY.md).
 
@@ -186,7 +173,7 @@ ai-job-search/
 ├── AGENTS.md                          # Codex entrypoint and operating rules
 ├── .codex/
 │   └── skills/                        # Codex natural-language workflow entrypoints
-├── .claude/
+├── .framework/
 │   ├── commands/
 │   │   ├── apply.md                   # /apply workflow (drafter-reviewer)
 │   │   ├── setup.md                   # /setup onboarding (documents folder, CV import, or interview)
@@ -212,7 +199,7 @@ ai-job-search/
 │   │   │   └── 07-interview-prep.md   # STAR examples + interview framework
 │   │   ├── job-scraper/               # Job search orchestration
 │   │   └── upskill/                   # /upskill skill gap analysis and learning plan
-│   └── settings.json                  # Codex permissions (shared, scoped)
+│   └── command-allowlist.json         # Reviewed framework command policy
 ├── .agents/skills/                    # Optional portal CLI tools
 │   ├── linkedin-search/               # LinkedIn public job listings (works with Australian locations)
 │   └── freehire-search/               # freehire.me tech job aggregator (multi-market, REST API)
@@ -238,7 +225,7 @@ ai-job-search/
 │   ├── check_framework_version.py     # CI check: framework_version bumped when skill files change
 │   ├── check_upstream_updates.py      # Preview which personalized files an upstream update touches
 │   ├── convert_salary_excel.py        # Convert salary Excel to JSON
-│   ├── lint_skills.py                 # CI lint for skills, commands, settings.json
+│   ├── lint_skills.py                 # CI lint for skills, commands, and command policy
 │   ├── robots_check.py                # Gate the browser-header retry against robots.txt
 │   ├── security_guards.py             # CI guards: permission allowlist, gitignore rules, manifests
 │   ├── upstream_triage.py             # Sort upstream commits into worth-reviewing vs probably-skip
@@ -334,25 +321,23 @@ The Danish portal CLIs are retained in `.agents/archive/skills/` only as legacy 
 
 Give it your local job board's URL. The command investigates the portal (search-URL pattern, result-page structure, robots.txt/access rules), scaffolds a CLI skill with the same structure, commands, and output contract as the shipped ones, and test-runs a live query before registering anything. Auth-walled portals are declined, and portals with restrictive terms get a prominent personal-use-only warning in the generated skill. The generated skill is market-specific and lives in your fork; the generator itself is the universal part.
 
-Maintaining a fork adapted to your market or language? Add it to the [Community forks & adaptations](https://github.com/MadsLorentzen/ai-job-search/discussions/78) thread so others can find it.
-
 ### Extending the framework: portals, templates, criteria - and borrowing from other forks
 
 Everything above adds up to an extension model, so here it is stated plainly. The framework has three extension points, and none of them require touching upstream:
 
-1. **Portal skills** - the module system for job boards. Every `*-search` skill is a self-contained folder under `.agents/skills/` with the same contract (a `search`/`detail` CLI, `--format json|table|plain` output, an `enabled:` flag in its `SKILL.md`, its own tests). `/scrape` auto-discovers any installed skill that follows the contract - nothing to register, nothing to wire up. `/add-portal` generates new ones; the [community portal index](https://github.com/MadsLorentzen/ai-job-search/discussions/78) catalogs the ones other forks have built.
+1. **Portal skills** - the module system for job boards. Every `*-search` skill is a self-contained folder under `.agents/skills/` with the same contract (a `search`/`detail` CLI, `--format json|table|plain` output, an `enabled:` flag in its `SKILL.md`, its own tests). `/scrape` auto-discovers any installed skill that follows the contract - nothing to register, nothing to wire up. `/add-portal` generates new ones.
 2. **Document templates** - `/add-template` registers any CV or cover-letter toolchain that compiles to PDF from the command line, LaTeX or otherwise.
 3. **Evaluation criteria** - deal-breakers and preferences in your profile are free-form, and the evaluation rubric scores against whatever you put there. "Strong parental-leave terms", "minimum salary X per my union's scale", "no on-call" - each is one profile line, no code, and it carries real weight in `/rank` and `/apply` fit evaluations. Language is the one deal-breaker type with dedicated, structured handling: `/setup` captures every language you work in and your level (asked directly, or inferred from your CV/LinkedIn export) into a `Languages` table, and the Language Gate (`04-job-evaluation.md`) hard-rejects a posting that requires a language you haven't declared at all, while flagging - not auto-rejecting - one that asks for a higher level than you declared in a language you do work in, so a borderline case (a strict "fluent" bar against your own B1/B2, say) gets your judgment instead of a silent drop.
 
-**Borrowing a portal skill from another fork** is the intended way to get a board that upstream doesn't ship: find it in the [portal index](https://github.com/MadsLorentzen/ai-job-search/discussions/78), open that fork, and copy the one folder into your own `.agents/skills/`. Before you run it:
+**Borrowing a portal skill from another fork** is one way to add a board this framework does not ship: review that fork, then copy the one folder into your own `.agents/skills/`. Before you run it:
 
-- **Read the code.** All of it - these CLIs run pre-approved on your machine (`.claude/settings.json` allowlists them) against your career data. Check that the only network calls go to the job board it claims to search, that `package.json` has no `dependencies` and no lifecycle scripts (`postinstall` etc.), and that nothing reads or writes outside its own folder.
+- **Read the code.** All of it - these CLIs run against your career data. `.framework/command-allowlist.json` documents the commands the framework expects to use, but your runtime remains responsible for prompting and permission enforcement. Check that the only network calls go to the job board they claim to search, that `package.json` has no `dependencies` and no lifecycle scripts (`postinstall` etc.), and that nothing reads or writes outside its own folder.
 - **Run its tests offline** (`bun test` in the skill's `cli/` directory) - a well-built skill's tests pass with no network access.
 - Check the `enabled:` flag and the skill's own ToS notes.
 
 The copy step is manual on purpose. Your settings already allow installed portal skills to run without asking each time - so an installer that fetched them from third-party repos for you would skip the one check that matters: you, reading the code first. There isn't one, and that's a security decision rather than a missing feature.
 
-Market-specific *data sources* (a national salary database, local award-rate tables) follow the same pattern as portals: they belong in a market fork, shared via [#78](https://github.com/MadsLorentzen/ai-job-search/discussions/78), not upstream.
+Market-specific *data sources* (a national salary database, local award-rate tables) follow the same pattern as portals: keep them in a local or market-specific extension unless they are suitable for the main framework.
 
 ### Salary benchmarking
 
@@ -396,11 +381,6 @@ To get the most from this, invest time during `/setup` in describing not just yo
 ## Contributing
 
 Thinking about a PR? Read [CONTRIBUTING.md](CONTRIBUTING.md) first - it explains what gets merged, what lives in forks, and why.
-
-## Acknowledgements
-
-- [Mikkel Krogholm](https://github.com/mikkelkrogsholm) ([skills repo](https://github.com/mikkelkrogsholm/skills)) for the job search CLI skills
-- Originally built for [Claude Code](https://claude.com/claude-code) by [Anthropic](https://anthropic.com); adapted here for Codex and the Australian market
 
 ## License
 

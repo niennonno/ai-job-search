@@ -9,20 +9,20 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = REPO_ROOT / "tools" / "check_upstream_updates.py"
 
-TEMPLATE_URL = "https://github.com/MadsLorentzen/ai-job-search.git"
+TEMPLATE_URL = "https://github.com/niennonno/ai-job-search.git"
 FORK_URL = "https://github.com/octocat/ai-job-search.git"
 
 FRAMEWORK_FILES = [
-    ".claude/skills/job-application-assistant/01-candidate-profile.md",
-    ".claude/skills/job-application-assistant/02-behavioral-profile.md",
-    ".claude/skills/job-application-assistant/03-writing-style.md",
-    ".claude/skills/job-application-assistant/04-job-evaluation.md",
-    ".claude/skills/job-application-assistant/05-cv-templates.md",
-    ".claude/skills/job-application-assistant/06-cover-letter-templates.md",
-    ".claude/skills/job-application-assistant/07-interview-prep.md",
-    ".claude/skills/job-application-assistant/08-application-forms.md",
-    ".claude/skills/job-application-assistant/09-web-research.md",
-    ".claude/skills/job-application-assistant/SKILL.md",
+    ".framework/skills/job-application-assistant/01-candidate-profile.md",
+    ".framework/skills/job-application-assistant/02-behavioral-profile.md",
+    ".framework/skills/job-application-assistant/03-writing-style.md",
+    ".framework/skills/job-application-assistant/04-job-evaluation.md",
+    ".framework/skills/job-application-assistant/05-cv-templates.md",
+    ".framework/skills/job-application-assistant/06-cover-letter-templates.md",
+    ".framework/skills/job-application-assistant/07-interview-prep.md",
+    ".framework/skills/job-application-assistant/08-application-forms.md",
+    ".framework/skills/job-application-assistant/09-web-research.md",
+    ".framework/skills/job-application-assistant/SKILL.md",
     "AGENTS.md",
 ]
 
@@ -101,7 +101,7 @@ class DirectCloneFallbackTests(UpstreamCheckerRepoFixture):
 
     def test_clone_with_lowercased_template_url_falls_back_without_fork_warning(self):
         # GitHub serves repo paths case-insensitively, so a clone from
-        # https://github.com/madslorentzen/ai-job-search is still the template.
+        # https://github.com/niennonno/ai-job-search is still the template.
         subprocess.run(
             ["git", "remote", "set-url", "origin", TEMPLATE_URL.lower()],
             cwd=self.root,

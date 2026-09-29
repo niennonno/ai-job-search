@@ -1,6 +1,6 @@
 """Guards for the Codex entrypoint layer.
 
-The detailed workflow specs live under .claude/, but Codex discovers the
+The detailed workflow specs live under .framework/, but Codex discovers the
 short skill routers under .codex/skills/. These tests keep the two layers
 from drifting when upstream adds commands or changes file naming rules.
 """
@@ -12,7 +12,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 CODEX_SKILLS = REPO / ".codex" / "skills"
-WORKFLOW_COMMANDS = REPO / ".claude" / "commands"
+WORKFLOW_COMMANDS = REPO / ".framework" / "commands"
 
 
 class CodexEntrypointTests(unittest.TestCase):

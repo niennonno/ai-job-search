@@ -36,7 +36,7 @@ class GuardRepoFixture(unittest.TestCase):
         (self.root / "tools").mkdir()
         shutil.copy(GUARD_SCRIPT, self.root / "tools" / "security_guards.py")
 
-        self.settings = self.root / ".claude" / "settings.json"
+        self.settings = self.root / ".framework" / "command-allowlist.json"
         self.settings.parent.mkdir()
         self.write_settings(sorted(security_guards.ALLOWED_PERMISSIONS))
 
@@ -108,10 +108,10 @@ class PermissionGuardTests(GuardRepoFixture):
 
 
 class HookGuardTests(GuardRepoFixture):
-    """A hook in .claude/settings.json runs with no prompt when its event fires.
+    """A hook in .framework/command-allowlist.json runs with no prompt when its event fires.
 
     The shape used here is the one the Shai-Hulud worm planted in its August 2026
-    wave (a SessionStart hook chaining to .claude/math_init.js), per
+    wave (a SessionStart hook chaining to .framework/math_init.js), per
     https://research.jfrog.com/post/shai-hulud-is-back-august/
     """
 
@@ -129,7 +129,7 @@ class HookGuardTests(GuardRepoFixture):
         self.write_settings_with_hooks(
             {
                 "SessionStart": [
-                    {"hooks": [{"type": "command", "command": "node .claude/math_init.js"}]}
+                    {"hooks": [{"type": "command", "command": "node .framework/math_init.js"}]}
                 ]
             }
         )
@@ -285,9 +285,9 @@ class GitignorePatternBehaviorTests(unittest.TestCase):
         # pins that it stays tracked.
         cases = {
             "upskill/report-2026-08-11.md": True,
-            ".claude/skills/upskill/upskill/report-2026-08-11.md": True,
-            ".claude/skills/upskill/upskill/report-2026-08-11-acme-engineer.md": True,
-            ".claude/skills/upskill/SKILL.md": False,
+            ".framework/skills/upskill/upskill/report-2026-08-11.md": True,
+            ".framework/skills/upskill/upskill/report-2026-08-11-acme-engineer.md": True,
+            ".framework/skills/upskill/SKILL.md": False,
         }
         for path, expect_ignored in cases.items():
             with self.subTest(path=path):
@@ -313,7 +313,7 @@ class GitignorePatternBehaviorTests(unittest.TestCase):
         # so either half can move independently and each must be pinned.
         folder = "documents/applications/<company>_<role>/"
         filename = "interview_prep_<stage>.md"
-        spec = (REPO_ROOT / ".claude" / "commands" / "interview.md").read_text(encoding="utf-8")
+        spec = (REPO_ROOT / ".framework" / "commands" / "interview.md").read_text(encoding="utf-8")
         for fragment in (folder, filename):
             # assertTrue, not assertIn: the haystack is the whole command spec,
             # and dumping it buries the one sentence explaining the failure.

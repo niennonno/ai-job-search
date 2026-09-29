@@ -10,7 +10,7 @@ Use this skill to publish a one-way view of ranked jobs and tracked applications
 ## Workflow
 
 1. Read `AGENTS.md`.
-2. Read `.claude/commands/notion-sync.md`; it is the canonical workflow for preflight, schema, sync set, upserts, and privacy rules.
+2. Read `.framework/commands/notion-sync.md`; it is the canonical workflow for preflight, schema, sync set, upserts, and privacy rules.
 3. Use Notion connector tools only when they are available in the current session. If not available, explain that Notion must be connected and stop.
 4. Build the sync set from local `job_scraper/seen_jobs.json` and `job_search_tracker.csv`; the tracker wins for application status.
 

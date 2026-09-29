@@ -33,8 +33,8 @@ import unittest
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-RESET = REPO / ".claude" / "commands" / "reset.md"
-SETUP = REPO / ".claude" / "commands" / "setup.md"
+RESET = REPO / ".framework" / "commands" / "reset.md"
+SETUP = REPO / ".framework" / "commands" / "setup.md"
 
 
 def tracked_document_subfolders():
@@ -95,7 +95,7 @@ def setup_step3_skill_files():
     """Skill files /setup Step 3 populates, derived from its own headings.
 
     Step 3's targets are written as '### <n>. <verb> `<target>`', where the
-    target is either a bare filename resolved against .claude/skills/ or a
+    target is either a bare filename resolved against .framework/skills/ or a
     repo-relative path. Non-skill targets (CODEX.md, the private master CV)
     are dropped: /reset profile's scope is skill files only.
     """
@@ -103,10 +103,10 @@ def setup_step3_skill_files():
     files = set()
     for target in re.findall(r"^###\s+\d+\.\s+\w+\s+`([^`]+)`", step3, re.MULTILINE):
         if (REPO / target).exists():
-            if target.startswith(".claude/skills/"):
+            if target.startswith(".framework/skills/"):
                 files.add(Path(target).name)
             continue
-        matches = list((REPO / ".claude" / "skills").glob(f"*/{target}"))
+        matches = list((REPO / ".framework" / "skills").glob(f"*/{target}"))
         if matches:
             files.add(Path(target).name)
     return files

@@ -10,7 +10,7 @@ Use this skill when the user wants to record what happened after an application,
 ## Workflow
 
 1. Read `AGENTS.md`.
-2. Read `.claude/commands/outcome.md`; it is the canonical workflow for tracker status vocabulary, archive format, follow-up limits, stale sweeps, and write rules.
+2. Read `.framework/commands/outcome.md`; it is the canonical workflow for tracker status vocabulary, archive format, follow-up limits, stale sweeps, and write rules.
 3. Load only the needed rows from `job_search_tracker.csv` and the matching `documents/applications/<company>_<role>/outcome.md` archive.
 4. Update the tracker and archive only after the target application and outcome are clear.
 

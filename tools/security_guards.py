@@ -3,19 +3,17 @@
 
 Run from anywhere: python tools/security_guards.py
 
-This repo ships pre-approved runtime permissions and CLI code that every
-fork user executes. These guards make the dangerous changes LOUD, not
+This repo ships a reviewed command policy and CLI code that every fork user
+can execute. These guards make dangerous changes LOUD, not
 impossible: a PR that intentionally needs one of them must update the
 allowlists in this file in the same diff, so the change is explicit and
 reviewable rather than buried.
 
 Checks:
-1. .claude/settings.json — every permissions.allow entry must be in the exact
-   allowlist below. Catches permission widening (e.g. Bash(*), Bash(curl:*)),
-   which would auto-approve commands on every fork. The same file's `hooks`
-   key is held to an allowlist too: a hook runs automatically when its event
-   fires, with no prompt, so it is strictly more dangerous than a pre-approved
-   permission.
+1. .framework/command-allowlist.json — every permissions.allow entry must be in the exact
+   allowlist below. Catches policy widening (e.g. Bash(*), Bash(curl:*)). The
+   same file's `hooks` key is held to an empty allowlist so executable startup
+   behaviour cannot be smuggled into the framework policy.
 2. .gitignore — the personal-data ignore rules must all still be present,
    and no un-allowlisted negation (!pattern) may re-include them. Catches
    weakening that would make future users silently commit their tracker,
@@ -42,7 +40,7 @@ ALLOWED_PERMISSIONS = {
     # pre-approved `bun run <any file>`. One entry per active portal CLI,
     # matching what each SKILL.md already declares in its allowed-tools.
     # A portal added by /add-portal needs its own entry here and in
-    # .claude/settings.json - that review step is the point.
+    # .framework/command-allowlist.json - that review step is the point.
     "Bash(bun run .agents/skills/linkedin-search/cli/src/cli.ts:*)",
     "Bash(bun run .agents/skills/freehire-search/cli/src/cli.ts:*)",
     "Bash(python salary_lookup.py:*)",
@@ -57,8 +55,23 @@ ALLOWED_PERMISSIONS = {
 # Personal-data ignore rules that must never disappear from .gitignore.
 REQUIRED_IGNORE_RULES = [
     "salary_data.json",
+    "CODEX.md",
+    ".codex/context/job-application-brief.md",
+    ".codex/context/evidence-bank.csv",
+    ".framework/skills/job-application-assistant/01-candidate-profile.md",
+    ".framework/skills/job-application-assistant/02-behavioral-profile.md",
+    ".framework/skills/job-application-assistant/03-writing-style.md",
+    ".framework/skills/job-application-assistant/04-job-evaluation.md",
+    ".framework/skills/job-application-assistant/05-cv-templates.md",
+    ".framework/skills/job-application-assistant/06-cover-letter-templates.md",
+    ".framework/skills/job-application-assistant/07-interview-prep.md",
+    ".framework/skills/job-scraper/search-queries.md",
+    "cv/master_cv.tex",
+    "/applications/",
+    "job_search_*.md",
+    "/tmp/",
     # Depth-independent: the job-scraper skill resolves `job_scraper/` relative
-    # to its own directory, so the state file lands under .claude/skills/... and
+    # to its own directory, so the state file lands under .framework/skills/... and
     # a repo-rooted rule silently fails to match it.
     "**/job_scraper/seen_jobs.json",
     "**/job_scraper/notion_sync.json",
@@ -88,7 +101,7 @@ REQUIRED_IGNORE_RULES = [
     # Depth-independent twin of the rule above. The upskill *skill* resolves
     # `upskill/` relative to its own directory - the same observed behavior
     # the **/job_scraper rules exist for - so reports can land at
-    # .claude/skills/upskill/upskill/*.md where the rooted rule cannot see
+    # .framework/skills/upskill/upskill/*.md where the rooted rule cannot see
     # them. `**/upskill/*.md` would also ignore the skill's own SKILL.md
     # (the directory shares the name), so the report-file prefix is pinned.
     "**/upskill/report-*.md",
@@ -124,7 +137,7 @@ ALLOWED_IGNORE_NEGATIONS = {
 # pre-approves something the runtime may choose to do; a hook runs unconditionally when
 # its event fires, with no prompt and no model decision in between. Cloning a repo
 # and opening it is enough. This is the vector the Shai-Hulud worm used in its
-# August 2026 wave, planting a SessionStart hook in .claude/settings.json that
+# August 2026 wave, planting a SessionStart hook in .framework/command-allowlist.json that
 # executed on session start:
 # https://research.jfrog.com/post/shai-hulud-is-back-august/
 ALLOWED_HOOKS: set[str] = set()
@@ -157,14 +170,14 @@ def _hook_commands(event: str, entries: object):
 
 
 def check_permissions() -> None:
-    path = ROOT / ".claude" / "settings.json"
+    path = ROOT / ".framework" / "command-allowlist.json"
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
-        errors.append(f".claude/settings.json: unreadable or invalid JSON: {exc}")
+        errors.append(f".framework/command-allowlist.json: unreadable or invalid JSON: {exc}")
         return
     if not isinstance(data, dict):
-        errors.append(".claude/settings.json: top-level JSON value must be an object")
+        errors.append(".framework/command-allowlist.json: top-level JSON value must be an object")
         return
 
     # Checked before the permissions shape guards below, so a file that pairs a
@@ -172,13 +185,13 @@ def check_permissions() -> None:
     hooks = data.get("hooks", {})
     if hooks:
         if not isinstance(hooks, dict):
-            errors.append(".claude/settings.json: hooks must be an object")
+            errors.append(".framework/command-allowlist.json: hooks must be an object")
         else:
             for event, entries in hooks.items():
                 for command in _hook_commands(str(event), entries):
                     if command not in ALLOWED_HOOKS:
                         errors.append(
-                            f".claude/settings.json: hook not in the reviewed allowlist: "
+                            f".framework/command-allowlist.json: hook not in the reviewed allowlist: "
                             f"{command!r}. A hook runs automatically when its event fires - it "
                             "is never gated by the permissions prompt, so it executes on every "
                             "fork without the user agreeing to anything. If this hook is "
@@ -188,24 +201,24 @@ def check_permissions() -> None:
 
     permissions = data.get("permissions", {})
     if not isinstance(permissions, dict):
-        errors.append(".claude/settings.json: permissions must be an object")
+        errors.append(".framework/command-allowlist.json: permissions must be an object")
         return
     allow = permissions.get("allow", [])
     if not isinstance(allow, list) or not all(isinstance(entry, str) for entry in allow):
-        errors.append(".claude/settings.json: permissions.allow must be a list of strings")
+        errors.append(".framework/command-allowlist.json: permissions.allow must be a list of strings")
         return
     for entry in allow:
         if entry not in ALLOWED_PERMISSIONS:
             errors.append(
-                f".claude/settings.json: permission not in the reviewed allowlist: {entry!r}. "
-                "Pre-approved permissions run without prompting on every fork. If this entry is "
+                f".framework/command-allowlist.json: permission not in the reviewed allowlist: {entry!r}. "
+                "This widens the framework's reviewed command policy. If this entry is "
                 "intentional, add it to ALLOWED_PERMISSIONS in tools/security_guards.py in the "
                 "same PR so the widening is explicit and reviewable."
             )
     for entry in ALLOWED_PERMISSIONS - set(allow):
         # Not an error: settings may legitimately drop an entry. But an
         # allowlist entry that no longer exists should be pruned.
-        print(f"note: allowlisted permission not present in settings.json: {entry!r}")
+        print(f"note: allowlisted permission not present in command-allowlist.json: {entry!r}")
 
 
 def check_gitignore() -> None:

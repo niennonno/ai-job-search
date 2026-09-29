@@ -13,7 +13,7 @@ Use this skill to compare the candidate profile with one posting or the tracked 
 2. If the user provided a posting, parse that posting. Otherwise use `job_search_tracker.csv` and the compact rows from `job_search_comprehensive_*.md`.
 3. Identify recurring requirements, genuine gaps, adjacent strengths, and high-leverage learning areas.
 4. Produce a prioritised learning plan with effort, practical exercises, and interview/portfolio evidence.
-5. Read `.claude/skills/upskill/SKILL.md` only for a durable report or deeper market-gap analysis.
+5. Read `.framework/skills/upskill/SKILL.md` only for a durable report or deeper market-gap analysis.
 
 ## Rules
 

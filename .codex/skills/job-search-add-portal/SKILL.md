@@ -10,7 +10,7 @@ Use this skill to create a new job-board search skill under `.agents/skills/`.
 ## Workflow
 
 1. Read `AGENTS.md`.
-2. Read `.claude/commands/add-portal.md`; it is the canonical workflow for portal research, scaffolding, CLI contract, tests, and registration.
+2. Read `.framework/commands/add-portal.md`; it is the canonical workflow for portal research, scaffolding, CLI contract, tests, and registration.
 3. Use `.agents/skills/linkedin-search/` or `.agents/skills/freehire-search/` as the active reference implementation.
 4. Treat `.agents/archive/skills/*` as historical examples only; copy from them only when the user explicitly wants that market and after reviewing them.
 5. Test-run a live query before registering a generated portal skill.

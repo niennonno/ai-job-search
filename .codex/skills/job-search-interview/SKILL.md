@@ -10,7 +10,7 @@ Use this skill to prepare for a real interview tied to a tracked application.
 ## Workflow
 
 1. Read `AGENTS.md` and `.codex/context/job-application-brief.md`.
-2. Read `.claude/commands/interview.md`; it is the canonical workflow for selecting the application, using the archive, researching the company/interviewers, and building the prep pack.
+2. Read `.framework/commands/interview.md`; it is the canonical workflow for selecting the application, using the archive, researching the company/interviewers, and building the prep pack.
 3. Read only the matching application archive under `documents/applications/<company>_<role>/` plus the relevant profile/interview files named by the command.
 4. Save prep packs only inside the matching application archive unless the user asks otherwise.
 

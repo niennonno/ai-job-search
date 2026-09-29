@@ -7,7 +7,7 @@ This script:
 1. Identifies the upstream remote (defaults to 'upstream', falls back to 'origin').
 2. Fetches the latest commits from the upstream remote.
 3. Compares the 'framework_version' in your local files under
-   .claude/skills/job-application-assistant/ with those in the upstream remote.
+   .framework/skills/job-application-assistant/ with those in the upstream remote.
 4. Alerts you if a file has been updated upstream with a newer version.
 """
 
@@ -21,20 +21,20 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FRAMEWORK_FILES = [
-    ".claude/skills/job-application-assistant/01-candidate-profile.md",
-    ".claude/skills/job-application-assistant/02-behavioral-profile.md",
-    ".claude/skills/job-application-assistant/03-writing-style.md",
-    ".claude/skills/job-application-assistant/04-job-evaluation.md",
-    ".claude/skills/job-application-assistant/05-cv-templates.md",
-    ".claude/skills/job-application-assistant/06-cover-letter-templates.md",
-    ".claude/skills/job-application-assistant/07-interview-prep.md",
-    ".claude/skills/job-application-assistant/08-application-forms.md",
-    ".claude/skills/job-application-assistant/09-web-research.md",
-    ".claude/skills/job-application-assistant/SKILL.md",
+    ".framework/skills/job-application-assistant/01-candidate-profile.md",
+    ".framework/skills/job-application-assistant/02-behavioral-profile.md",
+    ".framework/skills/job-application-assistant/03-writing-style.md",
+    ".framework/skills/job-application-assistant/04-job-evaluation.md",
+    ".framework/skills/job-application-assistant/05-cv-templates.md",
+    ".framework/skills/job-application-assistant/06-cover-letter-templates.md",
+    ".framework/skills/job-application-assistant/07-interview-prep.md",
+    ".framework/skills/job-application-assistant/08-application-forms.md",
+    ".framework/skills/job-application-assistant/09-web-research.md",
+    ".framework/skills/job-application-assistant/SKILL.md",
     "AGENTS.md",
 ]
 
-UPSTREAM_REPO_SLUG = "MadsLorentzen/ai-job-search"
+UPSTREAM_REPO_SLUG = "niennonno/ai-job-search"
 
 def run_git(args: list[str]) -> tuple[int, str, str]:
     res = subprocess.run(["git"] + args, cwd=str(ROOT), capture_output=True, text=True)

@@ -4,12 +4,12 @@
 Run from anywhere: python tools/lint_skills.py
 
 Checks:
-- Every SKILL.md (.codex/skills/*, .claude/skills/*, .agents/skills/*) has YAML frontmatter that
+- Every SKILL.md (.codex/skills/*, .framework/skills/*, .agents/skills/*) has YAML frontmatter that
   parses, with non-empty `name` and `description` keys
 - `allowed-tools` entries of the form `Bash(bun run <path> *)` point at files
   that exist (skill paths resolve relative to the repo root and to .agents/)
-- Every .claude/commands/*.md starts with a `# /<name>` title
-- .claude/settings.json is valid JSON with a permissions.allow list
+- Every .framework/commands/*.md starts with a `# /<name>` title
+- .framework/command-allowlist.json is valid JSON with a permissions.allow list
 
 Exit code 0 on success, 1 with a failure list otherwise.
 """
@@ -111,34 +111,34 @@ def check_command(path: Path) -> None:
 
 
 def check_settings() -> None:
-    path = ROOT / ".claude" / "settings.json"
+    path = ROOT / ".framework" / "command-allowlist.json"
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
-        errors.append(f".claude/settings.json: {exc}")
+        errors.append(f".framework/command-allowlist.json: {exc}")
         return
     if not isinstance(data, dict):
-        errors.append(".claude/settings.json: expected top-level JSON value to be an object")
+        errors.append(".framework/command-allowlist.json: expected top-level JSON value to be an object")
         return
     permissions = data.get("permissions", {})
     if not isinstance(permissions, dict):
-        errors.append(".claude/settings.json: expected permissions to be an object")
+        errors.append(".framework/command-allowlist.json: expected permissions to be an object")
         return
     if not isinstance(permissions.get("allow"), list):
-        errors.append(".claude/settings.json: expected permissions.allow to be a list")
+        errors.append(".framework/command-allowlist.json: expected permissions.allow to be a list")
 
 
 def main() -> int:
     skills = (
         sorted(ROOT.glob(".codex/skills/*/SKILL.md"))
-        + sorted(ROOT.glob(".claude/skills/*/SKILL.md"))
+        + sorted(ROOT.glob(".framework/skills/*/SKILL.md"))
         + sorted(ROOT.glob(".agents/skills/*/SKILL.md"))
     )
-    commands = sorted((ROOT / ".claude" / "commands").glob("*.md"))
+    commands = sorted((ROOT / ".framework" / "commands").glob("*.md"))
     if not skills:
         errors.append("no SKILL.md files found - glob roots are wrong or the tree moved")
     if not commands:
-        errors.append("no command files found under .claude/commands/")
+        errors.append("no command files found under .framework/commands/")
 
     for skill in skills:
         check_skill(skill)
@@ -151,7 +151,7 @@ def main() -> int:
         for err in errors:
             print(f"  - {err}")
         return 1
-    print(f"lint_skills: OK ({len(skills)} skills, {len(commands)} commands, settings.json)")
+    print(f"lint_skills: OK ({len(skills)} skills, {len(commands)} commands, command-allowlist.json)")
     return 0
 
 
