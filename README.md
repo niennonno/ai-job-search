@@ -1,17 +1,13 @@
-<p align="center">
-  <img src="assets/mascot/pip_flight_loop.gif" alt="Pip, the courier bird" width="200">
-</p>
-
 # AI Job Search
 
 *The job search that runs on your machine.*
 An AI-powered Codex framework for private, local job-search work in the Australian market. Codex entrypoints live under `.codex/`, with the detailed workflow specifications under `.framework/`.
 
-> Created and maintained by **Aditya Vikram Godawat**. This Codex-first Australian edition was inspired by the [original AI Job Search project](https://github.com/MadsLorentzen/ai-job-search) by Mads Lorentzen.
->
-> This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by OpenAI. Codex and OpenAI are referenced only to describe the toolchain this workflow uses.
->
-> This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The official support links are the Buy Me a Coffee link and GitHub repository below.
+Created and maintained by **Aditya Vikram Godawat**. This Codex-first Australian edition of AI Job Search was inspired by the [original AI Job Search project](https://github.com/MadsLorentzen/ai-job-search) by Mads Lorentzen.
+
+This is an independent open-source project and is not affiliated with, endorsed by, sponsored by, or maintained by OpenAI. Codex and OpenAI are referenced only to describe the toolchain this workflow uses.
+
+This project has **no affiliated cryptocurrency, token, or paid sponsorship program**. Anything claiming otherwise is unauthorized and should be treated as a scam. The official support links are the Buy Me a Coffee link and GitHub repository below.
 
 <p align="center">
   <a href="https://buymeacoffee.com/ad1tya">Buy Aditya a coffee</a>.<br>
@@ -52,8 +48,6 @@ The framework encodes career guidance best practices, including structured evalu
 
 ## Quick start
 
-> 🎥 **Prefer to see it in action first?** [The Next New Thing did a hands-on walkthrough](https://www.youtube.com/watch?v=HoVxjMNFYv4) of how the workflow is actually used, from setup to a finished application (recorded August 2026 - commands may have evolved since).
-
 ### 1. Clone
 
 ```bash
@@ -89,9 +83,7 @@ for tool in linkedin-search freehire-search; do
 done
 ```
 
-For `linkedin-search` and `freehire-search` the install is optional: both have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
-
-The old Danish portal CLIs are archived as legacy examples in this Australian fork and are not part of the default workflow.
+For `linkedin-search` the install is optional: both have zero runtime dependencies and run with plain `bun`; `bun install` only pulls TypeScript dev types.
 
 ### 3. Set up your profile in Codex
 
@@ -221,8 +213,6 @@ git fetch upstream --tags
 python3 tools/check_upstream_updates.py
 python3 tools/upstream_triage.py
 ```
-
-See [SETUP.md, section 8](SETUP.md#8-pulling-upstream-updates-into-your-fork) for the complete update workflow.
 
 ## Measure how it is performing
 
